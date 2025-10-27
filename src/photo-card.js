@@ -30,6 +30,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
     this.showComments = false;
     this.commentText = '';
     this.postedComments = [];
+    this.imageError = false;
   }
 
   // Lit reactive properties
@@ -46,7 +47,8 @@ export class PhotoCard extends DDDSuper(LitElement) {
       showDetails: { type: Boolean },
       showComments: { type: Boolean },
       commentText: { type: String },
-      postedComments: { type: Array }
+      postedComments: { type: Array },
+      imageError: { type: Boolean }
     };
   }
 
@@ -129,6 +131,21 @@ export class PhotoCard extends DDDSuper(LitElement) {
       .image-placeholder {
         color: var(--ddd-theme-default-slateGray);
         font-size: var(--ddd-font-size-s);
+      }
+
+      .image-placeholder.error {
+        color: var(--ddd-theme-default-original87Pink);
+        text-align: center;
+        font-size: var(--ddd-font-size-s);
+      }
+
+      .image-placeholder.error p {
+        margin: var(--ddd-spacing-1) 0;
+      }
+
+      .image-placeholder.error p:first-child {
+        font-size: var(--ddd-font-size-l);
+        margin-bottom: var(--ddd-spacing-2);
       }
 
       .photo-title {
@@ -704,14 +721,23 @@ export class PhotoCard extends DDDSuper(LitElement) {
       </div>
 
       <div class="image-container" @click="${this._showFullSize}">
-        ${this.loadImage && this.imageLoaded ? html`
-          <img 
-            class="main-image" 
-            src="${this.photoData.thumbnail}" 
-            alt="${this.photoData.name}"
-            loading="lazy"
-          />
-        ` : html`
+        ${this.loadImage && this.imageLoaded ? (
+          this.imageError ? html`
+            <div class="image-placeholder error">
+              <p>📷</p>
+              <p>Image temporarily unavailable</p>
+            </div>
+          ` : html`
+            <img 
+              class="main-image" 
+              src="${this.photoData.thumbnail}" 
+              alt="${this.photoData.name}"
+              loading="lazy"
+              @error="${this._handleImageError}"
+              @load="${this._handleImageLoad}"
+            />
+          `
+        ) : html`
           <div class="image-placeholder">Click to load image</div>
         `}
       </div>
@@ -796,6 +822,16 @@ export class PhotoCard extends DDDSuper(LitElement) {
         </div>
       ` : ''}
     `;
+  }
+
+  _handleImageError() {
+    this.imageError = true;
+    this.requestUpdate();
+  }
+
+  _handleImageLoad() {
+    this.imageError = false;
+    this.requestUpdate();
   }
 
   static get haxProperties() {
