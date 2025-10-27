@@ -1,0 +1,654 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "name": "Curious Red Fox",
+      "description": "A curious red fox captured in its natural habitat, showcasing the intelligence and beauty of these remarkable woodland creatures.",
+      "dateTaken": "2024-09-15T18:30:00Z",
+      "thumbnail": "https://randomfox.ca/images/1.jpg",
+      "fullSize": "https://randomfox.ca/images/1.jpg",
+      "author": {
+        "name": "Sarah Johnson",
+        "image": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=0D8ABC&color=fff&size=100",
+        "userSince": "2019-03-15"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Playful Fox Kit",
+      "description": "An adorable fox kit displaying playful behavior, demonstrating the charming nature of young foxes in the wild.",
+      "dateTaken": "2024-08-22T14:15:00Z",
+      "thumbnail": "https://randomfox.ca/images/2.jpg",
+      "fullSize": "https://randomfox.ca/images/2.jpg",
+      "author": {
+        "name": "Michael Chen",
+        "image": "https://ui-avatars.com/api/?name=Michael+Chen&background=f56565&color=fff&size=100",
+        "userSince": "2020-01-08"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Majestic Arctic Fox",
+      "description": "A majestic arctic fox with its pristine white coat, perfectly adapted to survive in harsh winter conditions.",
+      "dateTaken": "2024-07-11T09:45:00Z",
+      "thumbnail": "https://randomfox.ca/images/3.jpg",
+      "fullSize": "https://randomfox.ca/images/3.jpg",
+      "author": {
+        "name": "Isabella Martinez",
+        "image": "https://ui-avatars.com/api/?name=Isabella+Martinez&background=38a169&color=fff&size=100",
+        "userSince": "2018-11-20"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Sneaky Forest Fox",
+      "description": "A sneaky red fox peering through autumn foliage, displaying the cunning intelligence these animals are known for.",
+      "dateTaken": "2024-06-05T06:30:00Z",
+      "thumbnail": "https://randomfox.ca/images/4.jpg",
+      "fullSize": "https://randomfox.ca/images/4.jpg",
+      "author": {
+        "name": "Alexander Wilson",
+        "image": "https://ui-avatars.com/api/?name=Alexander+Wilson&background=9f7aea&color=fff&size=100",
+        "userSince": "2017-05-12"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Sleepy Fox Family",
+      "description": "A peaceful fox family resting together, showing the strong social bonds between fox parents and their kits.",
+      "dateTaken": "2024-05-18T11:20:00Z",
+      "thumbnail": "https://randomfox.ca/images/5.jpg",
+      "fullSize": "https://randomfox.ca/images/5.jpg",
+      "author": {
+        "name": "Samantha Thompson",
+        "image": "https://ui-avatars.com/api/?name=Samantha+Thompson&background=ed8936&color=fff&size=100",
+        "userSince": "2019-08-03"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Fluffy Winter Fox",
+      "description": "A fluffy winter fox with its thick seasonal coat, beautifully adapted for cold weather survival.",
+      "dateTaken": "2024-04-30T19:45:00Z",
+      "thumbnail": "https://randomfox.ca/images/6.jpg",
+      "fullSize": "https://randomfox.ca/images/6.jpg",
+      "author": {
+        "name": "Benjamin Davis",
+        "image": "https://ui-avatars.com/api/?name=Benjamin+Davis&background=38b2ac&color=fff&size=100",
+        "userSince": "2020-11-14"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Alert Mountain Fox",
+      "description": "An alert mountain fox scanning its territory, demonstrating the vigilant nature of these adaptable predators.",
+      "dateTaken": "2024-03-20T16:10:00Z",
+      "thumbnail": "https://randomfox.ca/images/7.jpg",
+      "fullSize": "https://randomfox.ca/images/7.jpg",
+      "author": {
+        "name": "Katherine Rodriguez",
+        "image": "https://ui-avatars.com/api/?name=Katherine+Rodriguez&background=d53f8c&color=fff&size=100",
+        "userSince": "2020-04-25"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Hunting Fox",
+      "description": "A focused fox in hunting mode, ears perked and ready to pounce on unsuspecting prey in the underbrush.",
+      "dateTaken": "2024-02-28T13:15:00Z",
+      "thumbnail": "https://randomfox.ca/images/8.jpg",
+      "fullSize": "https://randomfox.ca/images/8.jpg",
+      "author": {
+        "name": "Christopher Anderson",
+        "image": "https://ui-avatars.com/api/?name=Christopher+Anderson&background=3182ce&color=fff&size=100",
+        "userSince": "2018-09-17"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Graceful Red Fox",
+      "description": "A graceful red fox moving through tall grass, showcasing the elegant movements of these beautiful creatures.",
+      "dateTaken": "2024-01-14T08:30:00Z",
+      "thumbnail": "https://randomfox.ca/images/9.jpg",
+      "fullSize": "https://randomfox.ca/images/9.jpg",
+      "author": {
+        "name": "Jessica Parker",
+        "image": "https://ui-avatars.com/api/?name=Jessica+Parker&background=805ad5&color=fff&size=100",
+        "userSince": "2019-12-08"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Curious Fox Pup",
+      "description": "A curious fox pup exploring its surroundings, displaying the natural inquisitiveness of young foxes.",
+      "dateTaken": "2023-12-03T15:45:00Z",
+      "thumbnail": "https://randomfox.ca/images/10.jpg",
+      "fullSize": "https://randomfox.ca/images/10.jpg",
+      "author": {
+        "name": "Robert Brown",
+        "image": "https://ui-avatars.com/api/?name=Robert+Brown&background=e53e3e&color=fff&size=100",
+        "userSince": "2018-06-22"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Regal Forest Fox",
+      "description": "A regal fox standing proudly in an autumn forest, embodying the wild majesty of these intelligent animals.",
+      "dateTaken": "2023-11-18T12:20:00Z",
+      "thumbnail": "https://randomfox.ca/images/11.jpg",
+      "fullSize": "https://randomfox.ca/images/11.jpg",
+      "author": {
+        "name": "Amanda Williams",
+        "image": "https://ui-avatars.com/api/?name=Amanda+Williams&background=319795&color=fff&size=100",
+        "userSince": "2020-02-16"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Playful Young Fox",
+      "description": "A playful young fox caught mid-leap, displaying the energetic and spirited nature of juvenile foxes.",
+      "dateTaken": "2023-10-07T17:30:00Z",
+      "thumbnail": "https://randomfox.ca/images/12.jpg",
+      "fullSize": "https://randomfox.ca/images/12.jpg",
+      "author": {
+        "name": "Nicholas Taylor",
+        "image": "https://ui-avatars.com/api/?name=Nicholas+Taylor&background=dd6b20&color=fff&size=100",
+        "userSince": "2019-04-11"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Contemplative Fox",
+      "description": "A contemplative fox sitting quietly, showing the thoughtful and observant side of these intelligent creatures.",
+      "dateTaken": "2023-09-25T09:15:00Z",
+      "thumbnail": "https://randomfox.ca/images/13.jpg",
+      "fullSize": "https://randomfox.ca/images/13.jpg",
+      "author": {
+        "name": "Stephanie Moore",
+        "image": "https://ui-avatars.com/api/?name=Stephanie+Moore&background=0987a0&color=fff&size=100",
+        "userSince": "2020-07-30"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Swift Desert Fox",
+      "description": "A swift desert fox navigating sandy terrain, perfectly adapted to life in arid environments.",
+      "dateTaken": "2023-08-12T14:40:00Z",
+      "thumbnail": "https://randomfox.ca/images/14.jpg",
+      "fullSize": "https://randomfox.ca/images/14.jpg",
+      "author": {
+        "name": "Daniel Harris",
+        "image": "https://ui-avatars.com/api/?name=Daniel+Harris&background=9c4221&color=fff&size=100",
+        "userSince": "2018-10-05"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Elegant Silver Fox",
+      "description": "An elegant silver fox with its distinctive coat coloration, representing the beautiful genetic diversity of fox species.",
+      "dateTaken": "2023-07-28T11:55:00Z",
+      "thumbnail": "https://randomfox.ca/images/15.jpg",
+      "fullSize": "https://randomfox.ca/images/15.jpg",
+      "author": {
+        "name": "Michelle Clark",
+        "image": "https://ui-avatars.com/api/?name=Michelle+Clark&background=2a69ac&color=fff&size=100",
+        "userSince": "2019-01-20"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Brave Kit Fox",
+      "description": "A brave kit fox venturing out on its own, learning essential survival skills in the wild.",
+      "dateTaken": "2023-06-14T16:25:00Z",
+      "thumbnail": "https://randomfox.ca/images/16.jpg",
+      "fullSize": "https://randomfox.ca/images/16.jpg",
+      "author": {
+        "name": "Ryan Lewis",
+        "image": "https://ui-avatars.com/api/?name=Ryan+Lewis&background=b83280&color=fff&size=100",
+        "userSince": "2020-03-28"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Majestic Red Fox",
+      "description": "A majestic red fox in its prime, displaying the full beauty and power of these remarkable predators.",
+      "dateTaken": "2023-05-02T18:10:00Z",
+      "thumbnail": "https://randomfox.ca/images/17.jpg",
+      "fullSize": "https://randomfox.ca/images/17.jpg",
+      "author": {
+        "name": "Lauren Walker",
+        "image": "https://ui-avatars.com/api/?name=Lauren+Walker&background=276749&color=fff&size=100",
+        "userSince": "2018-08-13"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Cautious Urban Fox",
+      "description": "A cautious urban fox adapting to city life, showing how these intelligent animals survive in human environments.",
+      "dateTaken": "2023-04-19T07:35:00Z",
+      "thumbnail": "https://randomfox.ca/images/18.jpg",
+      "fullSize": "https://randomfox.ca/images/18.jpg",
+      "author": {
+        "name": "Kevin Hall",
+        "image": "https://ui-avatars.com/api/?name=Kevin+Hall&background=744210&color=fff&size=100",
+        "userSince": "2019-09-24"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Peaceful Woodland Fox",
+      "description": "A peaceful woodland fox resting in dappled sunlight, perfectly at home in its natural forest habitat.",
+      "dateTaken": "2023-03-08T13:50:00Z",
+      "thumbnail": "https://randomfox.ca/images/19.jpg",
+      "fullSize": "https://randomfox.ca/images/19.jpg",
+      "author": {
+        "name": "Brittany Young",
+        "image": "https://ui-avatars.com/api/?name=Brittany+Young&background=553c9a&color=fff&size=100",
+        "userSince": "2020-05-15"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Alert Arctic Fox",
+      "description": "An alert arctic fox with its winter coat, demonstrating incredible adaptation to extreme cold climates.",
+      "dateTaken": "2023-02-22T10:15:00Z",
+      "thumbnail": "https://randomfox.ca/images/20.jpg",
+      "fullSize": "https://randomfox.ca/images/20.jpg",
+      "author": {
+        "name": "Jonathan King",
+        "image": "https://ui-avatars.com/api/?name=Jonathan+King&background=c53030&color=fff&size=100",
+        "userSince": "2018-12-07"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Nimble Mountain Fox",
+      "description": "A nimble mountain fox navigating rocky terrain, showcasing the agility and sure-footedness of these adaptable creatures.",
+      "dateTaken": "2023-01-10T15:40:00Z",
+      "thumbnail": "https://randomfox.ca/images/21.jpg",
+      "fullSize": "https://randomfox.ca/images/21.jpg",
+      "author": {
+        "name": "Megan Wright",
+        "image": "https://ui-avatars.com/api/?name=Megan+Wright&background=1a7f37&color=fff&size=100",
+        "userSince": "2019-06-29"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Wise Old Fox",
+      "description": "A wise old fox with graying fur, representing the experience and knowledge that comes with surviving in the wild.",
+      "dateTaken": "2022-12-26T12:05:00Z",
+      "thumbnail": "https://randomfox.ca/images/22.jpg",
+      "fullSize": "https://randomfox.ca/images/22.jpg",
+      "author": {
+        "name": "Gregory Green",
+        "image": "https://ui-avatars.com/api/?name=Gregory+Green&background=0369a1&color=fff&size=100",
+        "userSince": "2017-11-18"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Energetic Fox Siblings",
+      "description": "Energetic fox siblings playing together, demonstrating the strong family bonds and social nature of young foxes.",
+      "dateTaken": "2022-11-14T09:30:00Z",
+      "thumbnail": "https://randomfox.ca/images/23.jpg",
+      "fullSize": "https://randomfox.ca/images/23.jpg",
+      "author": {
+        "name": "Rachel Adams",
+        "image": "https://ui-avatars.com/api/?name=Rachel+Adams&background=c2410c&color=fff&size=100",
+        "userSince": "2020-01-31"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Solitary Prairie Fox",
+      "description": "A solitary prairie fox surveying vast grasslands, embodying the independent spirit of these territorial animals.",
+      "dateTaken": "2022-10-03T17:20:00Z",
+      "thumbnail": "https://randomfox.ca/images/24.jpg",
+      "fullSize": "https://randomfox.ca/images/24.jpg",
+      "author": {
+        "name": "Tyler Baker",
+        "image": "https://ui-avatars.com/api/?name=Tyler+Baker&background=7c2d12&color=fff&size=100",
+        "userSince": "2018-04-16"
+      }
+    },
+    {
+      "id": 25,
+      "name": "Protective Mother Fox",
+      "description": "A protective mother fox watching over her den, displaying the fierce maternal instincts of female foxes.",
+      "dateTaken": "2022-08-21T14:45:00Z",
+      "thumbnail": "https://randomfox.ca/images/25.jpg",
+      "fullSize": "https://randomfox.ca/images/25.jpg",
+      "author": {
+        "name": "Cynthia Nelson",
+        "image": "https://ui-avatars.com/api/?name=Cynthia+Nelson&background=9333ea&color=fff&size=100",
+        "userSince": "2019-07-08"
+      }
+    },
+    {
+      "id": 26,
+      "name": "Stealthy Night Fox",
+      "description": "A stealthy fox moving through moonlit terrain, showcasing their nocturnal hunting abilities and adaptation to darkness.",
+      "dateTaken": "2022-07-09T21:15:00Z",
+      "thumbnail": "https://randomfox.ca/images/26.jpg",
+      "fullSize": "https://randomfox.ca/images/26.jpg",
+      "author": {
+        "name": "Marcus Carter",
+        "image": "https://ui-avatars.com/api/?name=Marcus+Carter&background=059669&color=fff&size=100",
+        "userSince": "2020-08-12"
+      }
+    },
+    {
+      "id": 27,
+      "name": "Curious Coastal Fox",
+      "description": "A curious coastal fox exploring tidal pools, demonstrating the adaptability of foxes to marine environments.",
+      "dateTaken": "2022-05-27T06:50:00Z",
+      "thumbnail": "https://randomfox.ca/images/27.jpg",
+      "fullSize": "https://randomfox.ca/images/27.jpg",
+      "author": {
+        "name": "Heather Mitchell",
+        "image": "https://ui-avatars.com/api/?name=Heather+Mitchell&background=dc2626&color=fff&size=100",
+        "userSince": "2018-01-25"
+      }
+    },
+    {
+      "id": 28,
+      "name": "Agile Tree Fox",
+      "description": "An agile fox demonstrating surprising climbing abilities, showing how these animals utilize all levels of their habitat.",
+      "dateTaken": "2022-04-15T11:25:00Z",
+      "thumbnail": "https://randomfox.ca/images/28.jpg",
+      "fullSize": "https://randomfox.ca/images/28.jpg",
+      "author": {
+        "name": "Andrew Perez",
+        "image": "https://ui-avatars.com/api/?name=Andrew+Perez&background=0891b2&color=fff&size=100",
+        "userSince": "2019-10-14"
+      }
+    },
+    {
+      "id": 29,
+      "name": "Resilient Snow Fox",
+      "description": "A resilient fox thriving in snowy conditions, showcasing the remarkable cold-weather adaptations of these hardy animals.",
+      "dateTaken": "2022-03-02T08:10:00Z",
+      "thumbnail": "https://randomfox.ca/images/29.jpg",
+      "fullSize": "https://randomfox.ca/images/29.jpg",
+      "author": {
+        "name": "Victoria Roberts",
+        "image": "https://ui-avatars.com/api/?name=Victoria+Roberts&background=7c3aed&color=fff&size=100",
+        "userSince": "2020-12-03"
+      }
+    },
+    {
+      "id": 30,
+      "name": "Elegant Fennec Fox",
+      "description": "An elegant fennec fox with its characteristic large ears, perfectly adapted for desert life and heat regulation.",
+      "dateTaken": "2022-01-19T16:35:00Z",
+      "thumbnail": "https://randomfox.ca/images/30.jpg",
+      "fullSize": "https://randomfox.ca/images/30.jpg",
+      "author": {
+        "name": "Charles Turner",
+        "image": "https://ui-avatars.com/api/?name=Charles+Turner&background=ea580c&color=fff&size=100",
+        "userSince": "2017-09-21"
+      }
+    },
+    {
+      "id": 31,
+      "name": "Watchful Fox Parent",
+      "description": "A watchful fox parent keeping guard while kits play nearby, demonstrating the protective nature of fox families.",
+      "dateTaken": "2021-12-08T13:20:00Z",
+      "thumbnail": "https://randomfox.ca/images/31.jpg",
+      "fullSize": "https://randomfox.ca/images/31.jpg",
+      "author": {
+        "name": "Patricia Phillips",
+        "image": "https://ui-avatars.com/api/?name=Patricia+Phillips&background=16a34a&color=fff&size=100",
+        "userSince": "2018-11-30"
+      }
+    },
+    {
+      "id": 32,
+      "name": "Adventurous Young Fox",
+      "description": "An adventurous young fox exploring new territory, showing the bold curiosity that drives fox dispersal and exploration.",
+      "dateTaken": "2021-10-25T15:55:00Z",
+      "thumbnail": "https://randomfox.ca/images/32.jpg",
+      "fullSize": "https://randomfox.ca/images/32.jpg",
+      "author": {
+        "name": "Steven Campbell",
+        "image": "https://ui-avatars.com/api/?name=Steven+Campbell&background=2563eb&color=fff&size=100",
+        "userSince": "2019-05-17"
+      }
+    },
+    {
+      "id": 33,
+      "name": "Magnificent Arctic Hunter",
+      "description": "A magnificent arctic fox in hunting stance, displaying the predatory skills that allow these animals to survive harsh northern winters.",
+      "dateTaken": "2021-09-13T07:40:00Z",
+      "thumbnail": "https://randomfox.ca/images/33.jpg",
+      "fullSize": "https://randomfox.ca/images/33.jpg",
+      "author": {
+        "name": "Deborah Parker",
+        "image": "https://ui-avatars.com/api/?name=Deborah+Parker&background=dc2626&color=fff&size=100",
+        "userSince": "2020-06-09"
+      }
+    },
+    {
+      "id": 34,
+      "name": "Graceful Meadow Fox",
+      "description": "A graceful fox moving through wildflower meadows, creating a perfect harmony between predator and peaceful natural beauty.",
+      "dateTaken": "2021-08-01T18:25:00Z",
+      "thumbnail": "https://randomfox.ca/images/34.jpg",
+      "fullSize": "https://randomfox.ca/images/34.jpg",
+      "author": {
+        "name": "Matthew Evans",
+        "image": "https://ui-avatars.com/api/?name=Matthew+Evans&background=059669&color=fff&size=100",
+        "userSince": "2017-12-15"
+      }
+    },
+    {
+      "id": 35,
+      "name": "Alert Fox Sentinel",
+      "description": "An alert fox serving as sentinel for its family group, demonstrating the cooperative vigilance that helps fox families survive.",
+      "dateTaken": "2021-06-18T10:05:00Z",
+      "thumbnail": "https://randomfox.ca/images/35.jpg",
+      "fullSize": "https://randomfox.ca/images/35.jpg",
+      "author": {
+        "name": "Lisa White",
+        "image": "https://ui-avatars.com/api/?name=Lisa+White&background=7c2d12&color=fff&size=100",
+        "userSince": "2018-07-27"
+      }
+    },
+    {
+      "id": 36,
+      "name": "Cunning Red Fox",
+      "description": "A cunning red fox demonstrating the intelligence and problem-solving abilities that have made foxes legendary in folklore.",
+      "dateTaken": "2021-05-06T14:50:00Z",
+      "thumbnail": "https://randomfox.ca/images/36.jpg",
+      "fullSize": "https://randomfox.ca/images/36.jpg",
+      "author": {
+        "name": "David Harris",
+        "image": "https://ui-avatars.com/api/?name=David+Harris&background=1d4ed8&color=fff&size=100",
+        "userSince": "2019-02-11"
+      }
+    },
+    {
+      "id": 37,
+      "name": "Tranquil Forest Dweller",
+      "description": "A tranquil fox at rest in its forest home, embodying the peaceful coexistence between wild predators and their natural environment.",
+      "dateTaken": "2021-03-24T12:15:00Z",
+      "thumbnail": "https://randomfox.ca/images/37.jpg",
+      "fullSize": "https://randomfox.ca/images/37.jpg",
+      "author": {
+        "name": "Jennifer Martin",
+        "image": "https://ui-avatars.com/api/?name=Jennifer+Martin&background=9333ea&color=fff&size=100",
+        "userSince": "2020-09-04"
+      }
+    },
+    {
+      "id": 38,
+      "name": "Bold Urban Explorer",
+      "description": "A bold fox exploring urban environments, showcasing the remarkable adaptability that allows foxes to thrive alongside human development.",
+      "dateTaken": "2021-02-09T16:30:00Z",
+      "thumbnail": "https://randomfox.ca/images/38.jpg",
+      "fullSize": "https://randomfox.ca/images/38.jpg",
+      "author": {
+        "name": "Michael Thompson",
+        "image": "https://ui-avatars.com/api/?name=Michael+Thompson&background=0891b2&color=fff&size=100",
+        "userSince": "2017-10-28"
+      }
+    },
+    {
+      "id": 39,
+      "name": "Serene Winter Fox",
+      "description": "A serene fox perfectly adapted to winter conditions, displaying the beautiful seasonal coat changes that help foxes survive cold climates.",
+      "dateTaken": "2020-12-27T09:45:00Z",
+      "thumbnail": "https://randomfox.ca/images/39.jpg",
+      "fullSize": "https://randomfox.ca/images/39.jpg",
+      "author": {
+        "name": "Sarah Jackson",
+        "image": "https://ui-avatars.com/api/?name=Sarah+Jackson&background=be185d&color=fff&size=100",
+        "userSince": "2018-03-19"
+      }
+    },
+    {
+      "id": 40,
+      "name": "Intelligent Fox Hunter",
+      "description": "An intelligent fox demonstrating sophisticated hunting strategies, highlighting the complex cognitive abilities of these remarkable predators.",
+      "dateTaken": "2020-11-14T17:20:00Z",
+      "thumbnail": "https://randomfox.ca/images/40.jpg",
+      "fullSize": "https://randomfox.ca/images/40.jpg",
+      "author": {
+        "name": "James Lee",
+        "image": "https://ui-avatars.com/api/?name=James+Lee&background=16a34a&color=fff&size=100",
+        "userSince": "2019-08-26"
+      }
+    },
+    {
+      "id": 41,
+      "name": "Majestic Tundra Fox",
+      "description": "A majestic fox surveying the vast tundra landscape, embodying the wild freedom and natural majesty of arctic wildlife.",
+      "dateTaken": "2020-10-02T11:35:00Z",
+      "thumbnail": "https://randomfox.ca/images/41.jpg",
+      "fullSize": "https://randomfox.ca/images/41.jpg",
+      "author": {
+        "name": "Karen Rodriguez",
+        "image": "https://ui-avatars.com/api/?name=Karen+Rodriguez&background=ea580c&color=fff&size=100",
+        "userSince": "2020-04-12"
+      }
+    },
+    {
+      "id": 42,
+      "name": "Playful Fox Trio",
+      "description": "A playful trio of young foxes engaging in social play, demonstrating the important role of play behavior in fox development and bonding.",
+      "dateTaken": "2020-08-19T15:10:00Z",
+      "thumbnail": "https://randomfox.ca/images/42.jpg",
+      "fullSize": "https://randomfox.ca/images/42.jpg",
+      "author": {
+        "name": "Robert Lewis",
+        "image": "https://ui-avatars.com/api/?name=Robert+Lewis&background=7c3aed&color=fff&size=100",
+        "userSince": "2017-06-08"
+      }
+    },
+    {
+      "id": 43,
+      "name": "Cautious Den Guardian",
+      "description": "A cautious fox guarding its den entrance, showing the territorial and protective instincts that ensure fox family survival.",
+      "dateTaken": "2020-07-07T08:25:00Z",
+      "thumbnail": "https://randomfox.ca/images/43.jpg",
+      "fullSize": "https://randomfox.ca/images/43.jpg",
+      "author": {
+        "name": "Michelle Walker",
+        "image": "https://ui-avatars.com/api/?name=Michelle+Walker&background=dc2626&color=fff&size=100",
+        "userSince": "2018-09-23"
+      }
+    },
+    {
+      "id": 44,
+      "name": "Swift Grassland Runner",
+      "description": "A swift fox racing across open grasslands, demonstrating the speed and agility that makes foxes successful hunters and escape artists.",
+      "dateTaken": "2020-05-25T13:55:00Z",
+      "thumbnail": "https://randomfox.ca/images/44.jpg",
+      "fullSize": "https://randomfox.ca/images/44.jpg",
+      "author": {
+        "name": "Christopher Hall",
+        "image": "https://ui-avatars.com/api/?name=Christopher+Hall&background=059669&color=fff&size=100",
+        "userSince": "2019-11-16"
+      }
+    },
+    {
+      "id": 45,
+      "name": "Wise Forest Elder",
+      "description": "An old, wise fox resting peacefully in ancient woodland, representing the accumulated wisdom and experience of a long life in the wild.",
+      "dateTaken": "2020-04-12T19:40:00Z",
+      "thumbnail": "https://randomfox.ca/images/45.jpg",
+      "fullSize": "https://randomfox.ca/images/45.jpg",
+      "author": {
+        "name": "Patricia Allen",
+        "image": "https://ui-avatars.com/api/?name=Patricia+Allen&background=1d4ed8&color=fff&size=100",
+        "userSince": "2020-01-07"
+      }
+    },
+    {
+      "id": 46,
+      "name": "Adaptable Suburban Fox",
+      "description": "An adaptable fox thriving in suburban environments, showcasing the remarkable flexibility that allows foxes to coexist with human communities.",
+      "dateTaken": "2020-02-28T12:30:00Z",
+      "thumbnail": "https://randomfox.ca/images/46.jpg",
+      "fullSize": "https://randomfox.ca/images/46.jpg",
+      "author": {
+        "name": "Daniel Young",
+        "image": "https://ui-avatars.com/api/?name=Daniel+Young&background=7c2d12&color=fff&size=100",
+        "userSince": "2017-08-14"
+      }
+    },
+    {
+      "id": 47,
+      "name": "Elegant Riverside Fox",
+      "description": "An elegant fox drinking from a clear mountain stream, capturing a moment of natural grace and the importance of water sources in fox habitat.",
+      "dateTaken": "2020-01-15T16:05:00Z",
+      "thumbnail": "https://randomfox.ca/images/47.jpg",
+      "fullSize": "https://randomfox.ca/images/47.jpg",
+      "author": {
+        "name": "Amanda King",
+        "image": "https://ui-avatars.com/api/?name=Amanda+King&background=9333ea&color=fff&size=100",
+        "userSince": "2018-05-29"
+      }
+    },
+    {
+      "id": 48,
+      "name": "Determined Mountain Climber",
+      "description": "A determined fox navigating steep mountain terrain, displaying the remarkable adaptability and persistence of these resilient animals.",
+      "dateTaken": "2019-12-03T10:50:00Z",
+      "thumbnail": "https://randomfox.ca/images/48.jpg",
+      "fullSize": "https://randomfox.ca/images/48.jpg",
+      "author": {
+        "name": "Timothy Wright",
+        "image": "https://ui-avatars.com/api/?name=Timothy+Wright&background=be185d&color=fff&size=100",
+        "userSince": "2018-12-16"
+      }
+    },
+    {
+      "id": 49,
+      "name": "Sunset Fox Silhouette",
+      "description": "A beautiful fox silhouette against a golden sunset, creating an artistic representation of wild beauty and natural harmony.",
+      "dateTaken": "2019-10-21T18:15:00Z",
+      "thumbnail": "https://randomfox.ca/images/49.jpg",
+      "fullSize": "https://randomfox.ca/images/49.jpg",
+      "author": {
+        "name": "Christina Johnson",
+        "image": "https://ui-avatars.com/api/?name=Christina+Johnson&background=16a34a&color=fff&size=100",
+        "userSince": "2019-11-02"
+      }
+    },
+    {
+      "id": 50,
+      "name": "Golden Plains Wanderer",
+      "description": "A golden fox wandering across endless plains, embodying the spirit of freedom and the untamed beauty of wild landscapes.",
+      "dateTaken": "2019-09-08T14:25:00Z",
+      "thumbnail": "https://randomfox.ca/images/50.jpg",
+      "fullSize": "https://randomfox.ca/images/50.jpg",
+      "author": {
+        "name": "Joshua Wilson",
+        "image": "https://ui-avatars.com/api/?name=Joshua+Wilson&background=ea580c&color=fff&size=100",
+        "userSince": "2020-06-18"
+      }
+    }
+  ]
+}

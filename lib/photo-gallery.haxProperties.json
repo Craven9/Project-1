@@ -1,0 +1,55 @@
+{
+  "canScale": true,
+  "canPosition": true,
+  "canEditSource": false,
+  "gizmo": {
+    "title": "Photo Gallery",
+    "description": "Responsive photo gallery with lazy loading, multiple view modes, and dark theme support",
+    "icon": "icons:photo-library",
+    "color": "purple",
+    "meta": {
+      "author": "Craven9",
+      "owner": "Craven9"
+    },
+    "tags": ["gallery", "photos", "responsive", "lazy-loading", "social"]
+  },
+  "settings": {
+    "configure": [
+      {
+        "property": "apiEndpoint",
+        "description": "URL endpoint for photo data JSON",
+        "inputMethod": "textfield",
+        "value": "./data/gallery-api.json"
+      },
+      {
+        "property": "itemsPerPage",
+        "description": "Number of photos to load per page",
+        "inputMethod": "number",
+        "min": 6,
+        "max": 24,
+        "value": 12
+      },
+      {
+        "property": "viewMode",
+        "description": "Default view mode for the gallery",
+        "inputMethod": "select",
+        "options": {
+          "grid": "Grid View",
+          "wall": "Wall View", 
+          "slide": "Slide View"
+        },
+        "value": "grid"
+      },
+      {
+        "property": "darkMode",
+        "description": "Enable dark mode by default",
+        "inputMethod": "boolean",
+        "value": false
+      }
+    ],
+    "advanced": []
+  },
+  "saveOptions": {
+    "unsetAttributes": ["photos", "displayedPhotos", "currentPage", "loading", "error"]
+  }
+}

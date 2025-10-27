@@ -1,0 +1,34 @@
+{
+  "canScale": true,
+  "canPosition": true,
+  "canEditSource": false,
+  "gizmo": {
+    "title": "Photo Card",
+    "description": "Instagram-like photo card with like/dislike and sharing functionality",
+    "icon": "icons:photo",
+    "color": "blue",
+    "meta": {
+      "author": "Craven9",
+      "owner": "Craven9"
+    },
+    "tags": ["photo", "social", "gallery", "card"]
+  },
+  "settings": {
+    "configure": [
+      {
+        "property": "photoData",
+        "description": "Photo data object containing image and author information",
+        "inputMethod": "object"
+      },
+      {
+        "property": "loadImage", 
+        "description": "Whether to load the image immediately",
+        "inputMethod": "boolean"
+      }
+    ],
+    "advanced": []
+  },
+  "saveOptions": {
+    "unsetAttributes": ["isLiked", "isDisliked", "likesCount", "showFullSize", "imageLoaded"]
+  }
+}
