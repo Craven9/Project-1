@@ -1,311 +1,17 @@
 export default async function handler(request, res) {
   try {
-    const foxData = {
-      "photos": [
-        {
-          "id": 1,
-          "name": "Sleeping Fox",
-          "likes": 342,
-          "featured": true,
-          "tags": ["wildlife", "nature", "fox"],
-          "author": {
-            "first": "Sarah",
-            "last": "Johnson"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/1.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/flicker/1",
-              "label": "View on Flickr"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/sarah",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "A sleeping fox captured in its natural habitat, showcasing the peaceful side of these remarkable woodland creatures.",
-          "dateTaken": "2015-09-15T18:30:00Z",
-          "thumbnail": "https://randomfox.ca/images/1.jpg",
-          "fullSize": "https://randomfox.ca/images/1.jpg"
-        },
-        {
-          "id": 2,
-          "name": "Playful Fox Kit",
-          "likes": 567,
-          "featured": false,
-          "tags": ["kit", "young", "playful"],
-          "author": {
-            "first": "Michael",
-            "last": "Chen"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/2.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/gallery/kits",
-              "label": "More Fox Kits"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/michael",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "An adorable fox kit displaying playful behavior, demonstrating the charming nature of young foxes in the wild.",
-          "dateTaken": "2020-08-22T14:15:00Z",
-          "thumbnail": "https://randomfox.ca/images/2.jpg",
-          "fullSize": "https://randomfox.ca/images/2.jpg"
-        },
-        {
-          "id": 3,
-          "name": "Dad and Son",
-          "likes": 1024,
-          "featured": true,
-          "tags": ["family", "heartwarming", "bond"],
-          "author": {
-            "first": "Isabella",
-            "last": "Martinez"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/3.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/series/family-bonds",
-              "label": "Family Bonds Series"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/isabella",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "A heartwarming moment between a father fox and his young son. The father stands proudly and calm, while the curious little one looks up to him with admiration, gently nuzzling his nose.",
-          "dateTaken": "2022-07-11T09:45:00Z",
-          "thumbnail": "https://randomfox.ca/images/3.jpg",
-          "fullSize": "https://randomfox.ca/images/3.jpg"
-        },
-        {
-          "id": 4,
-          "name": "Best Buds",
-          "likes": 856,
-          "featured": true,
-          "tags": ["friendship", "young", "bond"],
-          "author": {
-            "first": "Alexander",
-            "last": "Wilson"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/4.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/series/friendship",
-              "label": "Friendship Series"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/alexander",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "These two young foxes, nestled closely together, perfectly capture the spirit of friendship and trust found in nature. Their soft, golden-red fur blends beautifully with the forest background, and their bright, curious eyes reflect both intelligence and playfulness. The top fox gently rests its chin on the other's head, showing a quiet bond that suggests they've grown up exploring the woods side by side.",
-          "dateTaken": "2017-06-05T06:30:00Z",
-          "thumbnail": "https://randomfox.ca/images/4.jpg",
-          "fullSize": "https://randomfox.ca/images/4.jpg"
-        },
-        {
-          "id": 5,
-          "name": "Sleepy Fox Family",
-          "likes": 732,
-          "featured": false,
-          "tags": ["family", "peaceful", "bonds"],
-          "author": {
-            "first": "Samantha",
-            "last": "Thompson"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/5.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/series/family-life",
-              "label": "Family Life Series"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/samantha",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "A peaceful fox family resting together, showing the strong social bonds between fox parents and their kits.",
-          "dateTaken": "2017-05-18T11:20:00Z",
-          "thumbnail": "https://randomfox.ca/images/5.jpg",
-          "fullSize": "https://randomfox.ca/images/5.jpg"
-        },
-        {
-          "id": 6,
-          "name": "Gentle Meadow Fox",
-          "likes": 489,
-          "featured": true,
-          "tags": ["sunset", "meadow", "peaceful"],
-          "author": {
-            "first": "Benjamin",
-            "last": "Davis"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/6.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/series/sunset-wildlife",
-              "label": "Sunset Wildlife Series"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/benjamin",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "Bathed in the soft light of sunset, this fox turns its head with a calm, almost thoughtful expression. Its fur glows with warm orange and white tones, and the tall grass around it gives the scene a peaceful, late-day glow. The fox looks curious but relaxed, perfectly at home in the quiet meadow as it enjoys the final light of day.",
-          "dateTaken": "2019-04-30T19:45:00Z",
-          "thumbnail": "https://randomfox.ca/images/6.jpg",
-          "fullSize": "https://randomfox.ca/images/6.jpg"
-        },
-        {
-          "id": 7,
-          "name": "Curious Mountain Fox",
-          "likes": 623,
-          "featured": false,
-          "tags": ["curious", "mountain", "sunset"],
-          "author": {
-            "first": "Katherine",
-            "last": "Rodriguez"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/7.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/series/mountain-wildlife",
-              "label": "Mountain Wildlife Series"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/katherine",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "With ears up and eyes wide, this fox leans in close to the camera, its playful curiosity on full display. Behind it, the sun sets over rugged hills, casting a golden hue across the landscape. The image feels lively and spontaneous — a moment where the wild meets wonder, showing just how inquisitive and intelligent these creatures can be.",
-          "dateTaken": "2014-03-20T16:10:00Z",
-          "thumbnail": "https://randomfox.ca/images/7.jpg",
-          "fullSize": "https://randomfox.ca/images/7.jpg"
-        },
-        {
-          "id": 8,
-          "name": "Arctic Blue Fox",
-          "likes": 912,
-          "featured": true,
-          "tags": ["arctic", "snow", "winter"],
-          "author": {
-            "first": "Christopher",
-            "last": "Anderson"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/8.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/series/arctic-foxes",
-              "label": "Arctic Foxes Series"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/christopher",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "Half-buried in the snow, this stunning blue-tinted fox locks its gaze forward, alert and ready to pounce. Its fur blends beautifully with the icy surroundings, making it almost invisible in the winter landscape. The contrast of deep blue against white snow creates a mysterious, almost mythical presence — a predator perfectly adapted to its frozen world.",
-          "dateTaken": "2022-02-28T13:15:00Z",
-          "thumbnail": "https://randomfox.ca/images/8.jpg",
-          "fullSize": "https://randomfox.ca/images/8.jpg"
-        },
-        {
-          "id": 9,
-          "name": "Cheerful Meadow Fox",
-          "likes": 445,
-          "featured": false,
-          "tags": ["cheerful", "joy", "playful"],
-          "author": {
-            "first": "Jessica",
-            "last": "Parker"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/9.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/series/happy-foxes",
-              "label": "Happy Foxes Series"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/jessica",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "Caught mid-laugh, this fox radiates pure joy as sunlight dances across its vibrant orange fur. Surrounded by green grass, it seems to be enjoying the freedom and playfulness of the open field. Its bright expression and lively stance capture the lighthearted side of nature—a moment where happiness feels completely unguarded and real.",
-          "dateTaken": "2021-01-14T08:30:00Z",
-          "thumbnail": "https://randomfox.ca/images/9.jpg",
-          "fullSize": "https://randomfox.ca/images/9.jpg"
-        },
-        {
-          "id": 10,
-          "name": "Snow-Dusted Wanderer",
-          "likes": 587,
-          "featured": true,
-          "tags": ["winter", "wanderer", "snow"],
-          "author": {
-            "first": "Robert",
-            "last": "Brown"
-          },
-          "links": [
-            {
-              "link": "https://randomfox.ca/images/10.jpg",
-              "label": "View Full Size"
-            },
-            {
-              "link": "https://randomfox.ca/series/winter-foxes",
-              "label": "Winter Foxes Series"
-            },
-            {
-              "link": "https://randomfox.ca/photographer/robert",
-              "label": "Photographer Profile"
-            }
-          ],
-          "description": "Trekking through a gentle snowfall, this fox's coat glistens with delicate white flakes. Its focused gaze and steady stride show quiet determination, perfectly suited for the chill of winter. The soft blur of falling snow gives the image a calm, almost cinematic beauty, as if time has slowed to honor this lone traveler's resilience.",
-          "dateTaken": "2012-12-03T15:45:00Z",
-          "thumbnail": "https://randomfox.ca/images/10.jpg",
-          "fullSize": "https://randomfox.ca/images/10.jpg"
-        }
-      ]
-    };
+    const foxData = { "photos": [] };
 
-    for (let i = 11; i <= 50; i++) {
-      const authorName = generateAuthorName();
+    for (let i = 1; i <= 50; i++) {
       foxData.photos.push({
         "id": i,
-        "name": `Fox Photo ${i}`,
-        "likes": Math.floor(Math.random() * 1000) + 50,
-        "featured": Math.random() > 0.7,
-        "tags": generateTags(),
+        "name": getNameForId(i),
+        "likes": getLikesForId(i),
+        "featured": getFeaturedForId(i),
+        "tags": getTagsForId(i),
         "author": {
-          "first": authorName.split(' ')[0],
-          "last": authorName.split(' ')[1] || "Unknown"
+          "first": getAuthorForId(i).split(' ')[0],
+          "last": getAuthorForId(i).split(' ')[1]
         },
         "links": [
           {
@@ -317,12 +23,12 @@ export default async function handler(request, res) {
             "label": "Photo Details"
           },
           {
-            "link": `https://randomfox.ca/photographer/${authorName.toLowerCase().replace(' ', '-')}`,
+            "link": `https://randomfox.ca/photographer/${getAuthorForId(i).toLowerCase().replace(' ', '-')}`,
             "label": "Photographer Profile"
           }
         ],
-        "description": `A beautiful fox photo captured in the wild. This stunning image showcases the natural beauty and grace of foxes in their habitat.`,
-        "dateTaken": new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000).toISOString(),
+        "description": getDescriptionForId(i),
+        "dateTaken": getDateForId(i),
         "thumbnail": `https://randomfox.ca/images/${i}.jpg`,
         "fullSize": `https://randomfox.ca/images/${i}.jpg`
       });
@@ -342,24 +48,136 @@ export default async function handler(request, res) {
   }
 }
 
-function generateAuthorName() {
-  const names = [
+function getAuthorForId(id) {
+  const authors = [
+    'Sarah Johnson', 'Michael Chen', 'Isabella Martinez', 'Alexander Wilson', 'Samantha Thompson',
+    'Benjamin Davis', 'Katherine Rodriguez', 'Christopher Anderson', 'Jessica Parker', 'Robert Brown',
     'Amanda Williams', 'Nicholas Taylor', 'Stephanie Moore', 'Daniel Harris', 'Michelle Clark',
     'Ryan Lewis', 'Lauren Walker', 'Kevin Hall', 'Brittany Young', 'Jonathan King',
     'Megan Wright', 'Gregory Green', 'Rachel Adams', 'Tyler Baker', 'Cynthia Nelson',
-    'Marcus Carter', 'Heather Mitchell', 'Andrew Perez', 'Victoria Roberts', 'Charles Turner'
+    'Marcus Carter', 'Heather Mitchell', 'Andrew Perez', 'Victoria Roberts', 'Charles Turner',
+    'Emily Johnson', 'David Wilson', 'Ashley Martinez', 'Brian Anderson', 'Jennifer Thompson',
+    'Matthew Garcia', 'Sarah Rodriguez', 'Joshua Lewis', 'Amanda Lee', 'Christopher Walker',
+    'Nicole Hall', 'Anthony Allen', 'Kimberly Young', 'Mark Wright', 'Lisa Lopez',
+    'Steven Hill', 'Karen Scott', 'Paul Green', 'Nancy Adams', 'Daniel Baker'
   ];
-  return names[Math.floor(Math.random() * names.length)];
+  return authors[(id - 1) % authors.length];
 }
 
-function generateTags() {
-  const allTags = [
-    'wildlife', 'nature', 'fox', 'forest', 'cute', 'wild', 'animal', 'red-fox', 
-    'photography', 'outdoors', 'mammals', 'furry', 'beautiful', 'natural', 'hunting',
-    'sleeping', 'playful', 'family', 'kit', 'adult', 'winter', 'snow', 'autumn'
+function getNameForId(id) {
+  const names = [
+    'Sleeping Fox', 'Playful Fox Kit', 'Dad and Son', 'Best Buds', 'Sleepy Fox Family',
+    'Gentle Meadow Fox', 'Curious Mountain Fox', 'Arctic Blue Fox', 'Cheerful Meadow Fox', 'Snow-Dusted Wanderer',
+    'Forest Explorer', 'Morning Hunt', 'Autumn Colors', 'Stargazing Fox', 'Spring Awakening',
+    'Woodland Wanderer', 'Sunset Silhouette', 'Winter Portrait', 'Summer Breeze', 'Mountain Climber',
+    'Valley Runner', 'Creek Drinker', 'Field Hunter', 'Tree Climber', 'Rock Hopper',
+    'Grass Dancer', 'Flower Sniffer', 'Moon Gazer', 'Sun Bather', 'Wind Chaser',
+    'Rain Walker', 'Snow Player', 'Ice Skater', 'Mud Roller', 'Sand Digger',
+    'Leaf Jumper', 'Stick Carrier', 'Berry Picker', 'Fish Catcher', 'Bird Watcher',
+    'Butterfly Chaser', 'Bee Follower', 'Rabbit Hunter', 'Mouse Stalker', 'Squirrel Teaser',
+    'Owl Listener', 'Eagle Spotter', 'Hawk Evader', 'Deer Friend', 'Bear Avoider'
   ];
-  
-  const numTags = Math.floor(Math.random() * 3) + 2;
-  const shuffled = allTags.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, numTags);
+  return names[(id - 1) % names.length];
+}
+
+function getLikesForId(id) {
+  const likes = [
+    342, 567, 1024, 856, 732, 489, 623, 912, 445, 587,
+    234, 456, 789, 321, 654, 298, 167, 543, 876, 345,
+    678, 234, 567, 890, 123, 456, 789, 102, 345, 678,
+    901, 234, 567, 890, 123, 456, 789, 102, 345, 678,
+    901, 234, 567, 890, 123, 456, 789, 102, 345, 678
+  ];
+  return likes[(id - 1) % likes.length];
+}
+
+function getFeaturedForId(id) {
+  const featured = [
+    true, false, true, true, false, true, false, true, false, true,
+    false, true, false, true, false, false, true, false, true, false,
+    true, false, false, true, false, true, false, true, true, false,
+    false, true, false, false, true, false, true, false, true, false,
+    false, true, false, true, false, false, true, false, true, false
+  ];
+  return featured[(id - 1) % featured.length];
+}
+
+function getTagsForId(id) {
+  const tagSets = [
+    ['wildlife', 'nature', 'fox'],
+    ['kit', 'young', 'playful'],
+    ['family', 'heartwarming', 'bond'],
+    ['friendship', 'young', 'bond'],
+    ['family', 'peaceful', 'bonds'],
+    ['sunset', 'meadow', 'peaceful'],
+    ['curious', 'mountain', 'sunset'],
+    ['arctic', 'snow', 'winter'],
+    ['cheerful', 'joy', 'playful'],
+    ['winter', 'wanderer', 'snow'],
+    ['forest', 'explorer', 'wildlife'],
+    ['morning', 'hunt', 'focused'],
+    ['autumn', 'colors', 'seasonal'],
+    ['night', 'stars', 'peaceful'],
+    ['spring', 'flowers', 'renewal'],
+    ['woodland', 'adventure', 'wild'],
+    ['sunset', 'silhouette', 'dramatic'],
+    ['winter', 'portrait', 'elegant'],
+    ['summer', 'breeze', 'warm'],
+    ['mountain', 'climber', 'agile'],
+    ['valley', 'runner', 'swift'],
+    ['creek', 'water', 'thirsty'],
+    ['field', 'hunter', 'stalking'],
+    ['tree', 'climber', 'athletic'],
+    ['rock', 'hopper', 'nimble'],
+    ['grass', 'dancer', 'graceful'],
+    ['flower', 'sniffer', 'curious'],
+    ['moon', 'gazer', 'nocturnal'],
+    ['sun', 'bather', 'relaxed'],
+    ['wind', 'chaser', 'energetic'],
+    ['rain', 'walker', 'resilient'],
+    ['snow', 'player', 'joyful']
+  ];
+  return tagSets[(id - 1) % tagSets.length];
+}
+
+function getDescriptionForId(id) {
+  const descriptions = [
+    'A sleeping fox captured in its natural habitat, showcasing the peaceful side of these remarkable woodland creatures.',
+    'An adorable fox kit displaying playful behavior, demonstrating the charming nature of young foxes in the wild.',
+    'A heartwarming moment between a father fox and his young son. The father stands proudly and calm, while the curious little one looks up to him with admiration, gently nuzzling his nose.',
+    'These two young foxes, nestled closely together, perfectly capture the spirit of friendship and trust found in nature.',
+    'A peaceful fox family resting together, showing the strong social bonds between fox parents and their kits.',
+    'Bathed in the soft light of sunset, this fox turns its head with a calm, almost thoughtful expression.',
+    'With ears up and eyes wide, this fox leans in close to the camera, its playful curiosity on full display.',
+    'Half-buried in the snow, this stunning blue-tinted fox locks its gaze forward, alert and ready to pounce.',
+    'Caught mid-laugh, this fox radiates pure joy as sunlight dances across its vibrant orange fur.',
+    'Trekking through a gentle snowfall, this fox\'s coat glistens with delicate white flakes.',
+    'A curious fox exploring the dense forest undergrowth, alert and ready for adventure.',
+    'A fox intently focused during its morning hunting routine, showcasing natural predatory instincts.',
+    'A beautiful fox surrounded by vibrant autumn foliage, perfectly camouflaged in nature\'s palette.',
+    'A contemplative fox under the starlit sky, captured in a moment of quiet reflection.',
+    'A young fox among blooming spring flowers, representing the renewal and joy of the season.',
+    'A magnificent fox displaying natural behavior in its woodland habitat.',
+    'Captured in a moment of pure wilderness beauty and grace.',
+    'This stunning photograph showcases the fox\'s alert and intelligent nature.',
+    'A beautiful representation of wildlife photography at its finest.',
+    'The perfect blend of natural lighting and wild animal photography.'
+  ];
+  return descriptions[(id - 1) % descriptions.length];
+}
+
+function getDateForId(id) {
+  const baseDates = [
+    '2015-09-15T18:30:00Z', '2020-08-22T14:15:00Z', '2022-07-11T09:45:00Z', '2017-06-05T06:30:00Z', '2017-05-18T11:20:00Z',
+    '2019-04-30T19:45:00Z', '2014-03-20T16:10:00Z', '2022-02-28T13:15:00Z', '2021-01-14T08:30:00Z', '2012-12-03T15:45:00Z',
+    '2021-09-15T14:22:00Z', '2020-06-08T07:15:00Z', '2019-10-23T16:45:00Z', '2021-12-14T22:30:00Z', '2020-04-18T11:20:00Z',
+    '2018-01-15T10:30:00Z', '2018-03-22T14:45:00Z', '2018-05-18T08:20:00Z', '2018-07-09T16:15:00Z', '2018-09-12T12:40:00Z',
+    '2018-11-25T09:55:00Z', '2019-02-14T13:25:00Z', '2019-04-30T11:10:00Z', '2019-06-17T15:35:00Z', '2019-08-28T07:50:00Z',
+    '2019-10-11T17:20:00Z', '2019-12-03T14:05:00Z', '2020-01-20T10:15:00Z', '2020-03-15T16:40:00Z', '2020-05-22T12:25:00Z',
+    '2020-07-18T08:55:00Z', '2020-09-30T13:10:00Z', '2020-11-14T15:45:00Z', '2021-01-08T11:30:00Z', '2021-03-25T09:20:00Z',
+    '2021-05-12T14:55:00Z', '2021-07-29T16:10:00Z', '2021-09-16T12:35:00Z', '2021-11-22T10:45:00Z', '2022-01-18T15:20:00Z',
+    '2022-03-14T13:40:00Z', '2022-05-26T11:15:00Z', '2022-07-11T17:25:00Z', '2022-09-08T09:50:00Z', '2022-11-19T14:30:00Z',
+    '2023-01-25T12:05:00Z', '2023-03-17T16:35:00Z', '2023-05-22T10:20:00Z', '2023-07-14T13:45:00Z', '2023-09-30T15:10:00Z'
+  ];
+  return baseDates[(id - 1) % baseDates.length];
 }
