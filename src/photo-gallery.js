@@ -7,9 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import "./photo-card.js";
 
 /**
- * `photo-gallery`
- * Main gallery component with lazy loading, pagination, and responsive grid layout
- * 
+ * photo-gallery
  * @element photo-gallery
  */
 export class PhotoGallery extends DDDSuper(LitElement) {
@@ -20,15 +18,14 @@ export class PhotoGallery extends DDDSuper(LitElement) {
 
   constructor() {
     super();
-    this.apiEndpoint = "./data/gallery-api.json";
+    this.apiEndpoint = "./data/foxes.js"; 
     this.photos = [];
     this.loading = false;
     this.error = null;
-    this.viewMode = 'grid'; // 'grid', 'slide'
+    this.viewMode = 'grid'; 
     this.intersectionObserver = null;
   }
 
-  // Lit reactive properties
   static get properties() {
     return {
       ...super.properties,
@@ -40,7 +37,6 @@ export class PhotoGallery extends DDDSuper(LitElement) {
     };
   }
 
-  // Lit scoped styles
   static get styles() {
     return [super.styles,
     css`
@@ -112,7 +108,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         margin: 0 auto;
       }
 
-      /* Grid View with CSS Masonry */
+      /* Grid View */
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -137,7 +133,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         }
       }
 
-      /* Slide View with Enhanced Scroll Snap */
+      /* Slide View */
       .gallery-slide {
         display: flex;
         overflow-x: auto;
@@ -265,6 +261,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
     this.error = null;
 
     try {
+      console.log('Fetching photos from:', this.apiEndpoint);
       const response = await fetch(this.apiEndpoint);
       if (!response.ok) {
         throw new Error(`Failed to load photos: ${response.status}`);
@@ -290,14 +287,11 @@ export class PhotoGallery extends DDDSuper(LitElement) {
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
     }
-
     this.intersectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.target.tagName === 'PHOTO-CARD') {
-            // Lazy load image when card becomes visible
             entry.target.loadImage = true;
-            // Stop observing this card once it's loaded
             this.intersectionObserver.unobserve(entry.target);
           }
         });
@@ -307,13 +301,10 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         threshold: 0.1
       }
     );
-
-    // Observe all photo cards
     this._observeAllCards();
   }
 
   _observeAllCards() {
-    // Observe all photo cards for lazy loading
     const photoCards = this.shadowRoot?.querySelectorAll('photo-card');
     photoCards?.forEach(card => {
       if (this.intersectionObserver && !card.loadImage) {
@@ -332,7 +323,6 @@ export class PhotoGallery extends DDDSuper(LitElement) {
   }
 
   firstUpdated() {
-    // Load saved view mode
     const savedViewMode = localStorage.getItem('gallery-view-mode');
     if (savedViewMode && ['grid', 'slide'].includes(savedViewMode)) {
       this.viewMode = savedViewMode;
@@ -375,26 +365,18 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       <div class="gallery-header">
         <div>
           <h1 class="gallery-title">Photo Gallery</h1>
-          <div class="photo-count">
-            Images load as you scroll
-          </div>
+          <div class="photo-count">${this.photos.length} photos</div>
         </div>
         
         <div class="gallery-controls">
           <button 
             class="view-toggle ${this.viewMode === 'grid' ? 'active' : ''}"
             @click="${() => this._changeViewMode('grid')}"
-            title="Grid view"
-          >
-            Grid View
-          </button>
+            title="Grid view">Grid View</button>
           <button 
             class="view-toggle ${this.viewMode === 'slide' ? 'active' : ''}"
             @click="${() => this._changeViewMode('slide')}"
-            title="Slide view"
-          >
-            Slide View
-          </button>
+            title="Slide view">Slide View</button>
         </div>
       </div>
 
@@ -404,9 +386,6 @@ export class PhotoGallery extends DDDSuper(LitElement) {
     `;
   }
 
-  /**
-   * haxProperties integration via file reference
-   */
   static get haxProperties() {
     return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
       .href;

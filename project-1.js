@@ -7,11 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "./src/photo-gallery.js";
 
-/**
- * `project-1`
- * Photo Gallery Application with Instagram-like photo cards, 
- * featuring lazy loading, dark mode, and social sharing
- * 
+/**Project-1
  * @demo index.html
  * @element project-1
  */
@@ -24,7 +20,7 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.title = "Project 1";
-    this.apiEndpoint = "./data/gallery-api.json";
+    this.apiEndpoint = this._getApiEndpoint();
     this.t = this.t || {};
     this.t = {
       ...this.t,
@@ -41,7 +37,16 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
     });
   }
 
-  // Lit reactive properties
+  _getApiEndpoint() {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log('Using local development endpoint: ./data/gallery-api.json');
+      return "./data/gallery-api.json";
+    } else {
+      console.log('Using production endpoint: /api/foxes');
+      return "/api/foxes";
+    }
+  }
+
   static get properties() {
     return {
       ...super.properties,
@@ -50,7 +55,6 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
     };
   }
 
-  // Lit scoped styles
   static get styles() {
     return [super.styles,
     css`
@@ -68,9 +72,7 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .app-header {
-        background: linear-gradient(135deg, 
-          var(--ddd-theme-default-accent) 0%, 
-          var(--ddd-theme-default-keystoneYellow) 100%);
+        background: #87CEEB;
         color: var(--ddd-theme-default-white);
         padding: var(--ddd-spacing-6) var(--ddd-spacing-4);
         text-align: center;
@@ -106,7 +108,6 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
     `];
   }
 
-  // Lit render the HTML
   render() {
     return html`
       <div class="app-header">
@@ -120,9 +121,6 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
 
-  /**
-   * haxProperties integration via file reference
-   */
   static get haxProperties() {
     return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
       .href;

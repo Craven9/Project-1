@@ -4,7 +4,6 @@
   "canEditSource": false,
   "gizmo": {
     "title": "Photo Gallery",
-    "description": "Responsive photo gallery with lazy loading, multiple view modes, and dark theme support",
     "icon": "icons:photo-library",
     "color": "purple",
     "meta": {
@@ -35,7 +34,6 @@
         "inputMethod": "select",
         "options": {
           "grid": "Grid View",
-          "wall": "Wall View", 
           "slide": "Slide View"
         },
         "value": "grid"

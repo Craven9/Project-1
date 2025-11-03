@@ -6,9 +6,7 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
- * `photo-card`
- * Instagram-like photo card component with like/dislike and sharing functionality
- * 
+ * photo-card
  * @element photo-card
  */
 export class PhotoCard extends DDDSuper(LitElement) {
@@ -23,17 +21,32 @@ export class PhotoCard extends DDDSuper(LitElement) {
     this.isLiked = false;
     this.isDisliked = false;
     this.likesCount = 0;
+    this.dislikesCount = 0;
     this.showFullSize = false;
     this.imageLoaded = false;
     this.loadImage = false;
     this.showDetails = false;
-    this.showComments = false;
-    this.commentText = '';
-    this.postedComments = [];
     this.imageError = false;
   }
 
-  // Lit reactive properties
+  _getAuthorName() {
+    if (this.photoData.author?.first && this.photoData.author?.last) {
+      return `${this.photoData.author.first} ${this.photoData.author.last}`;
+    } else if (this.photoData.author?.name) {
+      return this.photoData.author.name;
+    }
+    return 'Unknown Author';
+  }
+
+  _getAuthorImage() {
+
+    if (this.photoData.author?.image) {
+      return this.photoData.author.image;
+    } else {
+      const name = this._getAuthorName();
+      return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random&size=40`;
+    }
+  }
   static get properties() {
     return {
       ...super.properties,
@@ -41,18 +54,15 @@ export class PhotoCard extends DDDSuper(LitElement) {
       isLiked: { type: Boolean },
       isDisliked: { type: Boolean },
       likesCount: { type: Number },
+      dislikesCount: { type: Number },
       showFullSize: { type: Boolean },
       imageLoaded: { type: Boolean },
       loadImage: { type: Boolean },
       showDetails: { type: Boolean },
-      showComments: { type: Boolean },
-      commentText: { type: String },
-      postedComments: { type: Array },
       imageError: { type: Boolean }
     };
   }
 
-  // Lit scoped styles
   static get styles() {
     return [super.styles,
     css`
@@ -118,7 +128,6 @@ export class PhotoCard extends DDDSuper(LitElement) {
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
       }
 
       .main-image {
@@ -165,6 +174,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         padding: var(--ddd-spacing-3);
         border-top: var(--ddd-border-sm);
         border-color: var(--ddd-theme-default-limestoneGray);
+        gap: var(--ddd-spacing-3);
       }
 
       :host([data-dark-mode]) .card-actions {
@@ -236,39 +246,147 @@ export class PhotoCard extends DDDSuper(LitElement) {
         border-color: rgba(255, 193, 7, 0.4);
       }
 
-      .info-btn {
-        background-color: transparent;
+      /* Like Button Styles */
+      .heart-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--ddd-spacing-2);
+      }
+
+      .heart-container p {
+        margin: 0;
+        font-size: var(--ddd-font-size-xs);
         color: var(--ddd-theme-default-slateGray);
-        border: none;
-        padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
-        border-radius: var(--ddd-radius-sm);
+        text-align: center;
+      }
+
+      .heart-icon {
         cursor: pointer;
-        font-size: var(--ddd-font-size-m);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--ddd-spacing-2);
+        border-radius: var(--ddd-radius-sm);
         transition: all 0.2s ease;
       }
 
+      .heart-icon:hover {
+        background-color: rgba(255, 0, 0, 0.1);
+        transform: scale(1.1);
+      }
+
+      .heart-icon {
+        font-size: var(--ddd-font-size-xl);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--ddd-spacing-2);
+        border-radius: var(--ddd-radius-sm);
+        transition: all 0.2s ease;
+      }
+
+      .heart-icon.liked {
+        animation: pulse .4s ease;
+      }
+
+      .likes-count {
+        font-size: var(--ddd-font-size-s);
+        color: var(--ddd-theme-default-coalyGray);
+        font-weight: var(--ddd-font-weight-medium);
+      }
+
+      /* Dislike button */
+      .dislike-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--ddd-spacing-2);
+        margin-top: var(--ddd-spacing-4);
+      }
+
+      .dislikes-count {
+        font-size: var(--ddd-font-size-s);
+        color: var(--ddd-theme-default-coalyGray);
+        font-weight: var(--ddd-font-weight-medium);
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+      }
+
+      .btn {
+        cursor: pointer;
+        outline: 0;
+        background: none;
+        border: none;
+        padding: var(--ddd-spacing-2);
+        border-radius: var(--ddd-radius-sm);
+        transition: all 0.2s ease;
+        font-size: var(--ddd-font-size-l);
+        filter: grayscale(100%);
+      }
+
+      .btn:focus {
+        outline: none;
+      }
+
+      .dislike-btn:hover {
+        background-color: rgba(255, 0, 0, 0.1);
+        transform: scale(1.1);
+      }
+
+      .btn.red {
+        filter: none;
+        animation: pulse 0.3s ease;
+      }
+
+      .info-btn {
+        background-color: var(--ddd-theme-default-accent);
+        color: var(--ddd-theme-default-white);
+        border: none;
+        padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
+        border-radius: var(--ddd-radius-md);
+        cursor: pointer;
+        font-size: var(--ddd-font-size-s);
+        font-weight: var(--ddd-font-weight-medium);
+        text-transform: capitalize;
+        transition: all 0.3s ease;
+        box-shadow: var(--ddd-boxShadow-sm);
+        min-width: 80px;
+        text-align: center;
+        margin-right: var(--ddd-spacing-5);
+      }
+
       :host([data-dark-mode]) .info-btn {
-        color: var(--ddd-theme-default-limestoneGray);
+        background-color: var(--ddd-theme-default-accent);
+        color: var(--ddd-theme-default-white);
       }
 
       .info-btn:hover {
-        background-color: var(--ddd-theme-default-limestoneGray);
-        color: var(--ddd-theme-default-coalyGray);
+        background-color: var(--ddd-theme-default-keystoneYellow);
+        transform: translateY(-1px);
+        box-shadow: var(--ddd-boxShadow-md);
       }
 
       :host([data-dark-mode]) .info-btn:hover {
-        background-color: var(--ddd-theme-default-slateGray);
-        color: var(--ddd-theme-default-white);
-      }
-
-      .info-btn.active {
-        background-color: var(--ddd-theme-default-limestoneGray);
+        background-color: var(--ddd-theme-default-keystoneYellow);
         color: var(--ddd-theme-default-coalyGray);
       }
 
+      .info-btn.active {
+        background-color: var(--ddd-theme-default-keystoneYellow);
+        color: var(--ddd-theme-default-coalyGray);
+        transform: translateY(-1px);
+        box-shadow: var(--ddd-boxShadow-md);
+      }
+
       :host([data-dark-mode]) .info-btn.active {
-        background-color: var(--ddd-theme-default-slateGray);
-        color: var(--ddd-theme-default-white);
+        background-color: var(--ddd-theme-default-keystoneYellow);
+        color: var(--ddd-theme-default-coalyGray);
       }
 
       .photo-details {
@@ -306,167 +424,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         color: var(--ddd-theme-default-white);
       }
 
-      .comment-btn {
-        background-color: transparent;
-        color: var(--ddd-theme-default-slateGray);
-        border: none;
-        padding: var(--ddd-spacing-2);
-        border-radius: var(--ddd-radius-sm);
-        cursor: pointer;
-        font-size: var(--ddd-font-size-xs);
-        transition: all 0.2s ease;
-        min-width: auto;
-        flex-shrink: 0;
-      }
 
-      :host([data-dark-mode]) .comment-btn {
-        color: var(--ddd-theme-default-limestoneGray);
-      }
-
-      .comment-btn:hover {
-        background-color: var(--ddd-theme-default-skyBlue);
-        color: var(--ddd-theme-default-white);
-      }
-
-      .comment-btn.active {
-        background-color: var(--ddd-theme-default-accent);
-        color: var(--ddd-theme-default-white);
-      }
-
-      .comment-section {
-        padding: var(--ddd-spacing-3);
-        border-top: var(--ddd-border-sm);
-        border-color: var(--ddd-theme-default-limestoneGray);
-        background-color: var(--ddd-theme-default-limestoneLight);
-        animation: slideDown 0.3s ease-out;
-      }
-
-      :host([data-dark-mode]) .comment-section {
-        background-color: var(--ddd-theme-default-slateGray);
-        border-color: var(--ddd-theme-default-slateGray);
-      }
-
-      .comment-input {
-        width: 100%;
-        min-height: 80px;
-        padding: var(--ddd-spacing-2);
-        border: var(--ddd-border-sm);
-        border-color: var(--ddd-theme-default-limestoneGray);
-        border-radius: var(--ddd-radius-sm);
-        font-family: inherit;
-        font-size: var(--ddd-font-size-s);
-        resize: vertical;
-        box-sizing: border-box;
-      }
-
-      :host([data-dark-mode]) .comment-input {
-        background-color: var(--ddd-theme-default-coalyGray);
-        border-color: var(--ddd-theme-default-slateGray);
-        color: var(--ddd-theme-default-white);
-      }
-
-      .comment-input:focus {
-        outline: none;
-        border-color: var(--ddd-theme-default-accent);
-        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-      }
-
-      .comment-actions {
-        display: flex;
-        justify-content: flex-end;
-        gap: var(--ddd-spacing-2);
-        margin-top: var(--ddd-spacing-2);
-      }
-
-      .comment-submit {
-        background-color: var(--ddd-theme-default-accent);
-        color: var(--ddd-theme-default-white);
-        border: none;
-        padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
-        border-radius: var(--ddd-radius-sm);
-        cursor: pointer;
-        font-size: var(--ddd-font-size-xs);
-      }
-
-      .comment-submit:hover {
-        background-color: var(--ddd-theme-default-keystoneYellow);
-      }
-
-      .comment-cancel {
-        background-color: var(--ddd-theme-default-slateGray);
-        color: var(--ddd-theme-default-white);
-        border: none;
-        padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
-        border-radius: var(--ddd-radius-sm);
-        cursor: pointer;
-        font-size: var(--ddd-font-size-xs);
-      }
-
-      .comment-cancel:hover {
-        background-color: var(--ddd-theme-default-coalyGray);
-      }
-
-      .posted-comments {
-        padding: var(--ddd-spacing-3);
-        border-top: var(--ddd-border-sm);
-        border-color: var(--ddd-theme-default-limestoneGray);
-        background-color: var(--ddd-theme-default-limestoneLight);
-      }
-
-      :host([data-dark-mode]) .posted-comments {
-        background-color: var(--ddd-theme-default-slateGray);
-        border-color: var(--ddd-theme-default-slateGray);
-      }
-
-      .comment-item {
-        padding: var(--ddd-spacing-2);
-        margin-bottom: var(--ddd-spacing-2);
-        background-color: var(--ddd-theme-default-white);
-        border-radius: var(--ddd-radius-sm);
-        border-left: 3px solid var(--ddd-theme-default-accent);
-        animation: fadeIn 0.3s ease-in;
-      }
-
-      :host([data-dark-mode]) .comment-item {
-        background-color: var(--ddd-theme-default-coalyGray);
-        color: var(--ddd-theme-default-white);
-      }
-
-      .comment-item:last-child {
-        margin-bottom: 0;
-      }
-
-      .comment-text {
-        font-size: var(--ddd-font-size-s);
-        line-height: 1.4;
-        margin: 0;
-        color: var(--ddd-theme-default-coalyGray);
-      }
-
-      :host([data-dark-mode]) .comment-text {
-        color: var(--ddd-theme-default-white);
-      }
-
-      .comment-timestamp {
-        font-size: var(--ddd-font-size-xs);
-        color: var(--ddd-theme-default-slateGray);
-        margin-top: var(--ddd-spacing-1);
-      }
-
-      :host([data-dark-mode]) .comment-timestamp {
-        color: var(--ddd-theme-default-limestoneGray);
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
 
       @keyframes slideDown {
         from {
@@ -540,12 +498,23 @@ export class PhotoCard extends DDDSuper(LitElement) {
         .action-btn {
           padding: var(--ddd-spacing-1);
         }
+
+        .heart-container p {
+          font-size: var(--ddd-font-size-xs);
+        }
+
+        .heart-icon {
+          font-size: var(--ddd-font-size-l);
+        }
+
+        .btn {
+          font-size: var(--ddd-font-size-m);
+        }
       }
     `];
   }
 
   firstUpdated() {
-    // Load like/dislike status from localStorage
     this._loadInteractionState();
   }
 
@@ -557,13 +526,16 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
   _loadInteractionState() {
     if (this.photoData.id) {
-      const interactions = JSON.parse(localStorage.getItem('photo-interactions') || '{}');
-      const photoInteraction = interactions[this.photoData.id];
-      if (photoInteraction) {
-        this.isLiked = photoInteraction.liked || false;
-        this.isDisliked = photoInteraction.disliked || false;
+      const storedData = this._getInteractionData();
+      if (storedData) {
+        this.isLiked = storedData.liked || false;
+        this.isDisliked = storedData.disliked || false;
+        this.likesCount = storedData.likesCount || Math.floor(Math.random() * 1000) + 10;
+        this.dislikesCount = storedData.dislikesCount || Math.floor(Math.random() * 100) + 5;
+      } else {
+        this.likesCount = Math.floor(Math.random() * 1000) + 10;
+        this.dislikesCount = Math.floor(Math.random() * 100) + 5;
       }
-      this.likesCount = Math.floor(Math.random() * 1000) + 10;
     }
   }
 
@@ -572,34 +544,72 @@ export class PhotoCard extends DDDSuper(LitElement) {
       const interactions = JSON.parse(localStorage.getItem('photo-interactions') || '{}');
       interactions[this.photoData.id] = {
         liked: this.isLiked,
-        disliked: this.isDisliked
+        disliked: this.isDisliked,
+        likesCount: this.likesCount + (this.isLiked ? 1 : 0),
+        dislikesCount: this.dislikesCount + (this.isDisliked ? 1 : 0)
       };
       localStorage.setItem('photo-interactions', JSON.stringify(interactions));
     }
   }
 
+  _getInteractionData() {
+    if (this.photoData.id) {
+      const interactions = JSON.parse(localStorage.getItem('photo-interactions') || '{}');
+      return interactions[this.photoData.id] || null;
+    }
+    return null;
+  }
+
   _toggleLike() {
+    // Get current interaction data from localStorage
+    const currentData = this._getInteractionData();
+    
     this.isLiked = !this.isLiked;
     if (this.isLiked && this.isDisliked) {
       this.isDisliked = false;
     }
+    
+    // Update likes count based on action
+    if (this.isLiked) {
+      this.likesCount = currentData?.likesCount || this.likesCount;
+    }
+    
+    // Save updated state to localStorage using setItem
     this._saveInteractionState();
     
     this.dispatchEvent(new CustomEvent('photo-liked', {
-      detail: { photoId: this.photoData.id, liked: this.isLiked },
+      detail: { 
+        photoId: this.photoData.id, 
+        liked: this.isLiked,
+        likesCount: this.likesCount + (this.isLiked ? 1 : 0)
+      },
       bubbles: true
     }));
   }
 
   _toggleDislike() {
+    // Get current interaction data from localStorage
+    const currentData = this._getInteractionData();
+    
     this.isDisliked = !this.isDisliked;
     if (this.isDisliked && this.isLiked) {
       this.isLiked = false;
     }
+    
+    // Update dislikes count based on action
+    if (this.isDisliked) {
+      this.dislikesCount = currentData?.dislikesCount || this.dislikesCount;
+    }
+    
+    // Save updated state to localStorage using setItem
     this._saveInteractionState();
     
     this.dispatchEvent(new CustomEvent('photo-disliked', {
-      detail: { photoId: this.photoData.id, disliked: this.isDisliked },
+      detail: { 
+        photoId: this.photoData.id, 
+        disliked: this.isDisliked,
+        dislikesCount: this.dislikesCount + (this.isDisliked ? 1 : 0)
+      },
       bubbles: true
     }));
   }
@@ -623,75 +633,6 @@ export class PhotoCard extends DDDSuper(LitElement) {
     }));
   }
 
-  _toggleComments() {
-    this.showComments = !this.showComments;
-
-    if (this.showComments) {
-      this.updateComplete.then(() => {
-        const textarea = this.shadowRoot.querySelector('.comment-input');
-        if (textarea) {
-          textarea.focus();
-        }
-      });
-    }
-    
-    this.dispatchEvent(new CustomEvent('photo-comments-toggled', {
-      detail: { photoId: this.photoData.id, showing: this.showComments },
-      bubbles: true
-    }));
-  }
-
-  _handleCommentInput(e) {
-    this.commentText = e.target.value;
-  }
-
-  _submitComment() {
-    if (!this.commentText.trim()) return;
-    
-    const newComment = {
-      text: this.commentText.trim(),
-      timestamp: new Date().toLocaleString()
-    };
-    
-    this.postedComments = [...this.postedComments, newComment];
-    
-    this.commentText = '';
-    this.showComments = false;
-    
-    this.dispatchEvent(new CustomEvent('photo-comment-submitted', {
-      detail: { photoId: this.photoData.id, comment: newComment.text },
-      bubbles: true
-    }));
-  }
-
-  _cancelComment() {
-    this.commentText = '';
-    this.showComments = false;
-  }
-
-  _sharePhoto() {
-    const shareData = {
-      title: this.photoData.name,
-      text: `Check out this amazing photo "${this.photoData.name}" by ${this.photoData.author.name}`,
-      url: window.location.href + `#photo-${this.photoData.id}`
-    };
-
-    if (navigator.share) {
-      navigator.share(shareData);
-    } else {
-      // Fallback: copy URL to clipboard
-      const shareUrl = `${window.location.href}#photo-${this.photoData.id}`;
-      navigator.clipboard.writeText(shareUrl).then(() => {
-        alert('Photo link copied to clipboard!');
-      });
-    }
-
-    this.dispatchEvent(new CustomEvent('photo-shared', {
-      detail: { photoId: this.photoData.id, method: navigator.share ? 'native' : 'clipboard' },
-      bubbles: true
-    }));
-  }
-
   _formatDate(dateString) {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -703,28 +644,27 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
   render() {
     if (!this.photoData || !this.photoData.id) {
-      return html`<div class="image-placeholder">Loading...</div>`;
+      return html`<div class="image-placeholder">Loading Image...</div>`;
     }
 
     return html`
       <div class="card-header">
         <img 
           class="author-avatar" 
-          src="${this.photoData.author.image}" 
-          alt="${this.photoData.author.name}"
+          src="${this._getAuthorImage()}" 
+          alt="${this._getAuthorName()}"
           loading="lazy"
         />
         <div class="author-info">
-          <h4 class="author-name">${this.photoData.author.name}</h4>
-          <p class="channel-name">${this.photoData.author.channelName}</p>
+          <h4 class="author-name">${this._getAuthorName()}</h4>
+          <p class="channel-name">${this.photoData.author?.channelName || 'Wildlife Photography'}</p>
         </div>
       </div>
 
-      <div class="image-container" @click="${this._showFullSize}">
+      <div class="image-container">
         ${this.loadImage && this.imageLoaded ? (
           this.imageError ? html`
             <div class="image-placeholder error">
-              <p>📷</p>
               <p>Image temporarily unavailable</p>
             </div>
           ` : html`
@@ -746,79 +686,32 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
       <div class="card-actions">
         <div class="action-buttons">
-          <button 
-            class="action-btn ${this.isLiked ? 'liked' : ''}" 
-            @click="${this._toggleLike}"
-            title="Like this photo"
-          >
-            ❤️ ${this.likesCount + (this.isLiked ? 1 : 0)}
-          </button>
-          <button 
-            class="action-btn ${this.isDisliked ? 'disliked' : ''}" 
-            @click="${this._toggleDislike}"
-            title="Dislike this photo"
-          >
-            👎 ${this.isDisliked ? 'Disliked' : 'Dislike'}
-          </button>
-          <button 
-            class="comment-btn ${this.showComments ? 'active' : ''}" 
-            @click="${this._toggleComments}"
-            title="Add a comment"
-          >
-            💬
-          </button>
+          <div class="heart-container">
+            <span 
+              id="heart-${this.photoData.id}" 
+              class="heart-icon ${this.isLiked ? 'liked' : ''}"
+              @click="${this._toggleLike}"
+              title="Like this photo">${this.isLiked ? '❤️' : '🤍'}</span>
+            <span class="likes-count">${this.likesCount + (this.isLiked ? 1 : 0)}</span>
+          </div>
+          <div class="dislike-container">
+            <button 
+              class="btn dislike-btn ${this.isDisliked ? 'red' : ''}" 
+              @click="${this._toggleDislike}"
+              title="Dislike this photo">👎</button>
+            <span class="dislikes-count">${this.dislikesCount + (this.isDisliked ? 1 : 0)}</span>
+          </div>
         </div>
         <button 
           class="info-btn ${this.showDetails ? 'active' : ''}" 
           @click="${this._toggleDetails}" 
-          title="Show/hide photo details"
-        >
-          ⋯
-        </button>
-      </div>
+          title="Show/hide photo details">Details</button>
+        </div>
 
       ${this.showDetails ? html`
         <div class="photo-details">
-          <div class="detail-date">📅 ${this._formatDate(this.photoData.dateTaken)}</div>
+          <div class="detail-date"> ${this._formatDate(this.photoData.dateTaken)}</div>
           <p class="detail-description">${this.photoData.description}</p>
-        </div>
-      ` : ''}
-
-      ${this.showComments ? html`
-        <div class="comment-section">
-          <textarea 
-            class="comment-input" 
-            placeholder="Write a comment about this photo..."
-            .value="${this.commentText}"
-            @input="${this._handleCommentInput}"
-          ></textarea>
-          <div class="comment-actions">
-            <button class="comment-cancel" @click="${this._cancelComment}">Cancel</button>
-            <button class="comment-submit" @click="${this._submitComment}">Post Comment</button>
-          </div>
-        </div>
-      ` : ''}
-
-      ${this.postedComments.length > 0 ? html`
-        <div class="posted-comments">
-          ${this.postedComments.map(comment => html`
-            <div class="comment-item">
-              <p class="comment-text">${comment.text}</p>
-              <div class="comment-timestamp">${comment.timestamp}</div>
-            </div>
-          `)}
-        </div>
-      ` : ''}
-
-      ${this.showFullSize ? html`
-        <div class="fullsize-overlay" @click="${this._hideFullSize}">
-          <button class="close-btn" @click="${this._hideFullSize}">✕</button>
-          <img 
-            class="fullsize-image" 
-            src="${this.photoData.fullSize}" 
-            alt="${this.photoData.name}"
-            @click="${(e) => e.stopPropagation()}"
-          />
         </div>
       ` : ''}
     `;

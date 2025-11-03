@@ -2,9 +2,9 @@
   "photos": [
     {
       "id": 1,
-      "name": "Curious Red Fox",
-      "description": "A curious red fox captured in its natural habitat, showcasing the intelligence and beauty of these remarkable woodland creatures.",
-      "dateTaken": "2024-09-15T18:30:00Z",
+      "name": "Sleeping Fox",
+      "description": "A sleeping fox captured in its natural habitat, showcasing the peaceful side of these remarkable woodland creatures.",
+      "dateTaken": "2015-09-15T18:30:00Z",
       "thumbnail": "https://randomfox.ca/images/1.jpg",
       "fullSize": "https://randomfox.ca/images/1.jpg",
       "author": {
@@ -17,7 +17,7 @@
       "id": 2,
       "name": "Playful Fox Kit",
       "description": "An adorable fox kit displaying playful behavior, demonstrating the charming nature of young foxes in the wild.",
-      "dateTaken": "2024-08-22T14:15:00Z",
+      "dateTaken": "2020-08-22T14:15:00Z",
       "thumbnail": "https://randomfox.ca/images/2.jpg",
       "fullSize": "https://randomfox.ca/images/2.jpg",
       "author": {
@@ -28,9 +28,9 @@
     },
     {
       "id": 3,
-      "name": "Majestic Arctic Fox",
-      "description": "A majestic arctic fox with its pristine white coat, perfectly adapted to survive in harsh winter conditions.",
-      "dateTaken": "2024-07-11T09:45:00Z",
+      "name": "Dad and Son",
+      "description": "A heartwarming moment between a father fox and his young son. The father stands proudly and calm, while the curious little one looks up to him with admiration, gently nuzzling his nose.",
+      "dateTaken": "2022-07-11T09:45:00Z",
       "thumbnail": "https://randomfox.ca/images/3.jpg",
       "fullSize": "https://randomfox.ca/images/3.jpg",
       "author": {
@@ -41,9 +41,9 @@
     },
     {
       "id": 4,
-      "name": "Sneaky Forest Fox",
-      "description": "A sneaky red fox peering through autumn foliage, displaying the cunning intelligence these animals are known for.",
-      "dateTaken": "2024-06-05T06:30:00Z",
+      "name": "Best Buds",
+      "description": "These two young foxes, nestled closely together, perfectly capture the spirit of friendship and trust found in nature. Their soft, golden-red fur blends beautifully with the forest background, and their bright, curious eyes reflect both intelligence and playfulness. The top fox gently rests its chin on the other’s head, showing a quiet bond that suggests they’ve grown up exploring the woods side by side.",
+      "dateTaken": "2017-06-05T06:30:00Z",
       "thumbnail": "https://randomfox.ca/images/4.jpg",
       "fullSize": "https://randomfox.ca/images/4.jpg",
       "author": {
@@ -56,7 +56,7 @@
       "id": 5,
       "name": "Sleepy Fox Family",
       "description": "A peaceful fox family resting together, showing the strong social bonds between fox parents and their kits.",
-      "dateTaken": "2024-05-18T11:20:00Z",
+      "dateTaken": "2017-05-18T11:20:00Z",
       "thumbnail": "https://randomfox.ca/images/5.jpg",
       "fullSize": "https://randomfox.ca/images/5.jpg",
       "author": {
@@ -67,9 +67,9 @@
     },
     {
       "id": 6,
-      "name": "Fluffy Winter Fox",
-      "description": "A fluffy winter fox with its thick seasonal coat, beautifully adapted for cold weather survival.",
-      "dateTaken": "2024-04-30T19:45:00Z",
+      "name": "Gentle Meadow Fox",
+      "description": "Bathed in the soft light of sunset, this fox turns its head with a calm, almost thoughtful expression. Its fur glows with warm orange and white tones, and the tall grass around it gives the scene a peaceful, late-day glow. The fox looks curious but relaxed, perfectly at home in the quiet meadow as it enjoys the final light of day.",
+      "dateTaken": "2019-04-30T19:45:00Z",
       "thumbnail": "https://randomfox.ca/images/6.jpg",
       "fullSize": "https://randomfox.ca/images/6.jpg",
       "author": {
@@ -80,9 +80,9 @@
     },
     {
       "id": 7,
-      "name": "Alert Mountain Fox",
-      "description": "An alert mountain fox scanning its territory, demonstrating the vigilant nature of these adaptable predators.",
-      "dateTaken": "2024-03-20T16:10:00Z",
+      "name": "Curious Mountain Fox",
+      "description": "With ears up and eyes wide, this fox leans in close to the camera, its playful curiosity on full display. Behind it, the sun sets over rugged hills, casting a golden hue across the landscape. The image feels lively and spontaneous — a moment where the wild meets wonder, showing just how inquisitive and intelligent these creatures can be.",
+      "dateTaken": "2014-03-20T16:10:00Z",
       "thumbnail": "https://randomfox.ca/images/7.jpg",
       "fullSize": "https://randomfox.ca/images/7.jpg",
       "author": {
@@ -93,9 +93,9 @@
     },
     {
       "id": 8,
-      "name": "Hunting Fox",
-      "description": "A focused fox in hunting mode, ears perked and ready to pounce on unsuspecting prey in the underbrush.",
-      "dateTaken": "2024-02-28T13:15:00Z",
+      "name": "Arctic Blue Fox",
+      "description": "Half-buried in the snow, this stunning blue-tinted fox locks its gaze forward, alert and ready to pounce. Its fur blends beautifully with the icy surroundings, making it almost invisible in the winter landscape. The contrast of deep blue against white snow creates a mysterious, almost mythical presence — a predator perfectly adapted to its frozen world.",
+      "dateTaken": "2022-02-28T13:15:00Z",
       "thumbnail": "https://randomfox.ca/images/8.jpg",
       "fullSize": "https://randomfox.ca/images/8.jpg",
       "author": {
@@ -106,9 +106,9 @@
     },
     {
       "id": 9,
-      "name": "Graceful Red Fox",
-      "description": "A graceful red fox moving through tall grass, showcasing the elegant movements of these beautiful creatures.",
-      "dateTaken": "2024-01-14T08:30:00Z",
+      "name": "Cheerful Meadow Fox",
+      "description": "Caught mid-laugh, this fox radiates pure joy as sunlight dances across its vibrant orange fur. Surrounded by green grass, it seems to be enjoying the freedom and playfulness of the open field. Its bright expression and lively stance capture the lighthearted side of nature—a moment where happiness feels completely unguarded and real.",
+      "dateTaken": "2021-01-14T08:30:00Z",
       "thumbnail": "https://randomfox.ca/images/9.jpg",
       "fullSize": "https://randomfox.ca/images/9.jpg",
       "author": {
@@ -119,9 +119,9 @@
     },
     {
       "id": 10,
-      "name": "Curious Fox Pup",
-      "description": "A curious fox pup exploring its surroundings, displaying the natural inquisitiveness of young foxes.",
-      "dateTaken": "2023-12-03T15:45:00Z",
+      "name": "Snow-Dusted Wanderer",
+      "description": "Trekking through a gentle snowfall, this fox’s coat glistens with delicate white flakes. Its focused gaze and steady stride show quiet determination, perfectly suited for the chill of winter. The soft blur of falling snow gives the image a calm, almost cinematic beauty, as if time has slowed to honor this lone traveler’s resilience.",
+      "dateTaken": "2012-12-03T15:45:00Z",
       "thumbnail": "https://randomfox.ca/images/10.jpg",
       "fullSize": "https://randomfox.ca/images/10.jpg",
       "author": {
@@ -132,9 +132,9 @@
     },
     {
       "id": 11,
-      "name": "Regal Forest Fox",
-      "description": "A regal fox standing proudly in an autumn forest, embodying the wild majesty of these intelligent animals.",
-      "dateTaken": "2023-11-18T12:20:00Z",
+      "name": "Noble Woodland Companions",
+      "description": "Three foxes share a peaceful winter moment, their golden coats glowing against the snow. One nuzzles the other affectionately, a quiet reminder of companionship in the wild. Their unity feels strong and graceful, as if they lead their small forest world together—watchful protectors bound by loyalty and warmth.",
+      "dateTaken": "2016-11-18T12:20:00Z",
       "thumbnail": "https://randomfox.ca/images/11.jpg",
       "fullSize": "https://randomfox.ca/images/11.jpg",
       "author": {
@@ -145,9 +145,9 @@
     },
     {
       "id": 12,
-      "name": "Playful Young Fox",
-      "description": "A playful young fox caught mid-leap, displaying the energetic and spirited nature of juvenile foxes.",
-      "dateTaken": "2023-10-07T17:30:00Z",
+      "name": "Leaping Forest Pup",
+      "description": "Full of boundless energy, this young fox springs into the air with playful enthusiasm. Its soft fur ripples as it leaps through the brush, eyes wide with excitement and curiosity. The motion and expression capture pure youth in the wild—a fearless explorer discovering every corner of its forest home.",
+      "dateTaken": "2019-10-07T17:30:00Z",
       "thumbnail": "https://randomfox.ca/images/12.jpg",
       "fullSize": "https://randomfox.ca/images/12.jpg",
       "author": {
@@ -158,9 +158,9 @@
     },
     {
       "id": 13,
-      "name": "Contemplative Fox",
-      "description": "A contemplative fox sitting quietly, showing the thoughtful and observant side of these intelligent creatures.",
-      "dateTaken": "2023-09-25T09:15:00Z",
+      "name": "Thoughtful Companions",
+      "description": "Two foxes rest close together, their expressions calm and knowing. The warmth in their amber eyes suggests a quiet understanding—perhaps siblings or lifelong companions sharing a peaceful moment. The soft light and their gentle closeness capture the emotional depth of the wild, where trust and connection often speak louder than sound.",
+      "dateTaken": "2020-09-25T09:15:00Z",
       "thumbnail": "https://randomfox.ca/images/13.jpg",
       "fullSize": "https://randomfox.ca/images/13.jpg",
       "author": {
@@ -171,9 +171,9 @@
     },
     {
       "id": 14,
-      "name": "Swift Desert Fox",
-      "description": "A swift desert fox navigating sandy terrain, perfectly adapted to life in arid environments.",
-      "dateTaken": "2023-08-12T14:40:00Z",
+      "name": "Resting Canyon Fox",
+      "description": "Nestled inside a wooden barrel, this sleepy fox enjoys a rare moment of calm. Its fur, tinted with soft desert tones, glows gently in the afternoon light. The relaxed posture and closed eyes show complete comfort and safety—a quiet scene of rest in an otherwise rugged world.",
+      "dateTaken": "2020-08-12T14:40:00Z",
       "thumbnail": "https://randomfox.ca/images/14.jpg",
       "fullSize": "https://randomfox.ca/images/14.jpg",
       "author": {
@@ -184,9 +184,9 @@
     },
     {
       "id": 15,
-      "name": "Elegant Silver Fox",
-      "description": "An elegant silver fox with its distinctive coat coloration, representing the beautiful genetic diversity of fox species.",
-      "dateTaken": "2023-07-28T11:55:00Z",
+      "name": "Arctic Pearl Fox",
+      "description": "This stunning white fox glances toward the camera with an elegant, almost regal presence. Its silvery fur shimmers in the cold light, and its dark eyes contrast beautifully against the snow-like background. Graceful and poised, it embodies the rare beauty and mystery of life in the frozen wilderness.",
+      "dateTaken": "2021-07-28T11:55:00Z",
       "thumbnail": "https://randomfox.ca/images/15.jpg",
       "fullSize": "https://randomfox.ca/images/15.jpg",
       "author": {
@@ -197,9 +197,9 @@
     },
     {
       "id": 16,
-      "name": "Brave Kit Fox",
-      "description": "A brave kit fox venturing out on its own, learning essential survival skills in the wild.",
-      "dateTaken": "2023-06-14T16:25:00Z",
+      "name": "Guardian of the Wild",
+      "description": "A young woman and a fox stand side by side, their red tones blending in perfect harmony. The fox’s watchful eyes mirror her calm strength, suggesting a deep bond between human and nature. The image carries a quiet power—one of trust, courage, and shared spirit beneath the forest’s silent canopy.",
+      "dateTaken": "2015-06-14T16:25:00Z",
       "thumbnail": "https://randomfox.ca/images/16.jpg",
       "fullSize": "https://randomfox.ca/images/16.jpg",
       "author": {
@@ -210,9 +210,9 @@
     },
     {
       "id": 17,
-      "name": "Majestic Red Fox",
-      "description": "A majestic red fox in its prime, displaying the full beauty and power of these remarkable predators.",
-      "dateTaken": "2023-05-02T18:10:00Z",
+      "name": "Winter Encounter",
+      "description": "In a quiet snow-covered forest, a curious fox approaches a person crouched low, their worlds momentarily overlapping. The fox’s face, dusted with snowflakes, shows a blend of trust and wonder. This moment feels rare and genuine — a peaceful connection between wild instinct and gentle human curiosity.",
+      "dateTaken": "2019-05-02T18:10:00Z",
       "thumbnail": "https://randomfox.ca/images/17.jpg",
       "fullSize": "https://randomfox.ca/images/17.jpg",
       "author": {
@@ -223,9 +223,9 @@
     },
     {
       "id": 18,
-      "name": "Cautious Urban Fox",
-      "description": "A cautious urban fox adapting to city life, showing how these intelligent animals survive in human environments.",
-      "dateTaken": "2023-04-19T07:35:00Z",
+      "name": "Streetwise Wanderer",
+      "description": "With its head tilted and eyes bright, this fox embodies the adaptability of nature in an urban world. Its thick coat glows warmly against the pale snow, and its inquisitive look suggests both caution and confidence. It’s a reminder that even in busy city edges, the wild still finds its way to thrive.",
+      "dateTaken": "2014-04-19T07:35:00Z",
       "thumbnail": "https://randomfox.ca/images/18.jpg",
       "fullSize": "https://randomfox.ca/images/18.jpg",
       "author": {
@@ -236,9 +236,9 @@
     },
     {
       "id": 19,
-      "name": "Peaceful Woodland Fox",
-      "description": "A peaceful woodland fox resting in dappled sunlight, perfectly at home in its natural forest habitat.",
-      "dateTaken": "2023-03-08T13:50:00Z",
+      "name": "Forest Dreamer",
+      "description": "Curled among fallen leaves, a fox rests in perfect harmony. Its soft fur and relaxed posture create a tender image of comfort and safety in the woodland’s embrace. The golden light filtering through the trees completes the scene — peaceful, warm, and full of quiet affection.",
+      "dateTaken": "2014-03-08T13:50:00Z",
       "thumbnail": "https://randomfox.ca/images/19.jpg",
       "fullSize": "https://randomfox.ca/images/19.jpg",
       "author": {
@@ -249,9 +249,9 @@
     },
     {
       "id": 20,
-      "name": "Alert Arctic Fox",
-      "description": "An alert arctic fox with its winter coat, demonstrating incredible adaptation to extreme cold climates.",
-      "dateTaken": "2023-02-22T10:15:00Z",
+      "name": "Ember-Eyed Sentinel",
+      "description": "With fur glowing like firelight and eyes sharp as amber, this fox gazes directly ahead, calm yet commanding. The dark background frames its face beautifully, giving it an almost regal presence. It feels like a guardian of the forest — observant, wise, and endlessly aware of everything that stirs in the night.",
+      "dateTaken": "2018-02-22T10:15:00Z",
       "thumbnail": "https://randomfox.ca/images/20.jpg",
       "fullSize": "https://randomfox.ca/images/20.jpg",
       "author": {
@@ -262,9 +262,9 @@
     },
     {
       "id": 21,
-      "name": "Nimble Mountain Fox",
-      "description": "A nimble mountain fox navigating rocky terrain, showcasing the agility and sure-footedness of these adaptable creatures.",
-      "dateTaken": "2023-01-10T15:40:00Z",
+      "name": "Playful Ridge Fox",
+      "description": "With a mischievous grin and a tiny flick of the tongue, this fox looks as if it’s sharing a private joke with the camera. Resting casually on a gravel path, it radiates confidence and charm. The bright eyes and relaxed pose reveal a spirited creature perfectly in tune with its rugged mountain home.",
+      "dateTaken": "2020-01-10T15:40:00Z",
       "thumbnail": "https://randomfox.ca/images/21.jpg",
       "fullSize": "https://randomfox.ca/images/21.jpg",
       "author": {
@@ -275,9 +275,9 @@
     },
     {
       "id": 22,
-      "name": "Wise Old Fox",
-      "description": "A wise old fox with graying fur, representing the experience and knowledge that comes with surviving in the wild.",
-      "dateTaken": "2022-12-26T12:05:00Z",
+      "name": "Serene Elder Fox",
+      "description": "Eyes closed and fur warmed by the sun, this fox embodies pure tranquility. Its soft expression and slightly lifted face suggest deep contentment — the calm wisdom that comes from years spent surviving and thriving in the wild. A portrait of peace, it’s a quiet reminder that stillness can be its own kind of strength.",
+      "dateTaken": "2021-12-26T12:05:00Z",
       "thumbnail": "https://randomfox.ca/images/22.jpg",
       "fullSize": "https://randomfox.ca/images/22.jpg",
       "author": {
@@ -288,9 +288,9 @@
     },
     {
       "id": 23,
-      "name": "Energetic Fox Siblings",
-      "description": "Energetic fox siblings playing together, demonstrating the strong family bonds and social nature of young foxes.",
-      "dateTaken": "2022-11-14T09:30:00Z",
+      "name": "Swimming Ember Fox",
+      "description": "Gliding smoothly through the cool blue water, this fox keeps its bright amber eyes fixed forward. Its fur shimmers like fire against the calm surface, creating a striking contrast of warmth and stillness. Focused and fearless, it moves with quiet determination — a rare sight of wild grace in motion.",
+      "dateTaken": "2018-11-14T09:30:00Z",
       "thumbnail": "https://randomfox.ca/images/23.jpg",
       "fullSize": "https://randomfox.ca/images/23.jpg",
       "author": {
@@ -301,9 +301,9 @@
     },
     {
       "id": 24,
-      "name": "Solitary Prairie Fox",
-      "description": "A solitary prairie fox surveying vast grasslands, embodying the independent spirit of these territorial animals.",
-      "dateTaken": "2022-10-03T17:20:00Z",
+      "name": "Lone Wanderer of the Plains",
+      "description": "Standing against a cold breeze, this fox’s gaze is both steady and thoughtful. Its thick coat ripples in the wind as snow gathers softly around it. There’s solitude in its stance, but not loneliness — just quiet determination and the fierce independence of a creature born to roam wide, open lands.",
+      "dateTaken": "2016-10-03T17:20:00Z",
       "thumbnail": "https://randomfox.ca/images/24.jpg",
       "fullSize": "https://randomfox.ca/images/24.jpg",
       "author": {
@@ -314,9 +314,9 @@
     },
     {
       "id": 25,
-      "name": "Protective Mother Fox",
-      "description": "A protective mother fox watching over her den, displaying the fierce maternal instincts of female foxes.",
-      "dateTaken": "2022-08-21T14:45:00Z",
+      "name": "Gentle Guardian",
+      "description": "Peeking from inside a tree, this fox watches carefully, her eyes soft but alert. There’s a warmth in her expression — a quiet strength that hints at protectiveness. The light catches the orange of her fur perfectly, revealing a calm presence that feels both nurturing and wise.",
+      "dateTaken": "2015-08-21T14:45:00Z",
       "thumbnail": "https://randomfox.ca/images/25.jpg",
       "fullSize": "https://randomfox.ca/images/25.jpg",
       "author": {
@@ -327,9 +327,9 @@
     },
     {
       "id": 26,
-      "name": "Stealthy Night Fox",
-      "description": "A stealthy fox moving through moonlit terrain, showcasing their nocturnal hunting abilities and adaptation to darkness.",
-      "dateTaken": "2022-07-09T21:15:00Z",
+      "name": "Shadowed Wanderer",
+      "description": "In shades of black and gray, this fox blends seamlessly with the night. Its eyes gleam softly through the darkness, patient and perceptive. The monochrome tones highlight its quiet power — a master of stealth moving silently through the undergrowth, guided only by instinct and moonlight.",
+      "dateTaken": "2019-07-09T21:15:00Z",
       "thumbnail": "https://randomfox.ca/images/26.jpg",
       "fullSize": "https://randomfox.ca/images/26.jpg",
       "author": {
@@ -340,9 +340,9 @@
     },
     {
       "id": 27,
-      "name": "Curious Coastal Fox",
-      "description": "A curious coastal fox exploring tidal pools, demonstrating the adaptability of foxes to marine environments.",
-      "dateTaken": "2022-05-27T06:50:00Z",
+      "name": "Attentive Cubs",
+      "description": "Five young foxes stand alert in the open grass, their ears perked and eyes wide as they study the world around them. Each cub seems tuned to every sound and movement, their natural curiosity sharpened into awareness. Bathed in warm sunlight, the group reflects the instinctive focus of young explorers — learning, watching, and growing together under their mother’s careful eye.",
+      "dateTaken": "2024-05-27T06:50:00Z",
       "thumbnail": "https://randomfox.ca/images/27.jpg",
       "fullSize": "https://randomfox.ca/images/27.jpg",
       "author": {
@@ -353,9 +353,9 @@
     },
     {
       "id": 28,
-      "name": "Agile Tree Fox",
-      "description": "An agile fox demonstrating surprising climbing abilities, showing how these animals utilize all levels of their habitat.",
-      "dateTaken": "2022-04-15T11:25:00Z",
+      "name": "Affectionate Companions",
+      "description": "Two foxes share a tender moment, one nuzzling the other as snow drifts around them. Their closeness radiates warmth despite the cold air, a beautiful reminder of loyalty and affection in the wild. It’s a simple, heartfelt scene — proof that even in nature, love finds its quiet ways to show.",
+      "dateTaken": "2021-04-15T11:25:00Z",
       "thumbnail": "https://randomfox.ca/images/28.jpg",
       "fullSize": "https://randomfox.ca/images/28.jpg",
       "author": {
@@ -366,8 +366,8 @@
     },
     {
       "id": 29,
-      "name": "Resilient Snow Fox",
-      "description": "A resilient fox thriving in snowy conditions, showcasing the remarkable cold-weather adaptations of these hardy animals.",
+      "name": "Sunlit Dreamer",
+      "description": "With eyes gently closed and fur kissed by sunlight, this fox appears completely at peace in the cold. Its posture shows quiet resilience — a calm spirit resting after the challenges of winter. The warm light against the snow gives the moment a feeling of strength wrapped in serenity.",
       "dateTaken": "2022-03-02T08:10:00Z",
       "thumbnail": "https://randomfox.ca/images/29.jpg",
       "fullSize": "https://randomfox.ca/images/29.jpg",
@@ -379,8 +379,8 @@
     },
     {
       "id": 30,
-      "name": "Elegant Fennec Fox",
-      "description": "An elegant fennec fox with its characteristic large ears, perfectly adapted for desert life and heat regulation.",
+      "name": "Majestic Crimson Fox",
+      "description": "This fox gazes forward with an air of confidence and wisdom. The sunlight catches the red tones in its fur, giving it a regal glow that commands attention. Every detail — from its calm eyes to its poised stance — conveys elegance, power, and timeless beauty.",
       "dateTaken": "2022-01-19T16:35:00Z",
       "thumbnail": "https://randomfox.ca/images/30.jpg",
       "fullSize": "https://randomfox.ca/images/30.jpg",
@@ -392,8 +392,8 @@
     },
     {
       "id": 31,
-      "name": "Watchful Fox Parent",
-      "description": "A watchful fox parent keeping guard while kits play nearby, demonstrating the protective nature of fox families.",
+      "name": "Vigilant Forest Guardian",
+      "description": "Standing tall among the greenery, this fox keeps watch over its surroundings with focused intensity. Its expression shows both care and awareness, the quiet instinct of a parent protecting what matters most. The mix of light and shadow enhances the sense of alertness — a true sentinel of the wild.",
       "dateTaken": "2021-12-08T13:20:00Z",
       "thumbnail": "https://randomfox.ca/images/31.jpg",
       "fullSize": "https://randomfox.ca/images/31.jpg",
@@ -405,9 +405,9 @@
     },
     {
       "id": 32,
-      "name": "Adventurous Young Fox",
-      "description": "An adventurous young fox exploring new territory, showing the bold curiosity that drives fox dispersal and exploration.",
-      "dateTaken": "2021-10-25T15:55:00Z",
+      "name": "Curious Autumn Pup",
+      "description": "Peeking through fiery red leaves, this young fox observes the world with wide, curious eyes. Its soft fur glows in the warm colors of fall, blending perfectly with the season around it. There’s a sense of discovery in its gaze — cautious yet full of wonder, as it takes in everything for the first time.",
+      "dateTaken": "2019-10-25T15:55:00Z",
       "thumbnail": "https://randomfox.ca/images/32.jpg",
       "fullSize": "https://randomfox.ca/images/32.jpg",
       "author": {
@@ -418,8 +418,8 @@
     },
     {
       "id": 33,
-      "name": "Magnificent Arctic Hunter",
-      "description": "A magnificent arctic fox in hunting stance, displaying the predatory skills that allow these animals to survive harsh northern winters.",
+      "name": "Frosted Wanderer",
+      "description": "Curled gracefully against the snow, this fox’s thick coat glows with shades of silver, rust, and white. Its calm expression and steady posture show quiet endurance — a creature built for the cold, thriving where others might falter. The soft winter light highlights its strength and poise, making it a true emblem of resilience.",
       "dateTaken": "2021-09-13T07:40:00Z",
       "thumbnail": "https://randomfox.ca/images/33.jpg",
       "fullSize": "https://randomfox.ca/images/33.jpg",
@@ -431,9 +431,9 @@
     },
     {
       "id": 34,
-      "name": "Graceful Meadow Fox",
-      "description": "A graceful fox moving through wildflower meadows, creating a perfect harmony between predator and peaceful natural beauty.",
-      "dateTaken": "2021-08-01T18:25:00Z",
+      "name": "Golden Plains Fox",
+      "description": "Bathed in warm sunlight, this fox seems almost regal, its fur shining like brushed copper. Its calm gaze and upright stance reflect both intelligence and serenity — a silent observer of the meadow it calls home. Every detail radiates balance and beauty, capturing the gentle heart of the wilderness.",
+      "dateTaken": "2015-08-01T18:25:00Z",
       "thumbnail": "https://randomfox.ca/images/34.jpg",
       "fullSize": "https://randomfox.ca/images/34.jpg",
       "author": {
@@ -444,8 +444,8 @@
     },
     {
       "id": 35,
-      "name": "Alert Fox Sentinel",
-      "description": "An alert fox serving as sentinel for its family group, demonstrating the cooperative vigilance that helps fox families survive.",
+      "name": "Vocal Forest Watcher",
+      "description": "Perched atop a fallen log, this fox lets out a powerful call that echoes through the forest. Its body is tensed, tail raised high — a striking mix of alertness and confidence. The moment feels alive with energy, as if the forest itself pauses to listen to its sentinel’s voice.",
       "dateTaken": "2021-06-18T10:05:00Z",
       "thumbnail": "https://randomfox.ca/images/35.jpg",
       "fullSize": "https://randomfox.ca/images/35.jpg",
@@ -457,9 +457,9 @@
     },
     {
       "id": 36,
-      "name": "Cunning Red Fox",
-      "description": "A cunning red fox demonstrating the intelligence and problem-solving abilities that have made foxes legendary in folklore.",
-      "dateTaken": "2021-05-06T14:50:00Z",
+      "name": "Devoted Woodland Pair",
+      "description": "A tender exchange unfolds as an adult fox bows its head toward a small cub, their fur brushing gently together. The warmth in the parent’s gesture reveals a love beyond words — protective, patient, and kind. Surrounded by soft greenery, the scene captures the heart of family life in the wild.",
+      "dateTaken": "2020-05-06T14:50:00Z",
       "thumbnail": "https://randomfox.ca/images/36.jpg",
       "fullSize": "https://randomfox.ca/images/36.jpg",
       "author": {
@@ -470,9 +470,9 @@
     },
     {
       "id": 37,
-      "name": "Tranquil Forest Dweller",
-      "description": "A tranquil fox at rest in its forest home, embodying the peaceful coexistence between wild predators and their natural environment.",
-      "dateTaken": "2021-03-24T12:15:00Z",
+      "name": "Playful Pup",
+      "description": "With bright eyes and a joyful grin, this young fox radiates curiosity and innocence. Its soft fur and relaxed pose make it look completely at ease, as if it’s taking a quiet break between adventures. There’s a spark of wonder in its gaze — the look of a creature just beginning to discover the beauty of the world around it.",
+      "dateTaken": "2022-03-24T12:15:00Z",
       "thumbnail": "https://randomfox.ca/images/37.jpg",
       "fullSize": "https://randomfox.ca/images/37.jpg",
       "author": {
@@ -483,9 +483,9 @@
     },
     {
       "id": 38,
-      "name": "Bold Urban Explorer",
-      "description": "A bold fox exploring urban environments, showcasing the remarkable adaptability that allows foxes to thrive alongside human development.",
-      "dateTaken": "2021-02-09T16:30:00Z",
+      "name": "Cheerful Fox",
+      "description": "Caught mid-laugh, this fox seems to wear a genuine smile. Its expression glows with personality, blending wild instinct with a surprising sense of humor. Against the soft greenery, it feels both playful and bold — an explorer at heart who’s learned to find joy even in the edges of the urban wild.",
+      "dateTaken": "2018-02-09T16:30:00Z",
       "thumbnail": "https://randomfox.ca/images/38.jpg",
       "fullSize": "https://randomfox.ca/images/38.jpg",
       "author": {
@@ -496,9 +496,9 @@
     },
     {
       "id": 39,
-      "name": "Serene Winter Fox",
-      "description": "A serene fox perfectly adapted to winter conditions, displaying the beautiful seasonal coat changes that help foxes survive cold climates.",
-      "dateTaken": "2020-12-27T09:45:00Z",
+      "name": "Winter Companion",
+      "description": "Nestled happily in loving arms, this fox shows pure comfort and trust. Its thick fur and bright eyes stand out against the soft winter tones, creating a moment of warmth in the cold. The shared laughter between fox and friend captures a bond that feels both wild and deeply human.",
+      "dateTaken": "2018-12-27T09:45:00Z",
       "thumbnail": "https://randomfox.ca/images/39.jpg",
       "fullSize": "https://randomfox.ca/images/39.jpg",
       "author": {
@@ -509,9 +509,9 @@
     },
     {
       "id": 40,
-      "name": "Intelligent Fox Hunter",
-      "description": "An intelligent fox demonstrating sophisticated hunting strategies, highlighting the complex cognitive abilities of these remarkable predators.",
-      "dateTaken": "2020-11-14T17:20:00Z",
+      "name": "Clever Forest Fox",
+      "description": "Relaxed yet alert, this fox lies upside down with an intelligent glimmer in its eyes. The playful posture hides a sharp awareness, as if it’s studying the world from a new perspective. There’s wit and charm in every detail — the unmistakable spirit of a creature who thrives on curiosity.",
+      "dateTaken": "2019-11-14T17:20:00Z",
       "thumbnail": "https://randomfox.ca/images/40.jpg",
       "fullSize": "https://randomfox.ca/images/40.jpg",
       "author": {
@@ -522,9 +522,9 @@
     },
     {
       "id": 41,
-      "name": "Majestic Tundra Fox",
-      "description": "A majestic fox surveying the vast tundra landscape, embodying the wild freedom and natural majesty of arctic wildlife.",
-      "dateTaken": "2020-10-02T11:35:00Z",
+      "name": "Floral Meadow Fox",
+      "description": "Resting in a sunlit patch of grass, this fox wears a delicate flower crown that contrasts beautifully with its russet fur. Its upward gaze and relaxed posture capture a sense of peace and playfulness — a perfect blend of wild grace and gentle charm beneath the open sky.",
+      "dateTaken": "2017-10-02T11:35:00Z",
       "thumbnail": "https://randomfox.ca/images/41.jpg",
       "fullSize": "https://randomfox.ca/images/41.jpg",
       "author": {
@@ -535,8 +535,8 @@
     },
     {
       "id": 42,
-      "name": "Playful Fox Trio",
-      "description": "A playful trio of young foxes engaging in social play, demonstrating the important role of play behavior in fox development and bonding.",
+      "name": "Resting Woodland Fox",
+      "description": "Curled comfortably on a tree stump, this fox sleeps soundly, its fur glowing warmly in the golden light. The quiet forest scene around it feels calm and safe, as though time itself has paused to let the creature dream. It’s a portrait of simplicity — nature at its most serene.",
       "dateTaken": "2020-08-19T15:10:00Z",
       "thumbnail": "https://randomfox.ca/images/42.jpg",
       "fullSize": "https://randomfox.ca/images/42.jpg",
@@ -548,9 +548,9 @@
     },
     {
       "id": 43,
-      "name": "Cautious Den Guardian",
-      "description": "A cautious fox guarding its den entrance, showing the territorial and protective instincts that ensure fox family survival.",
-      "dateTaken": "2020-07-07T08:25:00Z",
+      "name": "Vigilant Den Watcher",
+      "description": "Half-hidden among tall grasses, this fox keeps a careful eye on its surroundings. Its gaze is sharp and focused, revealing the quiet intensity of a guardian. The golden hues of its coat blend with the landscape, showing both camouflage and command — a true sentinel of the wild.",
+      "dateTaken": "2019-07-07T08:25:00Z",
       "thumbnail": "https://randomfox.ca/images/43.jpg",
       "fullSize": "https://randomfox.ca/images/43.jpg",
       "author": {
@@ -561,8 +561,8 @@
     },
     {
       "id": 44,
-      "name": "Swift Grassland Runner",
-      "description": "A swift fox racing across open grasslands, demonstrating the speed and agility that makes foxes successful hunters and escape artists.",
+      "name": "Silent Stream Stalker",
+      "description": "Moving with deliberate grace, this fox steps through shallow water, its reflection trailing perfectly beneath it. Every muscle seems poised, every glance precise — the mark of a skilled hunter. The calm ripples of the stream mirror its patience, embodying the art of stealth in motion.",
       "dateTaken": "2020-05-25T13:55:00Z",
       "thumbnail": "https://randomfox.ca/images/44.jpg",
       "fullSize": "https://randomfox.ca/images/44.jpg",
@@ -574,9 +574,9 @@
     },
     {
       "id": 45,
-      "name": "Wise Forest Elder",
-      "description": "An old, wise fox resting peacefully in ancient woodland, representing the accumulated wisdom and experience of a long life in the wild.",
-      "dateTaken": "2020-04-12T19:40:00Z",
+      "name": "Arctic Sage",
+      "description": "Bathed in the soft glow of twilight, this white fox stands calmly against the frozen landscape. Its fur blends seamlessly with the snow, and its steady gaze reflects both wisdom and endurance. Silent and composed, it seems to hold the quiet secrets of the winter forest.",
+      "dateTaken": "2015-04-12T19:40:00Z",
       "thumbnail": "https://randomfox.ca/images/45.jpg",
       "fullSize": "https://randomfox.ca/images/45.jpg",
       "author": {
@@ -587,9 +587,9 @@
     },
     {
       "id": 46,
-      "name": "Adaptable Suburban Fox",
-      "description": "An adaptable fox thriving in suburban environments, showcasing the remarkable flexibility that allows foxes to coexist with human communities.",
-      "dateTaken": "2020-02-28T12:30:00Z",
+      "name": "Twilight Wanderer",
+      "description": "Under a violet sky, this arctic fox moves gracefully through the snow, its thick coat glowing in the fading light. It pauses to observe the horizon, embodying adaptability and confidence. The deep colors of dusk contrast beautifully with its pale fur — a portrait of calm resilience in motion.",
+      "dateTaken": "2017-02-28T12:30:00Z",
       "thumbnail": "https://randomfox.ca/images/46.jpg",
       "fullSize": "https://randomfox.ca/images/46.jpg",
       "author": {
@@ -600,8 +600,8 @@
     },
     {
       "id": 47,
-      "name": "Elegant Riverside Fox",
-      "description": "An elegant fox drinking from a clear mountain stream, capturing a moment of natural grace and the importance of water sources in fox habitat.",
+      "name": "Riverside Sentinel",
+      "description": "Near the edge of a sunlit stream, this fox stands poised and alert. Its fur gleams in the light, and its focused expression suggests both patience and awareness. Surrounded by lush greenery, it perfectly captures the balance between watchfulness and serenity found in the wild.",
       "dateTaken": "2020-01-15T16:05:00Z",
       "thumbnail": "https://randomfox.ca/images/47.jpg",
       "fullSize": "https://randomfox.ca/images/47.jpg",
@@ -613,8 +613,8 @@
     },
     {
       "id": 48,
-      "name": "Determined Mountain Climber",
-      "description": "A determined fox navigating steep mountain terrain, displaying the remarkable adaptability and persistence of these resilient animals.",
+      "name": "Mountain Path Seeker",
+      "description": "Climbing through the bright grass and rocks, this fox’s determination is unmistakable. Its eyes stay fixed ahead, ears sharp to every sound of the hillside. With sunlight glinting off its fur, it embodies perseverance — a fearless traveler shaped by the challenges of the climb.",
       "dateTaken": "2019-12-03T10:50:00Z",
       "thumbnail": "https://randomfox.ca/images/48.jpg",
       "fullSize": "https://randomfox.ca/images/48.jpg",
@@ -626,8 +626,8 @@
     },
     {
       "id": 49,
-      "name": "Sunset Fox Silhouette",
-      "description": "A beautiful fox silhouette against a golden sunset, creating an artistic representation of wild beauty and natural harmony.",
+      "name": "Emberlight Hunter",
+      "description": "Bathed in the warm glow of sunset, this fox stands among the rocks, its fur blazing with fiery hues. The light catches every detail — from the alert tilt of its ears to the sharp focus in its eyes. It looks ready to move at any moment, embodying the quiet power and beauty of twilight in the wild.",
       "dateTaken": "2019-10-21T18:15:00Z",
       "thumbnail": "https://randomfox.ca/images/49.jpg",
       "fullSize": "https://randomfox.ca/images/49.jpg",
@@ -639,9 +639,9 @@
     },
     {
       "id": 50,
-      "name": "Golden Plains Wanderer",
-      "description": "A golden fox wandering across endless plains, embodying the spirit of freedom and the untamed beauty of wild landscapes.",
-      "dateTaken": "2019-09-08T14:25:00Z",
+      "name": "Amber Dune Traveler",
+      "description": "Against a pale winter backdrop, this fox’s golden coat shines with soft, windswept texture. Its steady gaze and poised expression reveal a calm awareness — a creature perfectly at home in open spaces. The contrast of warmth and light gives the image a timeless, peaceful strength.",
+      "dateTaken": "2023-09-08T14:25:00Z",
       "thumbnail": "https://randomfox.ca/images/50.jpg",
       "fullSize": "https://randomfox.ca/images/50.jpg",
       "author": {

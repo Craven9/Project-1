@@ -4,7 +4,6 @@
   "canEditSource": false,
   "gizmo": {
     "title": "Photo Card",
-    "description": "Instagram-like photo card with like/dislike and sharing functionality",
     "icon": "icons:photo",
     "color": "blue",
     "meta": {
