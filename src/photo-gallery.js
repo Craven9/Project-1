@@ -24,6 +24,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
     this.error = null;
     this.viewMode = 'grid'; 
     this.intersectionObserver = null;
+    this.darkMode = false;
   }
 
   static get properties() {
@@ -33,7 +34,8 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       photos: { type: Array },
       loading: { type: Boolean },
       error: { type: String },
-      viewMode: { type: String }
+      viewMode: { type: String },
+      darkMode: { type: Boolean }
     };
   }
 
@@ -45,6 +47,11 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         width: 100%;
         min-height: 100vh;
         background-color: var(--ddd-theme-default-limestoneGray);
+        transition: background-color 0.3s ease;
+      }
+
+      :host([dark-mode]) {
+        background-color: #1a1a1a;
       }
 
       .gallery-header {
@@ -57,6 +64,13 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         position: sticky;
         top: 0;
         z-index: 100;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      :host([dark-mode]) .gallery-header {
+        background-color: #2d3748;
+        color: #e0e0e0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
       }
 
       .gallery-title {
@@ -64,6 +78,11 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         font-weight: var(--ddd-font-weight-bold);
         color: var(--ddd-theme-default-coalyGray);
         margin: 0;
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .gallery-title {
+        color: #e0e0e0;
       }
 
       .gallery-controls {
@@ -85,10 +104,22 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         background-color: var(--ddd-theme-default-white);
       }
 
+      :host([dark-mode]) .view-toggle {
+        background-color: #4a5568;
+        color: #e0e0e0;
+        border-color: #718096;
+      }
+
       .view-toggle:hover {
         background-color: var(--ddd-theme-default-accent);
         color: var(--ddd-theme-default-white);
         border-color: var(--ddd-theme-default-accent);
+      }
+
+      :host([dark-mode]) .view-toggle:hover {
+        background-color: #63b3ed;
+        color: #1a202c;
+        border-color: #63b3ed;
       }
 
       .view-toggle.active {
@@ -97,9 +128,20 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         border-color: var(--ddd-theme-default-keystoneYellow);
       }
 
+      :host([dark-mode]) .view-toggle.active {
+        background-color: #f6ad55;
+        color: #1a202c;
+        border-color: #f6ad55;
+      }
+
       .photo-count {
         font-size: var(--ddd-font-size-s);
         color: var(--ddd-theme-default-slateGray);
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .photo-count {
+        color: #a0aec0;
       }
 
       .gallery-container {
@@ -111,9 +153,9 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       /* Grid View */
       .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         grid-template-rows: masonry;
-        gap: var(--ddd-spacing-4);
+        gap: var(--ddd-spacing-3);
         justify-items: center;
         align-items: start;
       }
@@ -146,7 +188,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       }
 
       .gallery-slide photo-card {
-        flex: 0 0 300px;
+        flex: 0 0 240px;
         scroll-snap-align: center;
         scroll-snap-stop: always;
       }
@@ -215,7 +257,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         }
 
         .gallery-slide photo-card {
-          flex: 0 0 280px;
+          flex: 0 0 220px;
         }
 
         .view-toggle {
@@ -226,13 +268,13 @@ export class PhotoGallery extends DDDSuper(LitElement) {
 
       @media (max-width: 480px) {
         .gallery-slide photo-card {
-          flex: 0 0 260px;
+          flex: 0 0 200px;
         }
       }
 
       @media (min-width: 769px) and (max-width: 1024px) {
         .gallery-grid {
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         }
 
         @supports not (grid-template-rows: masonry) {
@@ -297,7 +339,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         });
       },
       { 
-        rootMargin: '300px', 
+        rootMargin: '200px', 
         threshold: 0.1
       }
     );
@@ -335,6 +377,15 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         this._observeAllCards();
       });
     }
+    
+    if (changedProperties.has('darkMode')) {
+      // Update the host attribute for CSS targeting
+      if (this.darkMode) {
+        this.setAttribute('dark-mode', '');
+      } else {
+        this.removeAttribute('dark-mode');
+      }
+    }
   }
 
   _renderGallery() {
@@ -354,6 +405,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
           <photo-card
             .photoData="${photo}"
             .loadImage="${false}"
+            .darkMode="${this.darkMode}"
           ></photo-card>
         `)}
       </div>

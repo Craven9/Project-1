@@ -27,6 +27,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
     this.loadImage = false;
     this.showDetails = false;
     this.imageError = false;
+    this.darkMode = false;
   }
 
   _getAuthorName() {
@@ -47,6 +48,8 @@ export class PhotoCard extends DDDSuper(LitElement) {
       return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random&size=40`;
     }
   }
+
+
   static get properties() {
     return {
       ...super.properties,
@@ -59,7 +62,8 @@ export class PhotoCard extends DDDSuper(LitElement) {
       imageLoaded: { type: Boolean },
       loadImage: { type: Boolean },
       showDetails: { type: Boolean },
-      imageError: { type: Boolean }
+      imageError: { type: Boolean },
+      darkMode: { type: Boolean }
     };
   }
 
@@ -68,14 +72,24 @@ export class PhotoCard extends DDDSuper(LitElement) {
     css`
       :host {
         display: block;
-        max-width: 400px;
-        margin: var(--ddd-spacing-4);
+        max-width: 320px;
+        min-height: 400px;
+        margin: var(--ddd-spacing-3);
         border: var(--ddd-border-sm);
         border-radius: var(--ddd-radius-md);
         background-color: var(--ddd-theme-default-white);
         box-shadow: var(--ddd-boxShadow-sm);
         transition: all 0.3s ease;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      :host([dark-mode]) {
+        background-color: #2d3748;
+        border-color: #4a5568;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        color: #e0e0e0;
       }
 
 
@@ -85,11 +99,18 @@ export class PhotoCard extends DDDSuper(LitElement) {
         transform: translateY(-2px);
       }
 
+      :host([dark-mode]:hover) {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      }
+
       .card-header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         padding: var(--ddd-spacing-3);
         gap: var(--ddd-spacing-3);
+        min-height: 80px;
+        max-height: 80px;
+        flex-shrink: 0;
       }
 
       .author-avatar {
@@ -100,15 +121,53 @@ export class PhotoCard extends DDDSuper(LitElement) {
         object-fit: cover;
       }
 
+      .placeholder-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+        border: 2px solid var(--ddd-theme-default-limestoneGray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--ddd-theme-default-slateGray);
+        font-size: var(--ddd-font-size-xs);
+        font-weight: var(--ddd-font-weight-bold);
+      }
+
+      .placeholder-avatar::before {
+        content: "👤";
+        font-size: 16px;
+      }
+
       .author-info {
         flex: 1;
+        min-height: 64px;
+        max-height: 64px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--ddd-spacing-1) 0;
       }
 
       .author-name {
         font-weight: var(--ddd-font-weight-bold);
         font-size: var(--ddd-font-size-s);
-        margin: 0;
+        margin: 0 0 var(--ddd-spacing-1) 0;
         color: var(--ddd-theme-default-coalyGray);
+        line-height: 1.2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 32px;
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .author-name {
+        color: #f7fafc;
       }
 
 
@@ -117,7 +176,19 @@ export class PhotoCard extends DDDSuper(LitElement) {
         font-size: var(--ddd-font-size-xs);
         color: var(--ddd-theme-default-slateGray);
         margin: 0;
-        margin-top: var(--ddd-spacing-1);
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 22px;
+        padding-bottom: var(--ddd-spacing-1);
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .channel-name {
+        color: #a0aec0;
       }
 
       .image-container {
@@ -128,6 +199,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex: 1;
       }
 
       .main-image {
@@ -163,6 +235,20 @@ export class PhotoCard extends DDDSuper(LitElement) {
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
         color: var(--ddd-theme-default-coalyGray);
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 48px;
+        max-height: 48px;
+        flex-shrink: 0;
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .photo-title {
+        color: #f7fafc;
       }
 
 
@@ -175,15 +261,20 @@ export class PhotoCard extends DDDSuper(LitElement) {
         border-top: var(--ddd-border-sm);
         border-color: var(--ddd-theme-default-limestoneGray);
         gap: var(--ddd-spacing-3);
+        min-height: 56px;
+        flex-shrink: 0;
+        transition: border-color 0.3s ease;
       }
 
-      :host([data-dark-mode]) .card-actions {
-        border-color: var(--ddd-theme-default-slateGray);
+      :host([dark-mode]) .card-actions {
+        border-color: #4a5568;
       }
 
       .action-buttons {
         display: flex;
         gap: var(--ddd-spacing-2);
+        align-items: flex-end;
+        justify-content: space-between;
       }
 
       .action-btn {
@@ -200,18 +291,9 @@ export class PhotoCard extends DDDSuper(LitElement) {
         color: var(--ddd-theme-default-slateGray);
       }
 
-      :host([data-dark-mode]) .action-btn {
-        color: var(--ddd-theme-default-limestoneGray);
-      }
-
       .action-btn:hover {
         background-color: var(--ddd-theme-default-limestoneGray);
         color: var(--ddd-theme-default-coalyGray);
-      }
-
-      :host([data-dark-mode]) .action-btn:hover {
-        background-color: var(--ddd-theme-default-slateGray);
-        color: var(--ddd-theme-default-white);
       }
 
       .action-btn.liked {
@@ -236,22 +318,15 @@ export class PhotoCard extends DDDSuper(LitElement) {
         color: var(--ddd-theme-default-warning);
       }
 
-      :host([data-dark-mode]) .action-btn.liked {
-        background-color: rgba(220, 53, 69, 0.2);
-        border-color: rgba(220, 53, 69, 0.4);
-      }
-
-      :host([data-dark-mode]) .action-btn.disliked {
-        background-color: rgba(255, 193, 7, 0.2);
-        border-color: rgba(255, 193, 7, 0.4);
-      }
-
       /* Like Button Styles */
       .heart-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: var(--ddd-spacing-2);
+        gap: var(--ddd-spacing-1);
+        height: 77.33px;
+        justify-content: center;
+        padding: var(--ddd-spacing-1) 0;
       }
 
       .heart-container p {
@@ -262,29 +337,23 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .heart-icon {
+        font-size: var(--ddd-font-size-l);
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: var(--ddd-spacing-2);
+        padding: 0;
         border-radius: var(--ddd-radius-sm);
         transition: all 0.2s ease;
+        width: 40px;
+        height: 40px;
+        line-height: 1;
+        box-sizing: border-box;
       }
 
       .heart-icon:hover {
         background-color: rgba(255, 0, 0, 0.1);
         transform: scale(1.1);
-      }
-
-      .heart-icon {
-        font-size: var(--ddd-font-size-xl);
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: var(--ddd-spacing-2);
-        border-radius: var(--ddd-radius-sm);
-        transition: all 0.2s ease;
       }
 
       .heart-icon.liked {
@@ -295,6 +364,11 @@ export class PhotoCard extends DDDSuper(LitElement) {
         font-size: var(--ddd-font-size-s);
         color: var(--ddd-theme-default-coalyGray);
         font-weight: var(--ddd-font-weight-medium);
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .likes-count {
+        color: #e2e8f0;
       }
 
       /* Dislike button */
@@ -302,14 +376,21 @@ export class PhotoCard extends DDDSuper(LitElement) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: var(--ddd-spacing-2);
-        margin-top: var(--ddd-spacing-4);
+        gap: var(--ddd-spacing-1);
+        height: 77.33px;
+        justify-content: center;
+        padding: var(--ddd-spacing-1) 0;
       }
 
       .dislikes-count {
         font-size: var(--ddd-font-size-s);
         color: var(--ddd-theme-default-coalyGray);
         font-weight: var(--ddd-font-weight-medium);
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .dislikes-count {
+        color: #e2e8f0;
       }
 
       @keyframes pulse {
@@ -323,11 +404,18 @@ export class PhotoCard extends DDDSuper(LitElement) {
         outline: 0;
         background: none;
         border: none;
-        padding: var(--ddd-spacing-2);
+        padding: 0;
         border-radius: var(--ddd-radius-sm);
         transition: all 0.2s ease;
         font-size: var(--ddd-font-size-l);
         filter: grayscale(100%);
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        box-sizing: border-box;
       }
 
       .btn:focus {
@@ -345,48 +433,54 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .info-btn {
-        background-color: var(--ddd-theme-default-accent);
-        color: var(--ddd-theme-default-white);
+        background: linear-gradient(135deg, #87CEEB, #ADD8E6);
+        color: var(--ddd-theme-default-coalyGray);
         border: none;
-        padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
+        padding: var(--ddd-spacing-1) var(--ddd-spacing-4);
         border-radius: var(--ddd-radius-md);
         cursor: pointer;
-        font-size: var(--ddd-font-size-s);
+        font-size: var(--ddd-font-size-xs);
         font-weight: var(--ddd-font-weight-medium);
         text-transform: capitalize;
         transition: all 0.3s ease;
-        box-shadow: var(--ddd-boxShadow-sm);
-        min-width: 80px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        min-width: 75px;
         text-align: center;
-        margin-right: var(--ddd-spacing-5);
+        margin-right: var(--ddd-spacing-4);
+        letter-spacing: 0.3px;
       }
 
-      :host([data-dark-mode]) .info-btn {
-        background-color: var(--ddd-theme-default-accent);
-        color: var(--ddd-theme-default-white);
+      :host([dark-mode]) .info-btn {
+        background: linear-gradient(135deg, #4a5568, #718096);
+        color: #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
       }
 
       .info-btn:hover {
-        background-color: var(--ddd-theme-default-keystoneYellow);
+        background: linear-gradient(135deg, #5DADE2, #AED6F1);
+        color: var(--ddd-theme-default-coalyGray);
         transform: translateY(-1px);
-        box-shadow: var(--ddd-boxShadow-md);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       }
 
-      :host([data-dark-mode]) .info-btn:hover {
-        background-color: var(--ddd-theme-default-keystoneYellow);
-        color: var(--ddd-theme-default-coalyGray);
+      :host([dark-mode]) .info-btn:hover {
+        background: linear-gradient(135deg, #63b3ed, #90cdf4);
+        color: #1a202c;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
       }
 
       .info-btn.active {
-        background-color: var(--ddd-theme-default-keystoneYellow);
-        color: var(--ddd-theme-default-coalyGray);
+        background: linear-gradient(135deg, #2E86C1, #5DADE2);
+        color: var(--ddd-theme-default-white);
         transform: translateY(-1px);
-        box-shadow: var(--ddd-boxShadow-md);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        font-weight: var(--ddd-font-weight-bold);
       }
 
-      :host([data-dark-mode]) .info-btn.active {
-        background-color: var(--ddd-theme-default-keystoneYellow);
-        color: var(--ddd-theme-default-coalyGray);
+      :host([dark-mode]) .info-btn.active {
+        background: linear-gradient(135deg, #3182ce, #63b3ed);
+        color: #f7fafc;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
       }
 
       .photo-details {
@@ -395,11 +489,12 @@ export class PhotoCard extends DDDSuper(LitElement) {
         border-color: var(--ddd-theme-default-limestoneGray);
         background-color: var(--ddd-theme-default-limestoneLight);
         animation: slideDown 0.3s ease-out;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
       }
 
-      :host([data-dark-mode]) .photo-details {
-        background-color: var(--ddd-theme-default-slateGray);
-        border-color: var(--ddd-theme-default-slateGray);
+      :host([dark-mode]) .photo-details {
+        background-color: #1a202c;
+        border-color: #4a5568;
       }
 
       .detail-date {
@@ -407,10 +502,11 @@ export class PhotoCard extends DDDSuper(LitElement) {
         color: var(--ddd-theme-default-slateGray);
         margin: 0 0 var(--ddd-spacing-2) 0;
         font-weight: var(--ddd-font-weight-bold);
+        transition: color 0.3s ease;
       }
 
-      :host([data-dark-mode]) .detail-date {
-        color: var(--ddd-theme-default-limestoneGray);
+      :host([dark-mode]) .detail-date {
+        color: #a0aec0;
       }
 
       .detail-description {
@@ -418,10 +514,11 @@ export class PhotoCard extends DDDSuper(LitElement) {
         color: var(--ddd-theme-default-coalyGray);
         line-height: 1.5;
         margin: 0;
+        transition: color 0.3s ease;
       }
 
-      :host([data-dark-mode]) .detail-description {
-        color: var(--ddd-theme-default-white);
+      :host([dark-mode]) .detail-description {
+        color: #e2e8f0;
       }
 
 
@@ -521,6 +618,15 @@ export class PhotoCard extends DDDSuper(LitElement) {
   updated(changedProperties) {
     if (changedProperties.has('loadImage') && this.loadImage && !this.imageLoaded) {
       this.imageLoaded = true;
+    }
+    
+    if (changedProperties.has('darkMode')) {
+      // Update the host attribute for CSS targeting
+      if (this.darkMode) {
+        this.setAttribute('dark-mode', '');
+      } else {
+        this.removeAttribute('dark-mode');
+      }
     }
   }
 
@@ -649,12 +755,16 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
     return html`
       <div class="card-header">
-        <img 
-          class="author-avatar" 
-          src="${this._getAuthorImage()}" 
-          alt="${this._getAuthorName()}"
-          loading="lazy"
-        />
+        ${this.loadImage ? html`
+          <img 
+            class="author-avatar" 
+            src="${this._getAuthorImage()}" 
+            alt="${this._getAuthorName()}"
+            loading="lazy"
+          />
+        ` : html`
+          <div class="author-avatar placeholder-avatar"></div>
+        `}
         <div class="author-info">
           <h4 class="author-name">${this._getAuthorName()}</h4>
           <p class="channel-name">${this.photoData.author?.channelName || 'Wildlife Photography'}</p>
@@ -706,7 +816,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
           class="info-btn ${this.showDetails ? 'active' : ''}" 
           @click="${this._toggleDetails}" 
           title="Show/hide photo details">Details</button>
-        </div>
+      </div>
 
       ${this.showDetails ? html`
         <div class="photo-details">

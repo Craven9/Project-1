@@ -10,7 +10,8 @@
       "author": {
         "name": "Sarah Johnson",
         "image": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=0D8ABC&color=fff&size=100",
-        "userSince": "2019-03-15"
+        "userSince": "2019-03-15",
+        "channelName": "Wildlife Photography"
       }
     },
     {
@@ -23,631 +24,680 @@
       "author": {
         "name": "Michael Chen",
         "image": "https://ui-avatars.com/api/?name=Michael+Chen&background=f56565&color=fff&size=100",
-        "userSince": "2020-01-08"
+        "userSince": "2020-01-08",
+        "channelName": "Nature Focus"
       }
     },
     {
       "id": 3,
       "name": "Dad and Son",
-      "description": "A heartwarming moment between a father fox and his young son. The father stands proudly and calm, while the curious little one looks up to him with admiration, gently nuzzling his nose.",
+      "description": "A heartwarming moment between a father fox and his young son.",
       "dateTaken": "2022-07-11T09:45:00Z",
       "thumbnail": "https://randomfox.ca/images/3.jpg",
       "fullSize": "https://randomfox.ca/images/3.jpg",
       "author": {
         "name": "Isabella Martinez",
         "image": "https://ui-avatars.com/api/?name=Isabella+Martinez&background=38a169&color=fff&size=100",
-        "userSince": "2018-11-20"
+        "userSince": "2018-11-20",
+        "channelName": "Forest Friends"
       }
     },
     {
       "id": 4,
       "name": "Best Buds",
-      "description": "These two young foxes, nestled closely together, perfectly capture the spirit of friendship and trust found in nature. Their soft, golden-red fur blends beautifully with the forest background, and their bright, curious eyes reflect both intelligence and playfulness. The top fox gently rests its chin on the other’s head, showing a quiet bond that suggests they’ve grown up exploring the woods side by side.",
+      "description": "Two young foxes nestled closely together, capturing the spirit of friendship.",
       "dateTaken": "2017-06-05T06:30:00Z",
       "thumbnail": "https://randomfox.ca/images/4.jpg",
       "fullSize": "https://randomfox.ca/images/4.jpg",
       "author": {
         "name": "Alexander Wilson",
         "image": "https://ui-avatars.com/api/?name=Alexander+Wilson&background=9f7aea&color=fff&size=100",
-        "userSince": "2017-05-12"
+        "userSince": "2017-05-12",
+        "channelName": "Wild Moments"
       }
     },
     {
       "id": 5,
-      "name": "Sleepy Fox Family",
-      "description": "A peaceful fox family resting together, showing the strong social bonds between fox parents and their kits.",
-      "dateTaken": "2017-05-18T11:20:00Z",
+      "name": "Forest Explorer",
+      "description": "A curious fox exploring the forest depths.",
+      "dateTaken": "2019-04-20T15:22:00Z",
       "thumbnail": "https://randomfox.ca/images/5.jpg",
       "fullSize": "https://randomfox.ca/images/5.jpg",
       "author": {
-        "name": "Samantha Thompson",
-        "image": "https://ui-avatars.com/api/?name=Samantha+Thompson&background=ed8936&color=fff&size=100",
-        "userSince": "2019-08-03"
+        "name": "Emma Davis",
+        "image": "https://ui-avatars.com/api/?name=Emma+Davis&background=ed8936&color=fff&size=100",
+        "userSince": "2018-09-03",
+        "channelName": "Creature Captures"
       }
     },
     {
       "id": 6,
-      "name": "Gentle Meadow Fox",
-      "description": "Bathed in the soft light of sunset, this fox turns its head with a calm, almost thoughtful expression. Its fur glows with warm orange and white tones, and the tall grass around it gives the scene a peaceful, late-day glow. The fox looks curious but relaxed, perfectly at home in the quiet meadow as it enjoys the final light of day.",
-      "dateTaken": "2019-04-30T19:45:00Z",
+      "name": "Morning Light",
+      "description": "A fox basking in the golden morning sunlight.",
+      "dateTaken": "2021-05-12T07:15:00Z",
       "thumbnail": "https://randomfox.ca/images/6.jpg",
       "fullSize": "https://randomfox.ca/images/6.jpg",
       "author": {
-        "name": "Benjamin Davis",
-        "image": "https://ui-avatars.com/api/?name=Benjamin+Davis&background=38b2ac&color=fff&size=100",
-        "userSince": "2020-11-14"
+        "name": "James Thompson",
+        "image": "https://ui-avatars.com/api/?name=James+Thompson&background=4299e1&color=fff&size=100",
+        "userSince": "2020-02-14",
+        "channelName": "Woodland Tales"
       }
     },
     {
       "id": 7,
-      "name": "Curious Mountain Fox",
-      "description": "With ears up and eyes wide, this fox leans in close to the camera, its playful curiosity on full display. Behind it, the sun sets over rugged hills, casting a golden hue across the landscape. The image feels lively and spontaneous — a moment where the wild meets wonder, showing just how inquisitive and intelligent these creatures can be.",
-      "dateTaken": "2014-03-20T16:10:00Z",
+      "name": "Winter Fox",
+      "description": "A fox in its thick winter coat against snowy backdrop.",
+      "dateTaken": "2020-12-18T11:30:00Z",
       "thumbnail": "https://randomfox.ca/images/7.jpg",
       "fullSize": "https://randomfox.ca/images/7.jpg",
       "author": {
-        "name": "Katherine Rodriguez",
-        "image": "https://ui-avatars.com/api/?name=Katherine+Rodriguez&background=d53f8c&color=fff&size=100",
-        "userSince": "2020-04-25"
+        "name": "Olivia Garcia",
+        "image": "https://ui-avatars.com/api/?name=Olivia+Garcia&background=667eea&color=fff&size=100",
+        "userSince": "2019-07-21",
+        "channelName": "Fox Watch"
       }
     },
     {
       "id": 8,
-      "name": "Arctic Blue Fox",
-      "description": "Half-buried in the snow, this stunning blue-tinted fox locks its gaze forward, alert and ready to pounce. Its fur blends beautifully with the icy surroundings, making it almost invisible in the winter landscape. The contrast of deep blue against white snow creates a mysterious, almost mythical presence — a predator perfectly adapted to its frozen world.",
-      "dateTaken": "2022-02-28T13:15:00Z",
+      "name": "Alert Fox",
+      "description": "A fox standing alert, ears perked up listening to forest sounds.",
+      "dateTaken": "2018-03-09T16:45:00Z",
       "thumbnail": "https://randomfox.ca/images/8.jpg",
       "fullSize": "https://randomfox.ca/images/8.jpg",
       "author": {
-        "name": "Christopher Anderson",
-        "image": "https://ui-avatars.com/api/?name=Christopher+Anderson&background=3182ce&color=fff&size=100",
-        "userSince": "2018-09-17"
+        "name": "William Brown",
+        "image": "https://ui-avatars.com/api/?name=William+Brown&background=f093fb&color=fff&size=100",
+        "userSince": "2017-11-08",
+        "channelName": "Nature's Beauty"
       }
     },
     {
       "id": 9,
-      "name": "Cheerful Meadow Fox",
-      "description": "Caught mid-laugh, this fox radiates pure joy as sunlight dances across its vibrant orange fur. Surrounded by green grass, it seems to be enjoying the freedom and playfulness of the open field. Its bright expression and lively stance capture the lighthearted side of nature—a moment where happiness feels completely unguarded and real.",
-      "dateTaken": "2021-01-14T08:30:00Z",
+      "name": "Autumn Fox",
+      "description": "A fox surrounded by colorful autumn leaves.",
+      "dateTaken": "2019-10-15T14:20:00Z",
       "thumbnail": "https://randomfox.ca/images/9.jpg",
       "fullSize": "https://randomfox.ca/images/9.jpg",
       "author": {
-        "name": "Jessica Parker",
-        "image": "https://ui-avatars.com/api/?name=Jessica+Parker&background=805ad5&color=fff&size=100",
-        "userSince": "2019-12-08"
+        "name": "Sophia Miller",
+        "image": "https://ui-avatars.com/api/?name=Sophia+Miller&background=fbb6ce&color=fff&size=100",
+        "userSince": "2018-12-05",
+        "channelName": "Wild Life Studio"
       }
     },
     {
       "id": 10,
-      "name": "Snow-Dusted Wanderer",
-      "description": "Trekking through a gentle snowfall, this fox’s coat glistens with delicate white flakes. Its focused gaze and steady stride show quiet determination, perfectly suited for the chill of winter. The soft blur of falling snow gives the image a calm, almost cinematic beauty, as if time has slowed to honor this lone traveler’s resilience.",
-      "dateTaken": "2012-12-03T15:45:00Z",
+      "name": "Fox Portrait",
+      "description": "A stunning close-up portrait of a red fox.",
+      "dateTaken": "2021-08-07T10:10:00Z",
       "thumbnail": "https://randomfox.ca/images/10.jpg",
       "fullSize": "https://randomfox.ca/images/10.jpg",
       "author": {
-        "name": "Robert Brown",
-        "image": "https://ui-avatars.com/api/?name=Robert+Brown&background=e53e3e&color=fff&size=100",
-        "userSince": "2018-06-22"
+        "name": "Benjamin Jones",
+        "image": "https://ui-avatars.com/api/?name=Benjamin+Jones&background=81e6d9&color=fff&size=100",
+        "userSince": "2020-05-18",
+        "channelName": "Forest Photography"
       }
     },
     {
       "id": 11,
-      "name": "Noble Woodland Companions",
-      "description": "Three foxes share a peaceful winter moment, their golden coats glowing against the snow. One nuzzles the other affectionately, a quiet reminder of companionship in the wild. Their unity feels strong and graceful, as if they lead their small forest world together—watchful protectors bound by loyalty and warmth.",
-      "dateTaken": "2016-11-18T12:20:00Z",
+      "name": "Resting Fox",
+      "description": "A fox taking a peaceful rest in the shade.",
+      "dateTaken": "2020-06-25T13:45:00Z", 
       "thumbnail": "https://randomfox.ca/images/11.jpg",
       "fullSize": "https://randomfox.ca/images/11.jpg",
       "author": {
-        "name": "Amanda Williams",
-        "image": "https://ui-avatars.com/api/?name=Amanda+Williams&background=319795&color=fff&size=100",
-        "userSince": "2020-02-16"
+        "name": "Charlotte Wilson",
+        "image": "https://ui-avatars.com/api/?name=Charlotte+Wilson&background=a78bfa&color=fff&size=100",
+        "userSince": "2019-04-12",
+        "channelName": "Animal Kingdom"
       }
     },
     {
       "id": 12,
-      "name": "Leaping Forest Pup",
-      "description": "Full of boundless energy, this young fox springs into the air with playful enthusiasm. Its soft fur ripples as it leaps through the brush, eyes wide with excitement and curiosity. The motion and expression capture pure youth in the wild—a fearless explorer discovering every corner of its forest home.",
-      "dateTaken": "2019-10-07T17:30:00Z",
+      "name": "Young Fox",
+      "description": "A young fox learning to navigate the forest.",
+      "dateTaken": "2019-09-03T08:30:00Z",
       "thumbnail": "https://randomfox.ca/images/12.jpg",
       "fullSize": "https://randomfox.ca/images/12.jpg",
       "author": {
-        "name": "Nicholas Taylor",
-        "image": "https://ui-avatars.com/api/?name=Nicholas+Taylor&background=dd6b20&color=fff&size=100",
-        "userSince": "2019-04-11"
+        "name": "Henry Taylor",
+        "image": "https://ui-avatars.com/api/?name=Henry+Taylor&background=f6ad55&color=fff&size=100",
+        "userSince": "2018-06-22",
+        "channelName": "Nature's Lens"
       }
     },
     {
       "id": 13,
-      "name": "Thoughtful Companions",
-      "description": "Two foxes rest close together, their expressions calm and knowing. The warmth in their amber eyes suggests a quiet understanding—perhaps siblings or lifelong companions sharing a peaceful moment. The soft light and their gentle closeness capture the emotional depth of the wild, where trust and connection often speak louder than sound.",
-      "dateTaken": "2020-09-25T09:15:00Z",
+      "name": "Fox in Grass",
+      "description": "A fox camouflaged among tall grass.",
+      "dateTaken": "2021-07-19T17:20:00Z",
       "thumbnail": "https://randomfox.ca/images/13.jpg",
       "fullSize": "https://randomfox.ca/images/13.jpg",
       "author": {
-        "name": "Stephanie Moore",
-        "image": "https://ui-avatars.com/api/?name=Stephanie+Moore&background=0987a0&color=fff&size=100",
-        "userSince": "2020-07-30"
+        "name": "Amelia Anderson",
+        "image": "https://ui-avatars.com/api/?name=Amelia+Anderson&background=68d391&color=fff&size=100",
+        "userSince": "2020-08-09",
+        "channelName": "Wildlife World"
       }
     },
     {
       "id": 14,
-      "name": "Resting Canyon Fox",
-      "description": "Nestled inside a wooden barrel, this sleepy fox enjoys a rare moment of calm. Its fur, tinted with soft desert tones, glows gently in the afternoon light. The relaxed posture and closed eyes show complete comfort and safety—a quiet scene of rest in an otherwise rugged world.",
-      "dateTaken": "2020-08-12T14:40:00Z",
+      "name": "Curious Fox",
+      "description": "A fox showing intense curiosity about its surroundings.",
+      "dateTaken": "2018-11-14T12:15:00Z",
       "thumbnail": "https://randomfox.ca/images/14.jpg",
       "fullSize": "https://randomfox.ca/images/14.jpg",
       "author": {
-        "name": "Daniel Harris",
-        "image": "https://ui-avatars.com/api/?name=Daniel+Harris&background=9c4221&color=fff&size=100",
-        "userSince": "2018-10-05"
+        "name": "Lucas Martinez",
+        "image": "https://ui-avatars.com/api/?name=Lucas+Martinez&background=fc8181&color=fff&size=100",
+        "userSince": "2017-10-30",
+        "channelName": "Outdoor Adventures"
       }
     },
     {
       "id": 15,
-      "name": "Arctic Pearl Fox",
-      "description": "This stunning white fox glances toward the camera with an elegant, almost regal presence. Its silvery fur shimmers in the cold light, and its dark eyes contrast beautifully against the snow-like background. Graceful and poised, it embodies the rare beauty and mystery of life in the frozen wilderness.",
-      "dateTaken": "2021-07-28T11:55:00Z",
+      "name": "Fox Family",
+      "description": "A beautiful fox family moment in nature.",
+      "dateTaken": "2020-04-28T09:55:00Z",
       "thumbnail": "https://randomfox.ca/images/15.jpg",
       "fullSize": "https://randomfox.ca/images/15.jpg",
       "author": {
-        "name": "Michelle Clark",
-        "image": "https://ui-avatars.com/api/?name=Michelle+Clark&background=2a69ac&color=fff&size=100",
-        "userSince": "2019-01-20"
+        "name": "Grace Lee",
+        "image": "https://ui-avatars.com/api/?name=Grace+Lee&background=63b3ed&color=fff&size=100",
+        "userSince": "2019-01-17",
+        "channelName": "Nature Shots"
       }
     },
     {
       "id": 16,
-      "name": "Guardian of the Wild",
-      "description": "A young woman and a fox stand side by side, their red tones blending in perfect harmony. The fox’s watchful eyes mirror her calm strength, suggesting a deep bond between human and nature. The image carries a quiet power—one of trust, courage, and shared spirit beneath the forest’s silent canopy.",
-      "dateTaken": "2015-06-14T16:25:00Z",
+      "name": "Hunting Fox",
+      "description": "A fox focused and ready to hunt.",
+      "dateTaken": "2019-12-02T15:40:00Z",
       "thumbnail": "https://randomfox.ca/images/16.jpg",
       "fullSize": "https://randomfox.ca/images/16.jpg",
       "author": {
-        "name": "Ryan Lewis",
-        "image": "https://ui-avatars.com/api/?name=Ryan+Lewis&background=b83280&color=fff&size=100",
-        "userSince": "2020-03-28"
+        "name": "Daniel White",
+        "image": "https://ui-avatars.com/api/?name=Daniel+White&background=b794f6&color=fff&size=100",
+        "userSince": "2018-03-25",
+        "channelName": "Wild Creatures"
       }
     },
     {
       "id": 17,
-      "name": "Winter Encounter",
-      "description": "In a quiet snow-covered forest, a curious fox approaches a person crouched low, their worlds momentarily overlapping. The fox’s face, dusted with snowflakes, shows a blend of trust and wonder. This moment feels rare and genuine — a peaceful connection between wild instinct and gentle human curiosity.",
-      "dateTaken": "2019-05-02T18:10:00Z",
+      "name": "Fox Den",
+      "description": "A fox near its cozy den entrance.",
+      "dateTaken": "2021-03-16T11:25:00Z",
       "thumbnail": "https://randomfox.ca/images/17.jpg",
       "fullSize": "https://randomfox.ca/images/17.jpg",
       "author": {
-        "name": "Lauren Walker",
-        "image": "https://ui-avatars.com/api/?name=Lauren+Walker&background=276749&color=fff&size=100",
-        "userSince": "2018-08-13"
+        "name": "Victoria Clark",
+        "image": "https://ui-avatars.com/api/?name=Victoria+Clark&background=f687b3&color=fff&size=100",
+        "userSince": "2020-01-11",
+        "channelName": "Forest Life"
       }
     },
     {
       "id": 18,
-      "name": "Streetwise Wanderer",
-      "description": "With its head tilted and eyes bright, this fox embodies the adaptability of nature in an urban world. Its thick coat glows warmly against the pale snow, and its inquisitive look suggests both caution and confidence. It’s a reminder that even in busy city edges, the wild still finds its way to thrive.",
-      "dateTaken": "2014-04-19T07:35:00Z",
+      "name": "Majestic Fox",
+      "description": "A fox displaying its natural majesty and grace.",
+      "dateTaken": "2018-08-21T14:10:00Z",
       "thumbnail": "https://randomfox.ca/images/18.jpg",
       "fullSize": "https://randomfox.ca/images/18.jpg",
       "author": {
-        "name": "Kevin Hall",
-        "image": "https://ui-avatars.com/api/?name=Kevin+Hall&background=744210&color=fff&size=100",
-        "userSince": "2019-09-24"
+        "name": "Matthew Lewis",
+        "image": "https://ui-avatars.com/api/?name=Matthew+Lewis&background=4fd1c7&color=fff&size=100",
+        "userSince": "2017-07-14",
+        "channelName": "Natural Wonders"
       }
     },
     {
       "id": 19,
-      "name": "Forest Dreamer",
-      "description": "Curled among fallen leaves, a fox rests in perfect harmony. Its soft fur and relaxed posture create a tender image of comfort and safety in the woodland’s embrace. The golden light filtering through the trees completes the scene — peaceful, warm, and full of quiet affection.",
-      "dateTaken": "2014-03-08T13:50:00Z",
+      "name": "Fox at Sunset",
+      "description": "A fox silhouetted against a beautiful sunset.",
+      "dateTaken": "2020-09-09T19:35:00Z",
       "thumbnail": "https://randomfox.ca/images/19.jpg",
       "fullSize": "https://randomfox.ca/images/19.jpg",
       "author": {
-        "name": "Brittany Young",
-        "image": "https://ui-avatars.com/api/?name=Brittany+Young&background=553c9a&color=fff&size=100",
-        "userSince": "2020-05-15"
+        "name": "Hannah Robinson",
+        "image": "https://ui-avatars.com/api/?name=Hannah+Robinson&background=fbd38d&color=fff&size=100",
+        "userSince": "2019-06-07",
+        "channelName": "Wildlife Art"
       }
     },
     {
       "id": 20,
-      "name": "Ember-Eyed Sentinel",
-      "description": "With fur glowing like firelight and eyes sharp as amber, this fox gazes directly ahead, calm yet commanding. The dark background frames its face beautifully, giving it an almost regal presence. It feels like a guardian of the forest — observant, wise, and endlessly aware of everything that stirs in the night.",
-      "dateTaken": "2018-02-22T10:15:00Z",
+      "name": "Fox Leap",
+      "description": "A fox captured mid-leap through the forest.",
+      "dateTaken": "2019-05-17T16:20:00Z",
       "thumbnail": "https://randomfox.ca/images/20.jpg",
       "fullSize": "https://randomfox.ca/images/20.jpg",
       "author": {
-        "name": "Jonathan King",
-        "image": "https://ui-avatars.com/api/?name=Jonathan+King&background=c53030&color=fff&size=100",
-        "userSince": "2018-12-07"
+        "name": "Christopher Walker",
+        "image": "https://ui-avatars.com/api/?name=Christopher+Walker&background=90cdf4&color=fff&size=100",
+        "userSince": "2018-02-28",
+        "channelName": "Nature's Gallery"
       }
     },
     {
       "id": 21,
-      "name": "Playful Ridge Fox",
-      "description": "With a mischievous grin and a tiny flick of the tongue, this fox looks as if it’s sharing a private joke with the camera. Resting casually on a gravel path, it radiates confidence and charm. The bright eyes and relaxed pose reveal a spirited creature perfectly in tune with its rugged mountain home.",
-      "dateTaken": "2020-01-10T15:40:00Z",
+      "name": "Snow Fox",
+      "description": "A fox perfectly adapted to snowy conditions.",
+      "dateTaken": "2021-01-13T10:45:00Z",
       "thumbnail": "https://randomfox.ca/images/21.jpg",
       "fullSize": "https://randomfox.ca/images/21.jpg",
       "author": {
-        "name": "Megan Wright",
-        "image": "https://ui-avatars.com/api/?name=Megan+Wright&background=1a7f37&color=fff&size=100",
-        "userSince": "2019-06-29"
+        "name": "Chloe Hall",
+        "image": "https://ui-avatars.com/api/?name=Chloe+Hall&background=c6f6d5&color=fff&size=100",
+        "userSince": "2020-04-20",
+        "channelName": "Wild Photography"
       }
     },
     {
       "id": 22,
-      "name": "Serene Elder Fox",
-      "description": "Eyes closed and fur warmed by the sun, this fox embodies pure tranquility. Its soft expression and slightly lifted face suggest deep contentment — the calm wisdom that comes from years spent surviving and thriving in the wild. A portrait of peace, it’s a quiet reminder that stillness can be its own kind of strength.",
-      "dateTaken": "2021-12-26T12:05:00Z",
+      "name": "Fox Pounce",
+      "description": "A fox in mid-pounce, demonstrating hunting skills.",
+      "dateTaken": "2018-07-08T13:50:00Z",
       "thumbnail": "https://randomfox.ca/images/22.jpg",
       "fullSize": "https://randomfox.ca/images/22.jpg",
       "author": {
-        "name": "Gregory Green",
-        "image": "https://ui-avatars.com/api/?name=Gregory+Green&background=0369a1&color=fff&size=100",
-        "userSince": "2017-11-18"
+        "name": "Andrew Allen",
+        "image": "https://ui-avatars.com/api/?name=Andrew+Allen&background=feb2b2&color=fff&size=100",
+        "userSince": "2017-04-16",
+        "channelName": "Creature Chronicles"
       }
     },
     {
       "id": 23,
-      "name": "Swimming Ember Fox",
-      "description": "Gliding smoothly through the cool blue water, this fox keeps its bright amber eyes fixed forward. Its fur shimmers like fire against the calm surface, creating a striking contrast of warmth and stillness. Focused and fearless, it moves with quiet determination — a rare sight of wild grace in motion.",
-      "dateTaken": "2018-11-14T09:30:00Z",
+      "name": "Fox Gaze",
+      "description": "A fox with an intense, thoughtful gaze.",
+      "dateTaken": "2020-11-25T12:30:00Z",
       "thumbnail": "https://randomfox.ca/images/23.jpg",
       "fullSize": "https://randomfox.ca/images/23.jpg",
       "author": {
-        "name": "Rachel Adams",
-        "image": "https://ui-avatars.com/api/?name=Rachel+Adams&background=c2410c&color=fff&size=100",
-        "userSince": "2020-01-31"
+        "name": "Zoe Young",
+        "image": "https://ui-avatars.com/api/?name=Zoe+Young&background=9decf9&color=fff&size=100",
+        "userSince": "2019-08-12",
+        "channelName": "Nature Explore"
       }
     },
     {
       "id": 24,
-      "name": "Lone Wanderer of the Plains",
-      "description": "Standing against a cold breeze, this fox’s gaze is both steady and thoughtful. Its thick coat ripples in the wind as snow gathers softly around it. There’s solitude in its stance, but not loneliness — just quiet determination and the fierce independence of a creature born to roam wide, open lands.",
-      "dateTaken": "2016-10-03T17:20:00Z",
+      "name": "Fox Stretch",
+      "description": "A fox stretching after a long rest.",
+      "dateTaken": "2019-03-22T08:15:00Z",
       "thumbnail": "https://randomfox.ca/images/24.jpg",
       "fullSize": "https://randomfox.ca/images/24.jpg",
       "author": {
-        "name": "Tyler Baker",
-        "image": "https://ui-avatars.com/api/?name=Tyler+Baker&background=7c2d12&color=fff&size=100",
-        "userSince": "2018-04-16"
+        "name": "Ryan King",
+        "image": "https://ui-avatars.com/api/?name=Ryan+King&background=d6bcfa&color=fff&size=100",
+        "userSince": "2018-01-09",
+        "channelName": "Wildlife Magic"
       }
     },
     {
       "id": 25,
-      "name": "Gentle Guardian",
-      "description": "Peeking from inside a tree, this fox watches carefully, her eyes soft but alert. There’s a warmth in her expression — a quiet strength that hints at protectiveness. The light catches the orange of her fur perfectly, revealing a calm presence that feels both nurturing and wise.",
-      "dateTaken": "2015-08-21T14:45:00Z",
+      "name": "Fox at Stream",
+      "description": "A fox drinking from a crystal clear forest stream.",
+      "dateTaken": "2021-06-11T15:25:00Z",
       "thumbnail": "https://randomfox.ca/images/25.jpg",
       "fullSize": "https://randomfox.ca/images/25.jpg",
       "author": {
-        "name": "Cynthia Nelson",
-        "image": "https://ui-avatars.com/api/?name=Cynthia+Nelson&background=9333ea&color=fff&size=100",
-        "userSince": "2019-07-08"
+        "name": "Lily Scott",
+        "image": "https://ui-avatars.com/api/?name=Lily+Scott&background=fbb6ce&color=fff&size=100",
+        "userSince": "2020-03-07",
+        "channelName": "Forest Focus"
       }
     },
     {
       "id": 26,
-      "name": "Shadowed Wanderer",
-      "description": "In shades of black and gray, this fox blends seamlessly with the night. Its eyes gleam softly through the darkness, patient and perceptive. The monochrome tones highlight its quiet power — a master of stealth moving silently through the undergrowth, guided only by instinct and moonlight.",
-      "dateTaken": "2019-07-09T21:15:00Z",
+      "name": "Fox Pack",
+      "description": "A group of foxes traveling together through the forest.",
+      "dateTaken": "2018-12-04T11:40:00Z",
       "thumbnail": "https://randomfox.ca/images/26.jpg",
       "fullSize": "https://randomfox.ca/images/26.jpg",
       "author": {
-        "name": "Marcus Carter",
-        "image": "https://ui-avatars.com/api/?name=Marcus+Carter&background=059669&color=fff&size=100",
-        "userSince": "2020-08-12"
+        "name": "Tyler Green",
+        "image": "https://ui-avatars.com/api/?name=Tyler+Green&background=81e6d9&color=fff&size=100",
+        "userSince": "2017-09-23",
+        "channelName": "Animal Adventures"
       }
     },
     {
       "id": 27,
-      "name": "Attentive Cubs",
-      "description": "Five young foxes stand alert in the open grass, their ears perked and eyes wide as they study the world around them. Each cub seems tuned to every sound and movement, their natural curiosity sharpened into awareness. Bathed in warm sunlight, the group reflects the instinctive focus of young explorers — learning, watching, and growing together under their mother’s careful eye.",
-      "dateTaken": "2024-05-27T06:50:00Z",
+      "name": "Fox Hiding",
+      "description": "A fox expertly hiding among forest vegetation.",
+      "dateTaken": "2020-02-18T14:55:00Z",
       "thumbnail": "https://randomfox.ca/images/27.jpg",
       "fullSize": "https://randomfox.ca/images/27.jpg",
       "author": {
-        "name": "Heather Mitchell",
-        "image": "https://ui-avatars.com/api/?name=Heather+Mitchell&background=dc2626&color=fff&size=100",
-        "userSince": "2018-01-25"
+        "name": "Maya Adams",
+        "image": "https://ui-avatars.com/api/?name=Maya+Adams&background=f6ad55&color=fff&size=100",
+        "userSince": "2019-05-14",
+        "channelName": "Nature's Eye"
       }
     },
     {
       "id": 28,
-      "name": "Affectionate Companions",
-      "description": "Two foxes share a tender moment, one nuzzling the other as snow drifts around them. Their closeness radiates warmth despite the cold air, a beautiful reminder of loyalty and affection in the wild. It’s a simple, heartfelt scene — proof that even in nature, love finds its quiet ways to show.",
-      "dateTaken": "2021-04-15T11:25:00Z",
+      "name": "Fox Climbing",
+      "description": "A fox demonstrating impressive climbing abilities.",
+      "dateTaken": "2019-08-30T09:20:00Z",
       "thumbnail": "https://randomfox.ca/images/28.jpg",
       "fullSize": "https://randomfox.ca/images/28.jpg",
       "author": {
-        "name": "Andrew Perez",
-        "image": "https://ui-avatars.com/api/?name=Andrew+Perez&background=0891b2&color=fff&size=100",
-        "userSince": "2019-10-14"
+        "name": "Noah Baker",
+        "image": "https://ui-avatars.com/api/?name=Noah+Baker&background=68d391&color=fff&size=100",
+        "userSince": "2018-04-18",
+        "channelName": "Wild Horizon"
       }
     },
     {
       "id": 29,
-      "name": "Sunlit Dreamer",
-      "description": "With eyes gently closed and fur kissed by sunlight, this fox appears completely at peace in the cold. Its posture shows quiet resilience — a calm spirit resting after the challenges of winter. The warm light against the snow gives the moment a feeling of strength wrapped in serenity.",
-      "dateTaken": "2022-03-02T08:10:00Z",
+      "name": "Fox Digging",
+      "description": "A fox digging for food in the forest floor.",
+      "dateTaken": "2021-04-14T16:10:00Z",
       "thumbnail": "https://randomfox.ca/images/29.jpg",
       "fullSize": "https://randomfox.ca/images/29.jpg",
       "author": {
-        "name": "Victoria Roberts",
-        "image": "https://ui-avatars.com/api/?name=Victoria+Roberts&background=7c3aed&color=fff&size=100",
-        "userSince": "2020-12-03"
+        "name": "Ella Nelson",
+        "image": "https://ui-avatars.com/api/?name=Ella+Nelson&background=fc8181&color=fff&size=100",
+        "userSince": "2020-07-22",
+        "channelName": "Creature Quest"
       }
     },
     {
       "id": 30,
-      "name": "Majestic Crimson Fox",
-      "description": "This fox gazes forward with an air of confidence and wisdom. The sunlight catches the red tones in its fur, giving it a regal glow that commands attention. Every detail — from its calm eyes to its poised stance — conveys elegance, power, and timeless beauty.",
-      "dateTaken": "2022-01-19T16:35:00Z",
+      "name": "Fox Watching",
+      "description": "A fox intently watching something in the distance.",
+      "dateTaken": "2018-05-26T12:45:00Z",
       "thumbnail": "https://randomfox.ca/images/30.jpg",
       "fullSize": "https://randomfox.ca/images/30.jpg",
       "author": {
-        "name": "Charles Turner",
-        "image": "https://ui-avatars.com/api/?name=Charles+Turner&background=ea580c&color=fff&size=100",
-        "userSince": "2017-09-21"
+        "name": "Jack Mitchell",
+        "image": "https://ui-avatars.com/api/?name=Jack+Mitchell&background=63b3ed&color=fff&size=100",
+        "userSince": "2017-12-05",
+        "channelName": "Nature Frame"
       }
     },
     {
       "id": 31,
-      "name": "Vigilant Forest Guardian",
-      "description": "Standing tall among the greenery, this fox keeps watch over its surroundings with focused intensity. Its expression shows both care and awareness, the quiet instinct of a parent protecting what matters most. The mix of light and shadow enhances the sense of alertness — a true sentinel of the wild.",
-      "dateTaken": "2021-12-08T13:20:00Z",
+      "name": "Fox Stalking",
+      "description": "A fox in stealth mode, carefully stalking prey.",
+      "dateTaken": "2020-10-07T17:30:00Z",
       "thumbnail": "https://randomfox.ca/images/31.jpg",
       "fullSize": "https://randomfox.ca/images/31.jpg",
       "author": {
-        "name": "Patricia Phillips",
-        "image": "https://ui-avatars.com/api/?name=Patricia+Phillips&background=16a34a&color=fff&size=100",
-        "userSince": "2018-11-30"
+        "name": "Mia Perez",
+        "image": "https://ui-avatars.com/api/?name=Mia+Perez&background=b794f6&color=fff&size=100",
+        "userSince": "2019-11-28",
+        "channelName": "Wildlife Vision"
       }
     },
     {
       "id": 32,
-      "name": "Curious Autumn Pup",
-      "description": "Peeking through fiery red leaves, this young fox observes the world with wide, curious eyes. Its soft fur glows in the warm colors of fall, blending perfectly with the season around it. There’s a sense of discovery in its gaze — cautious yet full of wonder, as it takes in everything for the first time.",
-      "dateTaken": "2019-10-25T15:55:00Z",
+      "name": "Fox Grooming",
+      "description": "A fox carefully grooming its beautiful coat.",
+      "dateTaken": "2019-01-19T10:25:00Z",
       "thumbnail": "https://randomfox.ca/images/32.jpg",
       "fullSize": "https://randomfox.ca/images/32.jpg",
       "author": {
-        "name": "Steven Campbell",
-        "image": "https://ui-avatars.com/api/?name=Steven+Campbell&background=2563eb&color=fff&size=100",
-        "userSince": "2019-05-17"
+        "name": "Ethan Roberts",
+        "image": "https://ui-avatars.com/api/?name=Ethan+Roberts&background=f687b3&color=fff&size=100",
+        "userSince": "2018-08-11",
+        "channelName": "Forest Dreams"
       }
     },
     {
       "id": 33,
-      "name": "Frosted Wanderer",
-      "description": "Curled gracefully against the snow, this fox’s thick coat glows with shades of silver, rust, and white. Its calm expression and steady posture show quiet endurance — a creature built for the cold, thriving where others might falter. The soft winter light highlights its strength and poise, making it a true emblem of resilience.",
-      "dateTaken": "2021-09-13T07:40:00Z",
+      "name": "Fox Running",
+      "description": "A fox at full sprint through the woodland.",
+      "dateTaken": "2021-02-23T13:15:00Z",
       "thumbnail": "https://randomfox.ca/images/33.jpg",
       "fullSize": "https://randomfox.ca/images/33.jpg",
       "author": {
-        "name": "Deborah Parker",
-        "image": "https://ui-avatars.com/api/?name=Deborah+Parker&background=dc2626&color=fff&size=100",
-        "userSince": "2020-06-09"
+        "name": "Ava Turner",
+        "image": "https://ui-avatars.com/api/?name=Ava+Turner&background=4fd1c7&color=fff&size=100",
+        "userSince": "2020-06-15",
+        "channelName": "Nature's Touch"
       }
     },
     {
       "id": 34,
-      "name": "Golden Plains Fox",
-      "description": "Bathed in warm sunlight, this fox seems almost regal, its fur shining like brushed copper. Its calm gaze and upright stance reflect both intelligence and serenity — a silent observer of the meadow it calls home. Every detail radiates balance and beauty, capturing the gentle heart of the wilderness.",
-      "dateTaken": "2015-08-01T18:25:00Z",
+      "name": "Fox Yawning",
+      "description": "A fox caught in a big yawn, showing its peaceful nature.",
+      "dateTaken": "2018-09-12T07:50:00Z",
       "thumbnail": "https://randomfox.ca/images/34.jpg",
       "fullSize": "https://randomfox.ca/images/34.jpg",
       "author": {
-        "name": "Matthew Evans",
-        "image": "https://ui-avatars.com/api/?name=Matthew+Evans&background=059669&color=fff&size=100",
-        "userSince": "2017-12-15"
+        "name": "Owen Phillips",
+        "image": "https://ui-avatars.com/api/?name=Owen+Phillips&background=fbd38d&color=fff&size=100",
+        "userSince": "2017-06-29",
+        "channelName": "Wild Moments Co"
       }
     },
     {
       "id": 35,
-      "name": "Vocal Forest Watcher",
-      "description": "Perched atop a fallen log, this fox lets out a powerful call that echoes through the forest. Its body is tensed, tail raised high — a striking mix of alertness and confidence. The moment feels alive with energy, as if the forest itself pauses to listen to its sentinel’s voice.",
-      "dateTaken": "2021-06-18T10:05:00Z",
+      "name": "Fox Sunbathing",
+      "description": "A fox enjoying a warm sunny day in the meadow.",
+      "dateTaken": "2020-07-01T14:35:00Z",
       "thumbnail": "https://randomfox.ca/images/35.jpg",
       "fullSize": "https://randomfox.ca/images/35.jpg",
       "author": {
-        "name": "Lisa White",
-        "image": "https://ui-avatars.com/api/?name=Lisa+White&background=7c2d12&color=fff&size=100",
-        "userSince": "2018-07-27"
+        "name": "Aria Campbell",
+        "image": "https://ui-avatars.com/api/?name=Aria+Campbell&background=90cdf4&color=fff&size=100",
+        "userSince": "2019-10-13",
+        "channelName": "Creature Studio"
       }
     },
     {
       "id": 36,
-      "name": "Devoted Woodland Pair",
-      "description": "A tender exchange unfolds as an adult fox bows its head toward a small cub, their fur brushing gently together. The warmth in the parent’s gesture reveals a love beyond words — protective, patient, and kind. Surrounded by soft greenery, the scene captures the heart of family life in the wild.",
-      "dateTaken": "2020-05-06T14:50:00Z",
+      "name": "Fox Exploring",
+      "description": "A fox exploring new territory with curiosity.",
+      "dateTaken": "2019-11-08T11:20:00Z",
       "thumbnail": "https://randomfox.ca/images/36.jpg",
       "fullSize": "https://randomfox.ca/images/36.jpg",
       "author": {
-        "name": "David Harris",
-        "image": "https://ui-avatars.com/api/?name=David+Harris&background=1d4ed8&color=fff&size=100",
-        "userSince": "2019-02-11"
+        "name": "Ian Parker",
+        "image": "https://ui-avatars.com/api/?name=Ian+Parker&background=c6f6d5&color=fff&size=100",
+        "userSince": "2018-07-04",
+        "channelName": "Nature Discover"
       }
     },
     {
       "id": 37,
-      "name": "Playful Pup",
-      "description": "With bright eyes and a joyful grin, this young fox radiates curiosity and innocence. Its soft fur and relaxed pose make it look completely at ease, as if it’s taking a quiet break between adventures. There’s a spark of wonder in its gaze — the look of a creature just beginning to discover the beauty of the world around it.",
-      "dateTaken": "2022-03-24T12:15:00Z",
+      "name": "Fox Listening",
+      "description": "A fox with ears perked, listening to forest sounds.",
+      "dateTaken": "2021-05-29T16:45:00Z",
       "thumbnail": "https://randomfox.ca/images/37.jpg",
       "fullSize": "https://randomfox.ca/images/37.jpg",
       "author": {
-        "name": "Jennifer Martin",
-        "image": "https://ui-avatars.com/api/?name=Jennifer+Martin&background=9333ea&color=fff&size=100",
-        "userSince": "2020-09-04"
+        "name": "Luna Evans",
+        "image": "https://ui-avatars.com/api/?name=Luna+Evans&background=feb2b2&color=fff&size=100",
+        "userSince": "2020-09-26",
+        "channelName": "Wildlife Realm"
       }
     },
     {
       "id": 38,
-      "name": "Cheerful Fox",
-      "description": "Caught mid-laugh, this fox seems to wear a genuine smile. Its expression glows with personality, blending wild instinct with a surprising sense of humor. Against the soft greenery, it feels both playful and bold — an explorer at heart who’s learned to find joy even in the edges of the urban wild.",
-      "dateTaken": "2018-02-09T16:30:00Z",
+      "name": "Fox Napping",
+      "description": "A fox taking a peaceful afternoon nap.",
+      "dateTaken": "2018-04-15T15:10:00Z",
       "thumbnail": "https://randomfox.ca/images/38.jpg",
       "fullSize": "https://randomfox.ca/images/38.jpg",
       "author": {
-        "name": "Michael Thompson",
-        "image": "https://ui-avatars.com/api/?name=Michael+Thompson&background=0891b2&color=fff&size=100",
-        "userSince": "2017-10-28"
+        "name": "Caleb Edwards",
+        "image": "https://ui-avatars.com/api/?name=Caleb+Edwards&background=9decf9&color=fff&size=100",
+        "userSince": "2017-01-21",
+        "channelName": "Forest Whispers"
       }
     },
     {
       "id": 39,
-      "name": "Winter Companion",
-      "description": "Nestled happily in loving arms, this fox shows pure comfort and trust. Its thick fur and bright eyes stand out against the soft winter tones, creating a moment of warmth in the cold. The shared laughter between fox and friend captures a bond that feels both wild and deeply human.",
-      "dateTaken": "2018-12-27T09:45:00Z",
+      "name": "Fox Playing",
+      "description": "A fox engaged in playful behavior with natural objects.",
+      "dateTaken": "2020-08-16T09:30:00Z",
       "thumbnail": "https://randomfox.ca/images/39.jpg",
       "fullSize": "https://randomfox.ca/images/39.jpg",
       "author": {
-        "name": "Sarah Jackson",
-        "image": "https://ui-avatars.com/api/?name=Sarah+Jackson&background=be185d&color=fff&size=100",
-        "userSince": "2018-03-19"
+        "name": "Scarlett Collins",
+        "image": "https://ui-avatars.com/api/?name=Scarlett+Collins&background=d6bcfa&color=fff&size=100",
+        "userSince": "2019-12-18",
+        "channelName": "Nature's Path"
       }
     },
     {
       "id": 40,
-      "name": "Clever Forest Fox",
-      "description": "Relaxed yet alert, this fox lies upside down with an intelligent glimmer in its eyes. The playful posture hides a sharp awareness, as if it’s studying the world from a new perspective. There’s wit and charm in every detail — the unmistakable spirit of a creature who thrives on curiosity.",
-      "dateTaken": "2019-11-14T17:20:00Z",
+      "name": "Fox Territory",
+      "description": "A fox marking and patrolling its territory.",
+      "dateTaken": "2019-06-27T12:55:00Z",
       "thumbnail": "https://randomfox.ca/images/40.jpg",
       "fullSize": "https://randomfox.ca/images/40.jpg",
       "author": {
-        "name": "James Lee",
-        "image": "https://ui-avatars.com/api/?name=James+Lee&background=16a34a&color=fff&size=100",
-        "userSince": "2019-08-26"
+        "name": "Sebastian Stewart",
+        "image": "https://ui-avatars.com/api/?name=Sebastian+Stewart&background=fbb6ce&color=fff&size=100",
+        "userSince": "2018-11-03",
+        "channelName": "Wild Stories"
       }
     },
     {
       "id": 41,
-      "name": "Floral Meadow Fox",
-      "description": "Resting in a sunlit patch of grass, this fox wears a delicate flower crown that contrasts beautifully with its russet fur. Its upward gaze and relaxed posture capture a sense of peace and playfulness — a perfect blend of wild grace and gentle charm beneath the open sky.",
-      "dateTaken": "2017-10-02T11:35:00Z",
+      "name": "Fox Alertness",
+      "description": "A fox displaying heightened alertness and awareness.",
+      "dateTaken": "2021-03-10T08:40:00Z",
       "thumbnail": "https://randomfox.ca/images/41.jpg",
       "fullSize": "https://randomfox.ca/images/41.jpg",
       "author": {
-        "name": "Karen Rodriguez",
-        "image": "https://ui-avatars.com/api/?name=Karen+Rodriguez&background=ea580c&color=fff&size=100",
-        "userSince": "2020-04-12"
+        "name": "Violet Sanchez",
+        "image": "https://ui-avatars.com/api/?name=Violet+Sanchez&background=81e6d9&color=fff&size=100",
+        "userSince": "2020-12-01",
+        "channelName": "Creature Corner"
       }
     },
     {
       "id": 42,
-      "name": "Resting Woodland Fox",
-      "description": "Curled comfortably on a tree stump, this fox sleeps soundly, its fur glowing warmly in the golden light. The quiet forest scene around it feels calm and safe, as though time itself has paused to let the creature dream. It’s a portrait of simplicity — nature at its most serene.",
-      "dateTaken": "2020-08-19T15:10:00Z",
+      "name": "Fox Investigating",
+      "description": "A fox carefully investigating an interesting scent.",
+      "dateTaken": "2018-10-29T14:20:00Z",
       "thumbnail": "https://randomfox.ca/images/42.jpg",
       "fullSize": "https://randomfox.ca/images/42.jpg",
       "author": {
-        "name": "Robert Lewis",
-        "image": "https://ui-avatars.com/api/?name=Robert+Lewis&background=7c3aed&color=fff&size=100",
-        "userSince": "2017-06-08"
+        "name": "Hudson Morris",
+        "image": "https://ui-avatars.com/api/?name=Hudson+Morris&background=f6ad55&color=fff&size=100",
+        "userSince": "2017-08-17",
+        "channelName": "Nature's View"
       }
     },
     {
       "id": 43,
-      "name": "Vigilant Den Watcher",
-      "description": "Half-hidden among tall grasses, this fox keeps a careful eye on its surroundings. Its gaze is sharp and focused, revealing the quiet intensity of a guardian. The golden hues of its coat blend with the landscape, showing both camouflage and command — a true sentinel of the wild.",
-      "dateTaken": "2019-07-07T08:25:00Z",
+      "name": "Fox Patience",
+      "description": "A fox demonstrating remarkable patience while hunting.",
+      "dateTaken": "2020-05-14T17:05:00Z",
       "thumbnail": "https://randomfox.ca/images/43.jpg",
       "fullSize": "https://randomfox.ca/images/43.jpg",
       "author": {
-        "name": "Michelle Walker",
-        "image": "https://ui-avatars.com/api/?name=Michelle+Walker&background=dc2626&color=fff&size=100",
-        "userSince": "2018-09-23"
+        "name": "Hazel Rogers",
+        "image": "https://ui-avatars.com/api/?name=Hazel+Rogers&background=68d391&color=fff&size=100",
+        "userSince": "2019-02-08",
+        "channelName": "Wildlife Haven"
       }
     },
     {
       "id": 44,
-      "name": "Silent Stream Stalker",
-      "description": "Moving with deliberate grace, this fox steps through shallow water, its reflection trailing perfectly beneath it. Every muscle seems poised, every glance precise — the mark of a skilled hunter. The calm ripples of the stream mirror its patience, embodying the art of stealth in motion.",
-      "dateTaken": "2020-05-25T13:55:00Z",
+      "name": "Fox Wisdom",
+      "description": "An older fox displaying the wisdom of years in the wild.",
+      "dateTaken": "2019-09-21T11:15:00Z",
       "thumbnail": "https://randomfox.ca/images/44.jpg",
       "fullSize": "https://randomfox.ca/images/44.jpg",
       "author": {
-        "name": "Christopher Hall",
-        "image": "https://ui-avatars.com/api/?name=Christopher+Hall&background=059669&color=fff&size=100",
-        "userSince": "2019-11-16"
+        "name": "Axel Reed",
+        "image": "https://ui-avatars.com/api/?name=Axel+Reed&background=fc8181&color=fff&size=100",
+        "userSince": "2018-05-30",
+        "channelName": "Forest Magic"
       }
     },
     {
       "id": 45,
-      "name": "Arctic Sage",
-      "description": "Bathed in the soft glow of twilight, this white fox stands calmly against the frozen landscape. Its fur blends seamlessly with the snow, and its steady gaze reflects both wisdom and endurance. Silent and composed, it seems to hold the quiet secrets of the winter forest.",
-      "dateTaken": "2015-04-12T19:40:00Z",
+      "name": "Fox Grace",
+      "description": "A fox moving with natural grace and elegance.",
+      "dateTaken": "2021-01-02T13:25:00Z",
       "thumbnail": "https://randomfox.ca/images/45.jpg",
       "fullSize": "https://randomfox.ca/images/45.jpg",
       "author": {
-        "name": "Patricia Allen",
-        "image": "https://ui-avatars.com/api/?name=Patricia+Allen&background=1d4ed8&color=fff&size=100",
-        "userSince": "2020-01-07"
+        "name": "Ivy Cooper",
+        "image": "https://ui-avatars.com/api/?name=Ivy+Cooper&background=63b3ed&color=fff&size=100",
+        "userSince": "2020-10-19",
+        "channelName": "Nature's Light"
       }
     },
     {
       "id": 46,
-      "name": "Twilight Wanderer",
-      "description": "Under a violet sky, this arctic fox moves gracefully through the snow, its thick coat glowing in the fading light. It pauses to observe the horizon, embodying adaptability and confidence. The deep colors of dusk contrast beautifully with its pale fur — a portrait of calm resilience in motion.",
-      "dateTaken": "2017-02-28T12:30:00Z",
+      "name": "Fox Adventure",
+      "description": "A fox embarking on a new forest adventure.",
+      "dateTaken": "2018-06-18T10:50:00Z",
       "thumbnail": "https://randomfox.ca/images/46.jpg",
       "fullSize": "https://randomfox.ca/images/46.jpg",
       "author": {
-        "name": "Daniel Young",
-        "image": "https://ui-avatars.com/api/?name=Daniel+Young&background=7c2d12&color=fff&size=100",
-        "userSince": "2017-08-14"
+        "name": "Grayson Bailey",
+        "image": "https://ui-avatars.com/api/?name=Grayson+Bailey&background=b794f6&color=fff&size=100",
+        "userSince": "2017-03-12",
+        "channelName": "Wild Adventures"
       }
     },
     {
       "id": 47,
-      "name": "Riverside Sentinel",
-      "description": "Near the edge of a sunlit stream, this fox stands poised and alert. Its fur gleams in the light, and its focused expression suggests both patience and awareness. Surrounded by lush greenery, it perfectly captures the balance between watchfulness and serenity found in the wild.",
-      "dateTaken": "2020-01-15T16:05:00Z",
+      "name": "Fox Discovery",
+      "description": "A fox making an exciting discovery in the underbrush.",
+      "dateTaken": "2020-12-05T15:35:00Z",
       "thumbnail": "https://randomfox.ca/images/47.jpg",
       "fullSize": "https://randomfox.ca/images/47.jpg",
       "author": {
-        "name": "Amanda King",
-        "image": "https://ui-avatars.com/api/?name=Amanda+King&background=9333ea&color=fff&size=100",
-        "userSince": "2018-05-29"
+        "name": "Aurora Rivera",
+        "image": "https://ui-avatars.com/api/?name=Aurora+Rivera&background=f687b3&color=fff&size=100",
+        "userSince": "2019-09-04",
+        "channelName": "Creature World"
       }
     },
     {
       "id": 48,
-      "name": "Mountain Path Seeker",
-      "description": "Climbing through the bright grass and rocks, this fox’s determination is unmistakable. Its eyes stay fixed ahead, ears sharp to every sound of the hillside. With sunlight glinting off its fur, it embodies perseverance — a fearless traveler shaped by the challenges of the climb.",
-      "dateTaken": "2019-12-03T10:50:00Z",
+      "name": "Fox Serenity",
+      "description": "A fox in a moment of perfect serenity and peace.",
+      "dateTaken": "2019-07-13T08:05:00Z",
       "thumbnail": "https://randomfox.ca/images/48.jpg",
       "fullSize": "https://randomfox.ca/images/48.jpg",
       "author": {
-        "name": "Timothy Wright",
-        "image": "https://ui-avatars.com/api/?name=Timothy+Wright&background=be185d&color=fff&size=100",
-        "userSince": "2018-12-16"
+        "name": "Jaxon Cox",
+        "image": "https://ui-avatars.com/api/?name=Jaxon+Cox&background=4fd1c7&color=fff&size=100",
+        "userSince": "2018-12-27",
+        "channelName": "Nature's Spirit"
       }
     },
     {
       "id": 49,
-      "name": "Emberlight Hunter",
-      "description": "Bathed in the warm glow of sunset, this fox stands among the rocks, its fur blazing with fiery hues. The light catches every detail — from the alert tilt of its ears to the sharp focus in its eyes. It looks ready to move at any moment, embodying the quiet power and beauty of twilight in the wild.",
-      "dateTaken": "2019-10-21T18:15:00Z",
+      "name": "Fox Determination",
+      "description": "A fox showing fierce determination and focus.",
+      "dateTaken": "2021-08-20T16:15:00Z",
       "thumbnail": "https://randomfox.ca/images/49.jpg",
       "fullSize": "https://randomfox.ca/images/49.jpg",
       "author": {
-        "name": "Christina Johnson",
-        "image": "https://ui-avatars.com/api/?name=Christina+Johnson&background=16a34a&color=fff&size=100",
-        "userSince": "2019-11-02"
+        "name": "Nova Ward",
+        "image": "https://ui-avatars.com/api/?name=Nova+Ward&background=fbd38d&color=fff&size=100",
+        "userSince": "2020-11-14",
+        "channelName": "Wildlife Focus"
       }
     },
     {
       "id": 50,
-      "name": "Amber Dune Traveler",
-      "description": "Against a pale winter backdrop, this fox’s golden coat shines with soft, windswept texture. Its steady gaze and poised expression reveal a calm awareness — a creature perfectly at home in open spaces. The contrast of warmth and light gives the image a timeless, peaceful strength.",
-      "dateTaken": "2023-09-08T14:25:00Z",
+      "name": "Fox Legacy",
+      "description": "A magnificent fox representing the enduring legacy of wildlife.",
+      "dateTaken": "2018-01-07T12:00:00Z",
       "thumbnail": "https://randomfox.ca/images/50.jpg",
       "fullSize": "https://randomfox.ca/images/50.jpg",
       "author": {
-        "name": "Joshua Wilson",
-        "image": "https://ui-avatars.com/api/?name=Joshua+Wilson&background=ea580c&color=fff&size=100",
-        "userSince": "2020-06-18"
+        "name": "Phoenix Torres",
+        "image": "https://ui-avatars.com/api/?name=Phoenix+Torres&background=90cdf4&color=fff&size=100",
+        "userSince": "2017-05-06",
+        "channelName": "Forest Tales"
       }
     }
   ]
