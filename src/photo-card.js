@@ -183,7 +183,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         overflow: hidden;
         text-overflow: ellipsis;
         max-height: 22px;
-        padding-bottom: var(--ddd-spacing-1);
+        padding-bottom: var(--ddd-spacing-2);
         transition: color 0.3s ease;
       }
 
@@ -230,7 +230,8 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .photo-title {
-        padding: var(--ddd-spacing-3);
+        padding-top: var(--ddd-spacing-3);
+        margin-bottom: var(--ddd-spacing-2);
         margin: 0;
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);

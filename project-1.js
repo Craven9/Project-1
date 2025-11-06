@@ -22,6 +22,7 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
     this.title = "Project 1";
     this.apiEndpoint = this._getApiEndpoint();
     this.darkMode = false;
+    this.showScrollToTop = false;
     this.t = this.t || {};
     this.t = {
       ...this.t,
@@ -57,7 +58,8 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       ...super.properties,
       title: { type: String },
       apiEndpoint: { type: String },
-      darkMode: { type: Boolean }
+      darkMode: { type: Boolean },
+      showScrollToTop: { type: Boolean }
     };
   }
 
@@ -148,6 +150,51 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
         transition: color 0.3s ease;
       }
 
+      .scroll-to-top {
+        position: fixed;
+        bottom: var(--ddd-spacing-6);
+        right: var(--ddd-spacing-6);
+        padding: var(--ddd-spacing-3) var(--ddd-spacing-4);
+        background: linear-gradient(135deg, #87CEEB, #ADD8E6);
+        border: none;
+        border-radius: var(--ddd-radius-md);
+        cursor: pointer;
+        font-size: var(--ddd-font-size-s);
+        font-weight: var(--ddd-font-weight-bold);
+        color: var(--ddd-theme-default-white);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        white-space: nowrap;
+      }
+
+      .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .scroll-to-top:hover {
+        background: linear-gradient(135deg, #5DADE2, #AED6F1);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      :host([dark-mode]) .scroll-to-top {
+        background: linear-gradient(135deg, #4a5568, #718096);
+        color: #e0e0e0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      }
+
+      :host([dark-mode]) .scroll-to-top:hover {
+        background: linear-gradient(135deg, #63b3ed, #90cdf4);
+        color: #1a202c;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+      }
+
       @media (max-width: 768px) {
         .app-header {
           padding: var(--ddd-spacing-4) var(--ddd-spacing-3);
@@ -167,6 +214,13 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
         .app-description {
           font-size: var(--ddd-font-size-s);
         }
+
+        .scroll-to-top {
+          bottom: var(--ddd-spacing-4);
+          right: var(--ddd-spacing-4);
+          padding: var(--ddd-spacing-2) var(--ddd-spacing-3);
+          font-size: var(--ddd-font-size-xs);
+        }
       }
     `];
   }
@@ -177,6 +231,35 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
     if (savedDarkMode === 'true') {
       this.darkMode = true;
     }
+    
+    // Add scroll listener for scroll-to-top button
+    this._setupScrollListener();
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    window.addEventListener('scroll', this._handleScroll.bind(this));
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    window.removeEventListener('scroll', this._handleScroll.bind(this));
+  }
+
+  _setupScrollListener() {
+    this._handleScroll();
+  }
+
+  _handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    this.showScrollToTop = scrollTop > 300; // Show button after scrolling 300px
+  }
+
+  _scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
   updated(changedProperties) {
@@ -218,6 +301,13 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       <photo-gallery 
         .apiEndpoint="${this.apiEndpoint}"
         .darkMode="${this.darkMode}"></photo-gallery>
+      
+      <button 
+        class="scroll-to-top ${this.showScrollToTop ? 'visible' : ''}"
+        @click="${this._scrollToTop}"
+        title="Scroll to top">
+        Back to top
+      </button>
       
       <slot></slot>
     `;
