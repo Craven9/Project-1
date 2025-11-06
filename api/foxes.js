@@ -185,16 +185,16 @@ function getDateForId(id) {
 
 function getChannelNameForId(id) {
   const channelNames = [
-    'Wildlife Photography', 'Nature Focus', 'Forest Friends', 'Wild Moments', 'Creature Captures',
-    'Woodland Tales', 'Fox Watch', 'Nature\'s Beauty', 'Wild Life Studio', 'Forest Photography',
-    'Animal Kingdom', 'Nature\'s Lens', 'Wildlife World', 'Outdoor Adventures', 'Nature Shots',
-    'Wild Creatures', 'Forest Life', 'Natural Wonders', 'Wildlife Art', 'Nature\'s Gallery',
-    'Wild Photography', 'Creature Chronicles', 'Nature Explore', 'Wildlife Magic', 'Forest Focus',
-    'Animal Adventures', 'Nature\'s Eye', 'Wild Horizon', 'Creature Quest', 'Nature Frame',
-    'Wildlife Vision', 'Forest Dreams', 'Nature\'s Touch', 'Wild Moments Co', 'Creature Studio',
-    'Nature Discover', 'Wildlife Realm', 'Forest Whispers', 'Nature\'s Path', 'Wild Stories',
-    'Creature Corner', 'Nature\'s View', 'Wildlife Haven', 'Forest Magic', 'Nature\'s Light',
-    'Wild Adventures', 'Creature World', 'Nature\'s Spirit', 'Wildlife Focus', 'Forest Tales'
+    '@Wildlife Photography', '@Nature Focus', '@Forest Friends', '@Wild Moments', '@Creature Captures',
+    '@Woodland Tales', '@Fox Watch', '@Nature\'s Beauty', '@Wild Life Studio', '@Forest Photography',
+    '@Animal Kingdom', '@Nature\'s Lens', '@Wildlife World', '@Outdoor Adventures', '@Nature Shots',
+    '@Wild Creatures', '@Forest Life', '@Natural Wonders', '@Wildlife Art', '@Nature\'s Gallery',
+    '@Wild Photography', '@Creature Chronicles', '@Nature Explore', '@Wildlife Magic', '@Forest Focus',
+    '@Animal Adventures', '@Nature\'s Eye', '@Wild Horizon', '@Creature Quest', '@Nature Frame',
+    '@Wildlife Vision', '@Forest Dreams', '@Nature\'s Touch', '@Wild Moments Co', '@Creature Studio',
+    '@Nature Discover', '@Wildlife Realm', '@Forest Whispers', '@Nature\'s Path', '@Wild Stories',
+    '@Creature Corner', '@Nature\'s View', '@Wildlife Haven', '@Forest Magic', '@Nature\'s Light',
+    '@Wild Adventures', '@Creature World', '@Nature\'s Spirit', '@Wildlife Focus', '@Forest Tales'
   ];
   return channelNames[(id - 1) % channelNames.length];
 }
