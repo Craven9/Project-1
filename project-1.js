@@ -76,8 +76,8 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       :host([dark-mode]) {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
+        background-color: var(--ddd-theme-default-coalyGray);
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       photo-gallery {
@@ -86,7 +86,7 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .app-header {
-        background: #87CEEB;
+        background: var(--ddd-theme-default-info);
         color: var(--ddd-theme-default-white);
         padding: var(--ddd-spacing-6) var(--ddd-spacing-4);
         text-align: center;
@@ -96,16 +96,16 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       :host([dark-mode]) .app-header {
-        background: #2d3748;
-        color: #e0e0e0;
+        background: var(--ddd-theme-default-slateGray);
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       .dark-mode-toggle {
         position: absolute;
         top: var(--ddd-spacing-4);
         right: var(--ddd-spacing-4);
-        background: rgba(255, 255, 255, 0.2);
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        background: var(--ddd-theme-default-whiteTransparent);
+        border: 2px solid var(--ddd-theme-default-white);
         border-radius: var(--ddd-radius-lg);
         padding: var(--ddd-spacing-2) var(--ddd-spacing-3);
         cursor: pointer;
@@ -116,30 +116,36 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
         display: flex;
         align-items: center;
         gap: var(--ddd-spacing-1);
+        opacity: 0.8;
       }
 
       .dark-mode-toggle:hover {
-        background: rgba(255, 255, 255, 0.3);
-        border-color: rgba(255, 255, 255, 0.5);
+        background: var(--ddd-theme-default-white);
+        border-color: var(--ddd-theme-default-white);
+        color: var(--ddd-theme-default-coalyGray);
         transform: translateY(-1px);
+        opacity: 1;
       }
 
       :host([dark-mode]) .dark-mode-toggle {
-        background: rgba(0, 0, 0, 0.3);
-        border-color: rgba(255, 255, 255, 0.3);
-        color: #e0e0e0;
+        background: var(--ddd-theme-default-coalyGray);
+        border-color: var(--ddd-theme-default-limestoneLight);
+        color: var(--ddd-theme-default-limestoneLight);
+        opacity: 0.8;
       }
 
       :host([dark-mode]) .dark-mode-toggle:hover {
-        background: rgba(0, 0, 0, 0.5);
-        border-color: rgba(255, 255, 255, 0.5);
+        background: var(--ddd-theme-default-slateGray);
+        border-color: var(--ddd-theme-default-white);
+        color: var(--ddd-theme-default-white);
+        opacity: 1;
       }
 
       .app-title {
         font-size: var(--ddd-font-size-xxl);
         font-weight: var(--ddd-font-weight-bold);
         margin: 0 0 var(--ddd-spacing-2) 0;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-shadow: var(--ddd-boxShadow-sm);
         transition: color 0.3s ease;
       }
 
@@ -155,14 +161,14 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
         bottom: var(--ddd-spacing-6);
         right: var(--ddd-spacing-6);
         padding: var(--ddd-spacing-3) var(--ddd-spacing-4);
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: var(--ddd-theme-default-accent);
         border: none;
         border-radius: var(--ddd-radius-md);
         cursor: pointer;
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
         color: var(--ddd-theme-default-white);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: var(--ddd-boxShadow-md);
         transition: all 0.3s ease;
         z-index: 1000;
         opacity: 0;
@@ -178,21 +184,21 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .scroll-to-top:hover {
-        background: linear-gradient(135deg, #5a67d8, #6b46c1);
+        background: var(--ddd-theme-default-accentDark);
         transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--ddd-boxShadow-lg);
       }
 
       :host([dark-mode]) .scroll-to-top {
-        background: linear-gradient(135deg, #f093fb, #f5576c);
-        color: #1a202c;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        background: var(--ddd-theme-default-error);
+        color: var(--ddd-theme-default-white);
+        box-shadow: var(--ddd-boxShadow-md);
       }
 
       :host([dark-mode]) .scroll-to-top:hover {
-        background: linear-gradient(135deg, #ed64a6, #e53e3e);
-        color: #1a202c;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        background: var(--ddd-theme-default-errorDark);
+        color: var(--ddd-theme-default-white);
+        box-shadow: var(--ddd-boxShadow-lg);
       }
 
       @media (max-width: 768px) {

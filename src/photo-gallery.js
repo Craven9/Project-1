@@ -51,7 +51,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) {
-        background-color: #1a1a1a;
+        background-color: var(--ddd-theme-default-coalyGray);
       }
 
       .gallery-header {
@@ -173,7 +173,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
           break-inside: avoid;
         }
       }
-      
+
       .gallery-slide {
         display: flex;
         overflow-x: auto;
