@@ -155,7 +155,7 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
         bottom: var(--ddd-spacing-6);
         right: var(--ddd-spacing-6);
         padding: var(--ddd-spacing-3) var(--ddd-spacing-4);
-        background: linear-gradient(135deg, #87CEEB, #ADD8E6);
+        background: linear-gradient(135deg, #667eea, #764ba2);
         border: none;
         border-radius: var(--ddd-radius-md);
         cursor: pointer;
@@ -178,19 +178,19 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .scroll-to-top:hover {
-        background: linear-gradient(135deg, #5DADE2, #AED6F1);
+        background: linear-gradient(135deg, #5a67d8, #6b46c1);
         transform: translateY(-3px);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
       }
 
       :host([dark-mode]) .scroll-to-top {
-        background: linear-gradient(135deg, #4a5568, #718096);
-        color: #e0e0e0;
+        background: linear-gradient(135deg, #f093fb, #f5576c);
+        color: #1a202c;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
       }
 
       :host([dark-mode]) .scroll-to-top:hover {
-        background: linear-gradient(135deg, #63b3ed, #90cdf4);
+        background: linear-gradient(135deg, #ed64a6, #e53e3e);
         color: #1a202c;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
       }
@@ -226,33 +226,31 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
   }
 
   firstUpdated() {
-    // Load dark mode preference from localStorage
     const savedDarkMode = localStorage.getItem('dark-mode');
     if (savedDarkMode === 'true') {
       this.darkMode = true;
     }
     
-    // Add scroll listener for scroll-to-top button
-    this._setupScrollListener();
+    // Initial scroll check is now handled in connectedCallback
   }
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener('scroll', this._handleScroll.bind(this));
+    this._boundHandleScroll = this._handleScroll.bind(this);
+    window.addEventListener('scroll', this._boundHandleScroll);
+    this._handleScroll();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    window.removeEventListener('scroll', this._handleScroll.bind(this));
-  }
-
-  _setupScrollListener() {
-    this._handleScroll();
+    if (this._boundHandleScroll) {
+      window.removeEventListener('scroll', this._boundHandleScroll);
+    }
   }
 
   _handleScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    this.showScrollToTop = scrollTop > 300; // Show button after scrolling 300px
+    this.showScrollToTop = scrollTop > 300;
   }
 
   _scrollToTop() {
@@ -264,14 +262,14 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
 
   updated(changedProperties) {
     if (changedProperties.has('darkMode')) {
-      // Update the host attribute for CSS targeting
+      // Update the host attribute for either dark or light mode
       if (this.darkMode) {
         this.setAttribute('dark-mode', '');
       } else {
         this.removeAttribute('dark-mode');
       }
-      
-      // Notify child components about dark mode change
+
+      // Notify components that dark mode has been applied
       this.dispatchEvent(new CustomEvent('dark-mode-changed', {
         detail: { darkMode: this.darkMode },
         bubbles: true,

@@ -18,7 +18,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
 
   constructor() {
     super();
-    this.apiEndpoint = "./data/foxes.js"; 
+    this.apiEndpoint = ""; 
     this.photos = [];
     this.loading = false;
     this.error = null;
@@ -150,7 +150,6 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         margin: 0 auto;
       }
 
-      /* Grid View */
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -174,8 +173,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
           break-inside: avoid;
         }
       }
-
-      /* Slide View */
+      
       .gallery-slide {
         display: flex;
         overflow-x: auto;
@@ -223,9 +221,6 @@ export class PhotoGallery extends DDDSuper(LitElement) {
         font-size: var(--ddd-font-size-m);
       }
 
-
-
-      /* Mobile Responsive */
       @media (max-width: 768px) {
         .gallery-header {
           flex-direction: column;
@@ -288,7 +283,6 @@ export class PhotoGallery extends DDDSuper(LitElement) {
 
   connectedCallback() {
     super.connectedCallback();
-    this._loadPhotos();
   }
 
   disconnectedCallback() {
@@ -299,11 +293,14 @@ export class PhotoGallery extends DDDSuper(LitElement) {
   }
 
   async _loadPhotos() {
+    if (!this.apiEndpoint) {
+      return;
+    }
+    
     this.loading = true;
     this.error = null;
 
     try {
-      console.log('Fetching photos from:', this.apiEndpoint);
       const response = await fetch(this.apiEndpoint);
       if (!response.ok) {
         throw new Error(`Failed to load photos: ${response.status}`);
@@ -385,6 +382,11 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       } else {
         this.removeAttribute('dark-mode');
       }
+    }
+    
+    // Load photos when API endpoint is set
+    if (changedProperties.has('apiEndpoint') && this.apiEndpoint) {
+      this._loadPhotos();
     }
   }
 

@@ -107,6 +107,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         display: flex;
         align-items: flex-start;
         padding: var(--ddd-spacing-3);
+        padding-bottom: 0;
         gap: var(--ddd-spacing-3);
         min-height: 80px;
         max-height: 80px;
@@ -230,20 +231,20 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .photo-title {
-        padding-top: var(--ddd-spacing-3);
-        margin-bottom: var(--ddd-spacing-2);
+        padding: var(--ddd-spacing-2) var(--ddd-spacing-2) var(--ddd-spacing-1) var(--ddd-spacing-2);
         margin: 0;
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
         color: var(--ddd-theme-default-coalyGray);
-        line-height: 1.4;
+        line-height: 1.3;
+        text-align: center;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
         text-overflow: ellipsis;
-        min-height: 48px;
-        max-height: 48px;
+        min-height: auto;
+        max-height: 40px;
         flex-shrink: 0;
         transition: color 0.3s ease;
       }
@@ -434,8 +435,8 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .info-btn {
-        background: linear-gradient(135deg, #87CEEB, #ADD8E6);
-        color: var(--ddd-theme-default-coalyGray);
+        background: linear-gradient(135deg, #4299e1, #63b3ed);
+        color: var(--ddd-theme-default-white);
         border: none;
         padding: var(--ddd-spacing-1) var(--ddd-spacing-4);
         border-radius: var(--ddd-radius-md);
@@ -458,8 +459,8 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .info-btn:hover {
-        background: linear-gradient(135deg, #5DADE2, #AED6F1);
-        color: var(--ddd-theme-default-coalyGray);
+        background: linear-gradient(135deg, #3182ce, #4299e1);
+        color: var(--ddd-theme-default-white);
         transform: translateY(-1px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       }
@@ -471,7 +472,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .info-btn.active {
-        background: linear-gradient(135deg, #2E86C1, #5DADE2);
+        background: linear-gradient(135deg, #2c5282, #3182ce);
         color: var(--ddd-theme-default-white);
         transform: translateY(-1px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -524,18 +525,220 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
 
 
-      @keyframes slideDown {
-        from {
+      .photo-details-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        animation: fadeIn 0.3s ease-out;
+        padding: var(--ddd-spacing-4);
+        box-sizing: border-box;
+      }
+
+      :host([dark-mode]) .photo-details-modal {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      .modal-card {
+        background-color: var(--ddd-theme-default-white);
+        border-radius: var(--ddd-radius-lg);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+        max-height: 90vh;
+        width: 100%;
+        overflow-y: auto;
+        position: relative;
+        animation: slideUp 0.4s ease-out;
+        transition: background-color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-card {
+        background-color: #2d3748;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-close {
+        position: absolute;
+        top: var(--ddd-spacing-3);
+        right: var(--ddd-spacing-3);
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        color: white;
+        font-size: var(--ddd-font-size-l);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transition: all 0.3s ease;
+      }
+
+      .modal-close:hover {
+        background: rgba(0, 0, 0, 0.7);
+        transform: scale(1.1);
+      }
+
+      .modal-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: var(--ddd-radius-lg) var(--ddd-radius-lg) 0 0;
+      }
+
+      .modal-content {
+        padding: var(--ddd-spacing-4);
+      }
+
+      .modal-title {
+        font-size: var(--ddd-font-size-xl);
+        font-weight: var(--ddd-font-weight-bold);
+        color: var(--ddd-theme-default-coalyGray);
+        margin: 0 0 var(--ddd-spacing-3) 0;
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-title {
+        color: #f7fafc;
+      }
+
+      .modal-author-info {
+        display: flex;
+        align-items: center;
+        gap: var(--ddd-spacing-3);
+        margin-bottom: var(--ddd-spacing-4);
+        padding: var(--ddd-spacing-3);
+        background-color: var(--ddd-theme-default-limestoneLight);
+        border-radius: var(--ddd-radius-md);
+        transition: background-color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-author-info {
+        background-color: #1a202c;
+      }
+
+      .modal-author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid var(--ddd-theme-default-limestoneGray);
+        object-fit: cover;
+      }
+
+      .modal-author-details h4 {
+        margin: 0 0 var(--ddd-spacing-1) 0;
+        color: var(--ddd-theme-default-coalyGray);
+        font-size: var(--ddd-font-size-m);
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-author-details h4 {
+        color: #f7fafc;
+      }
+
+      .modal-author-details p {
+        margin: 0;
+        color: var(--ddd-theme-default-slateGray);
+        font-size: var(--ddd-font-size-s);
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-author-details p {
+        color: #a0aec0;
+      }
+
+      .modal-date {
+        font-size: var(--ddd-font-size-s);
+        color: var(--ddd-theme-default-slateGray);
+        margin: 0 0 var(--ddd-spacing-3) 0;
+        font-weight: var(--ddd-font-weight-bold);
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-date {
+        color: #a0aec0;
+      }
+
+      .modal-description {
+        font-size: var(--ddd-font-size-m);
+        color: var(--ddd-theme-default-coalyGray);
+        line-height: 1.6;
+        margin: 0 0 var(--ddd-spacing-4) 0;
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-description {
+        color: #e2e8f0;
+      }
+
+      .modal-stats {
+        display: flex;
+        gap: var(--ddd-spacing-4);
+        align-items: center;
+        padding: var(--ddd-spacing-3);
+        background-color: var(--ddd-theme-default-limestoneLight);
+        border-radius: var(--ddd-radius-md);
+        transition: background-color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-stats {
+        background-color: #1a202c;
+      }
+
+      .modal-stat {
+        display: flex;
+        align-items: center;
+        gap: var(--ddd-spacing-1);
+        font-size: var(--ddd-font-size-s);
+        color: var(--ddd-theme-default-coalyGray);
+        transition: color 0.3s ease;
+      }
+
+      :host([dark-mode]) .modal-stat {
+        color: #e2e8f0;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes slideUp {
+        from { 
           opacity: 0;
-          max-height: 0;
-          padding-top: 0;
-          padding-bottom: 0;
+          transform: translateY(50px) scale(0.9);
         }
-        to {
+        to { 
           opacity: 1;
-          max-height: 200px;
-          padding-top: var(--ddd-spacing-3);
-          padding-bottom: var(--ddd-spacing-3);
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .modal-card {
+          max-width: 95vw;
+          margin: var(--ddd-spacing-2);
+        }
+
+        .modal-content {
+          padding: var(--ddd-spacing-3);
+        }
+
+        .modal-image {
+          height: 250px;
+        }
+
+        .modal-title {
+          font-size: var(--ddd-font-size-l);
         }
       }
 
@@ -703,7 +906,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       this.isLiked = false;
     }
     
-    // Update dislikes count based on action
+    // Update dislikes 
     if (this.isDisliked) {
       this.dislikesCount = currentData?.dislikesCount || this.dislikesCount;
     }
@@ -733,11 +936,6 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
   _toggleDetails() {
     this.showDetails = !this.showDetails;
-
-    this.dispatchEvent(new CustomEvent('photo-details-toggled', {
-      detail: { photoId: this.photoData.id, showing: this.showDetails },
-      bubbles: true
-    }));
   }
 
   _formatDate(dateString) {
@@ -805,6 +1003,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
               title="Like this photo">${this.isLiked ? '❤️' : '🤍'}</span>
             <span class="likes-count">${this.likesCount + (this.isLiked ? 1 : 0)}</span>
           </div>
+     
           <div class="dislike-container">
             <button 
               class="btn dislike-btn ${this.isDisliked ? 'red' : ''}" 
@@ -821,10 +1020,15 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
       ${this.showDetails ? html`
         <div class="photo-details">
-          <div class="detail-date"> ${this._formatDate(this.photoData.dateTaken)}</div>
-          <p class="detail-description">${this.photoData.description}</p>
+          <p class="detail-date">
+            Posted on ${this.photoData.dateTaken ? this._formatDate(this.photoData.dateTaken) : 'Unknown date'}
+          </p>
+          <p class="detail-description">
+            ${this.photoData.description || 'No description available for this photo.'}
+          </p>
         </div>
       ` : ''}
+
     `;
   }
 
