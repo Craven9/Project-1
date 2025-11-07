@@ -68,9 +68,9 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .gallery-header {
-        background-color: #2d3748;
-        color: #e0e0e0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        background-color: var(--ddd-theme-default-slateGray);
+        color: var(--ddd-theme-default-limestoneLight);
+        box-shadow: var(--ddd-boxShadow-md);
       }
 
       .gallery-title {
@@ -82,7 +82,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .gallery-title {
-        color: #e0e0e0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       .gallery-controls {
@@ -105,9 +105,9 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .view-toggle {
-        background-color: #4a5568;
-        color: #e0e0e0;
-        border-color: #718096;
+        background-color: var(--ddd-theme-default-slateGray);
+        color: var(--ddd-theme-default-limestoneLight);
+        border-color: var(--ddd-theme-default-slateLight);
       }
 
       .view-toggle:hover {
@@ -117,9 +117,9 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .view-toggle:hover {
-        background-color: #63b3ed;
-        color: #1a202c;
-        border-color: #63b3ed;
+        background-color: var(--ddd-theme-default-infoLight);
+        color: var(--ddd-theme-default-coalyGray);
+        border-color: var(--ddd-theme-default-infoLight);
       }
 
       .view-toggle.active {
@@ -129,9 +129,9 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .view-toggle.active {
-        background-color: #f6ad55;
-        color: #1a202c;
-        border-color: #f6ad55;
+        background-color: var(--ddd-theme-default-warning);
+        color: var(--ddd-theme-default-coalyGray);
+        border-color: var(--ddd-theme-default-warning);
       }
 
       .photo-count {
@@ -141,7 +141,7 @@ export class PhotoGallery extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .photo-count {
-        color: #a0aec0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       .gallery-container {
