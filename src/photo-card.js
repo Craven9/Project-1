@@ -154,7 +154,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
       .author-name {
         font-weight: var(--ddd-font-weight-bold);
-        font-size: var(--ddd-font-size-s);
+        font-size: var(--ddd-font-size-xs);
         margin: 0 0 var(--ddd-spacing-1) 0;
         color: var(--ddd-theme-default-coalyGray);
         line-height: 1.2;
