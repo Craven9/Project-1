@@ -86,10 +86,10 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) {
-        background-color: #2d3748;
-        border-color: #4a5568;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        color: #e0e0e0;
+        background-color: var(--ddd-theme-default-coalyGray);
+        border-color: var(--ddd-theme-default-slateGray);
+        box-shadow: var(--ddd-boxShadow-md);
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
 
@@ -100,7 +100,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]:hover) {
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        box-shadow: var(--ddd-boxShadow-lg);
       }
 
       .card-header {
@@ -126,7 +126,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+        background: linear-gradient(45deg, var(--ddd-theme-default-limestoneLight), var(--ddd-theme-default-limestoneGray));
         border: 2px solid var(--ddd-theme-default-limestoneGray);
         display: flex;
         align-items: center;
@@ -168,7 +168,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .author-name {
-        color: #f7fafc;
+        color: var(--ddd-theme-default-white);
       }
 
 
@@ -189,7 +189,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .channel-name {
-        color: #a0aec0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       .image-container {
@@ -250,7 +250,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .photo-title {
-        color: #f7fafc;
+        color: var(--ddd-theme-default-white);
       }
 
 
@@ -269,7 +269,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .card-actions {
-        border-color: #4a5568;
+        border-color: var(--ddd-theme-default-slateGray);
       }
 
       .action-buttons {
@@ -300,23 +300,23 @@ export class PhotoCard extends DDDSuper(LitElement) {
 
       .action-btn.liked {
         color: var(--ddd-theme-default-error);
-        background-color: rgba(220, 53, 69, 0.1);
-        border: 1px solid rgba(220, 53, 69, 0.3);
+        background-color: var(--ddd-theme-default-errorLight);
+        border: 1px solid var(--ddd-theme-default-error);
       }
 
       .action-btn.liked:hover {
-        background-color: rgba(220, 53, 69, 0.2);
+        background-color: var(--ddd-theme-default-errorLight);
         color: var(--ddd-theme-default-error);
       }
 
       .action-btn.disliked {
         color: var(--ddd-theme-default-warning);
-        background-color: rgba(255, 193, 7, 0.1);
-        border: 1px solid rgba(255, 193, 7, 0.3);
+        background-color: var(--ddd-theme-default-warningLight);
+        border: 1px solid var(--ddd-theme-default-warning);
       }
 
       .action-btn.disliked:hover {
-        background-color: rgba(255, 193, 7, 0.2);
+        background-color: var(--ddd-theme-default-warningLight);
         color: var(--ddd-theme-default-warning);
       }
 
@@ -354,7 +354,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .heart-icon:hover {
-        background-color: rgba(255, 0, 0, 0.1);
+        background-color: var(--ddd-theme-default-errorLight);
         transform: scale(1.1);
       }
 
@@ -370,7 +370,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .likes-count {
-        color: #e2e8f0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       /* Dislike button */
@@ -392,7 +392,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .dislikes-count {
-        color: #e2e8f0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       @keyframes pulse {
@@ -425,7 +425,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .dislike-btn:hover {
-        background-color: rgba(255, 0, 0, 0.1);
+        background-color: var(--ddd-theme-default-errorLight);
         transform: scale(1.1);
       }
 
@@ -435,7 +435,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .info-btn {
-        background: linear-gradient(135deg, #4299e1, #63b3ed);
+        background: var(--ddd-theme-default-info);
         color: var(--ddd-theme-default-white);
         border: none;
         padding: var(--ddd-spacing-1) var(--ddd-spacing-4);
@@ -445,7 +445,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         font-weight: var(--ddd-font-weight-medium);
         text-transform: capitalize;
         transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--ddd-boxShadow-sm);
         min-width: 75px;
         text-align: center;
         margin-right: var(--ddd-spacing-4);
@@ -453,36 +453,37 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .info-btn {
-        background: linear-gradient(135deg, #4a5568, #718096);
-        color: #e2e8f0;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        background: var(--ddd-theme-default-slateGray);
+        color: var(--ddd-theme-default-limestoneLight);
+        box-shadow: var(--ddd-boxShadow-md);
       }
 
       .info-btn:hover {
-        background: linear-gradient(135deg, #3182ce, #4299e1);
+        background: var(--ddd-theme-default-info);
         color: var(--ddd-theme-default-white);
         transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--ddd-boxShadow-md);
+        opacity: 0.9;
       }
 
       :host([dark-mode]) .info-btn:hover {
-        background: linear-gradient(135deg, #63b3ed, #90cdf4);
-        color: #1a202c;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        background: var(--ddd-theme-default-info);
+        color: var(--ddd-theme-default-coalyGray);
+        box-shadow: var(--ddd-boxShadow-lg);
       }
 
       .info-btn.active {
-        background: linear-gradient(135deg, #2c5282, #3182ce);
+        background: linear-gradient(135deg, var(--ddd-theme-default-accent), var(--ddd-theme-default-info));
         color: var(--ddd-theme-default-white);
         transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        box-shadow: var(--ddd-boxShadow-md);
         font-weight: var(--ddd-font-weight-bold);
       }
 
       :host([dark-mode]) .info-btn.active {
-        background: linear-gradient(135deg, #3182ce, #63b3ed);
-        color: #f7fafc;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        background: var(--ddd-theme-default-info);
+        color: var(--ddd-theme-default-white);
+        box-shadow: var(--ddd-boxShadow-lg);
       }
 
       .photo-details {
@@ -495,8 +496,8 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .photo-details {
-        background-color: #1a202c;
-        border-color: #4a5568;
+        background-color: var(--ddd-theme-default-coalyGray);
+        border-color: var(--ddd-theme-default-slateGray);
       }
 
       .detail-date {
@@ -508,7 +509,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .detail-date {
-        color: #a0aec0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       .detail-description {
@@ -520,7 +521,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .detail-description {
-        color: #e2e8f0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
 
@@ -531,7 +532,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: var(--ddd-theme-default-coalyGray);
         backdrop-filter: blur(10px);
         display: flex;
         align-items: center;
@@ -543,13 +544,13 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .photo-details-modal {
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: var(--ddd-theme-default-coalyGray);
       }
 
       .modal-card {
         background-color: var(--ddd-theme-default-white);
         border-radius: var(--ddd-radius-lg);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--ddd-boxShadow-xl);
         max-width: 600px;
         max-height: 90vh;
         width: 100%;
@@ -560,21 +561,21 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-card {
-        background-color: #2d3748;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        background-color: var(--ddd-theme-default-coalyGray);
+        box-shadow: var(--ddd-boxShadow-xl);
       }
 
       .modal-close {
         position: absolute;
         top: var(--ddd-spacing-3);
         right: var(--ddd-spacing-3);
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--ddd-theme-default-coalyGray);
         border: none;
         border-radius: 50%;
         width: 35px;
         height: 35px;
         cursor: pointer;
-        color: white;
+        color: var(--ddd-theme-default-white);
         font-size: var(--ddd-font-size-l);
         display: flex;
         align-items: center;
@@ -584,7 +585,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       .modal-close:hover {
-        background: rgba(0, 0, 0, 0.7);
+        background: var(--ddd-theme-default-slateGray);
         transform: scale(1.1);
       }
 
@@ -608,7 +609,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-title {
-        color: #f7fafc;
+        color: var(--ddd-theme-default-white);
       }
 
       .modal-author-info {
@@ -623,7 +624,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-author-info {
-        background-color: #1a202c;
+        background-color: var(--ddd-theme-default-coalyGray);
       }
 
       .modal-author-avatar {
@@ -642,7 +643,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-author-details h4 {
-        color: #f7fafc;
+        color: var(--ddd-theme-default-white);
       }
 
       .modal-author-details p {
@@ -653,7 +654,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-author-details p {
-        color: #a0aec0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       .modal-date {
@@ -665,7 +666,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-date {
-        color: #a0aec0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       .modal-description {
@@ -677,7 +678,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-description {
-        color: #e2e8f0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       .modal-stats {
@@ -691,7 +692,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-stats {
-        background-color: #1a202c;
+        background-color: var(--ddd-theme-default-coalyGray);
       }
 
       .modal-stat {
@@ -704,7 +705,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
       }
 
       :host([dark-mode]) .modal-stat {
-        color: #e2e8f0;
+        color: var(--ddd-theme-default-limestoneLight);
       }
 
       @keyframes fadeIn {
@@ -748,7 +749,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: var(--ddd-theme-default-coalyGray);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -766,7 +767,7 @@ export class PhotoCard extends DDDSuper(LitElement) {
         position: absolute;
         top: 20px;
         right: 20px;
-        background: rgba(255, 255, 255, 0.9);
+        background: var(--ddd-theme-default-white);
         border: none;
         border-radius: 50%;
         width: 40px;
